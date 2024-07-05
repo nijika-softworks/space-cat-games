@@ -1,0 +1,40 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background: linear-gradient(to left top, #ff0095, #00ffe1);
+  
+  background-size: 3000px 3000px;
+  .header {
+    background-color: #F1F1F1;
+    text-align: center;
+    padding: 20px;
+
+  }
+h1 {
+  color: white;
+  font-family: Verdana;
+}
+
+h2 {
+  color: white;
+  font-family: Verdana;
+}
+button {
+  background-color: #db4d00;
+  font-color: white
+  
+}
+p {
+  color: white;
+  font-family: Verdana;
+}
+
+h3 {
+  color: white;
+  font-family: Verdana;
+}
+
+
+
