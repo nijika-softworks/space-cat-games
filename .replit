@@ -1,3 +1,5 @@
+onBoot = ["bash", "-c", "eval `/nix/store/mpaapj377c886qdfk90rhkm6q349w8dh-openssh-9.3p1/bin/ssh-agent`"]
+
 entrypoint="index.html"
 hidden=[".config"]
 modules = ["nodejs-20", "web:v2-20230623-0b7a606"]
@@ -16,3 +18,4 @@ externalPort = 3000
 [[ports]]
 localPort = 7906
 externalPort = 80
+
