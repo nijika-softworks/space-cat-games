@@ -3,7 +3,7 @@ html {
   width: 100%;
 }
 body {
-  background: linear-gradient(to right top, #4c00ff, #ff2600);
+  background: #3b3b3b;
   
   background-size: 3000px 3000px;
   .header {
