@@ -1,5 +1,7 @@
 {pkgs}: {
   deps = [
+    pkgs.ruby_3_2
+    pkgs.ksh
     pkgs.xorg.xkill
     pkgs.nano
     pkgs.neofetch
@@ -16,5 +18,6 @@
     pkgs.mysql80
     pkgs.nmap
     pkgs.wget
+    pkgs.neocities-cli
   ];
 }
