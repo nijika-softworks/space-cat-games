@@ -19,9 +19,29 @@
   
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8061192980504496"
      crossorigin="anonymous"></script>
-  <img src="Preview.png" width="250"px height="250"px> 
-
-  <h1>Welcome to the site! This is version 10, codename "NPHP!"(no PHP)
+  <html>
+       <head>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+       </head>
+       <body>
+            <img class="image" src="Space-Cat-Games-Version-10-22-07-2024.png"/>
+            <script>
+                 $( document ).ready(function(){
+                      let images = [
+                           "logowhitecat.png",
+                           "Space-Cat-Games-Version-10-22-07-2024.png",
+                           "logobobacat.png",
+                      ];
+                      var i = 0;
+                      window.setInterval(function(){
+                           $('.image'). attr("src", images[i]);
+                           i = (i==images.length-1) ? 0 : i+1;
+                      }, 5000);
+                 });
+            </script>
+       </body>
+  </html>
+  <h1>Welcome to the site! This is version 10, codename "Obsidian"!</h1>
     <h2>Wanna support the website to stay up and running? Join the patreon for £2 per month!!</h2>
     <a href="https://www.patreon.com/spacecats_">
       <button>Support Us!!</button>

@@ -3,7 +3,7 @@ html {
   width: 100%;
 }
 body {
-  background: #3b3b3b;
+  background: black;
   
   background-size: 3000px 3000px;
   .header {
@@ -40,4 +40,3 @@ a {
   color: white;
   font-family: Verdana;
 }
-
