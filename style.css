@@ -67,3 +67,11 @@ a {
     background-color: #04AA6D;
     color: white;
   }
+  /* UI Bar Logo Placement */
+  .navigation-bar ul {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    display:inline-block;
+    vertical-align:top;
+  }
