@@ -3,7 +3,8 @@ html {
   width: 100%;
 }
 body {
-  background: black;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);;
   
   background-size: 3000px 3000px;
   .header {
@@ -35,21 +36,21 @@ h3 {
   color: white;
   font-family: Verdana;
 }
-
+/* link colour*/
 a {
   color: white;
   font-family: Verdana;
 }
   /* Add a black background color to the top navigation */
   .topnav {
-    background-color: #ff0000;
+    background-color: #00ffe1;
     overflow: hidden;
   }
 
   /* Style the links inside the navigation bar */
   .topnav a {
     float: left;
-    color: #f2f2f2;
+    color: #0f0f0f;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
