@@ -1,11 +1,10 @@
-/*Base Stylesheet, used since Floppa Utils 0.5 */
 html {
   height: 100%;
   width: 100%;
 }
 body {
   background: rgb(2,0,36);
-  background: rgb(25, 19, 129);
+  background: rgb(2,0,36);
   background: linear-gradient(171deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(9,18,127,1) 38%, rgba(0,212,255,1) 100%);
   
   background-size: 3000px 3000px;
@@ -15,7 +14,6 @@ body {
     padding: 20px;
 
   }
-  /* Text Styling */
 h1 {
   color: white;
   font-family: Verdana;
@@ -26,7 +24,7 @@ h2 {
   font-family: Verdana;
 }
 button {
-  background-color: #00ff1e;
+  background-color: #db4d00;
   font-color: white
   
 }
@@ -44,7 +42,6 @@ a {
   color: white;
   font-family: Verdana;
 }
-  /* Topnav style starts here */
   /* Add a black background color to the top navigation */
   .topnav {
     background-color: #00ffe1;
@@ -80,7 +77,6 @@ a {
     display:inline-block;
     vertical-align:top;
   }
-  /*this does something that I forgot */
   {
       box-sizing: border-box;
       font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif;
@@ -88,3 +84,54 @@ a {
   }
   body {
       background-color: #435165;
+  }
+  .login {
+      width: 400px;
+      background-color: #ffffff;
+      box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+      margin: 100px auto;
+  }
+  .login h1 {
+      text-align: center;
+      color: #5b6574;
+      font-size: 24px;
+      padding: 20px 0 20px 0;
+      border-bottom: 1px solid #dee0e4;
+  }
+  .login form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-top: 20px;
+  }
+  .login form label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      background-color: #3274d6;
+      color: #ffffff;
+  }
+  .login form input[type="password"], .login form input[type="text"] {
+      width: 310px;
+      height: 50px;
+      border: 1px solid #dee0e4;
+      margin-bottom: 20px;
+      padding: 0 15px;
+  }
+  .login form input[type="submit"] {
+      width: 100%;
+      padding: 15px;
+    margin-top: 20px;
+      background-color: #3274d6;
+      border: 0;
+      cursor: pointer;
+      font-weight: bold;
+      color: #ffffff;
+      transition: background-color 0.2s;
+  }
+  .login form input[type="submit"]:hover {
+    background-color: #2868c7;
+      transition: background-color 0.2s;
+  }
