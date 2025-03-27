@@ -43,12 +43,23 @@ a {
   color: white;
   font-family: Verdana;
 }
+button{
+  font-family: sans-serif;
+  font-size: 100%;
+  color: rgb(232, 223, 223);
+  border-radius: 5px;
+  
+}
   /* Add a black background color to the top navigation */
   .topnav {
     background-color: #00ffe1;
     overflow: hidden;
+    border-radius: 8px;
+    width: 95vw;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-evenly;
   }
-
   /* Style the links inside the navigation bar */
   .topnav a {
     float: left;
@@ -57,6 +68,7 @@ a {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    border-radius: 5px;
   }
 
   /* Change the color of links on hover */
