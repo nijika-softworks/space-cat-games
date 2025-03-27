@@ -3,8 +3,9 @@ html {
   width: 100%;
 }
 body {
+  background: rgb(0, 0, 0);
   background: rgb(2,0,36);
-
+  background: linear-gradient(171deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(9,18,127,1) 38%, rgb(98, 190, 209) 100%);
   
   background-size: 3000px 3000px;
   .header {
@@ -14,8 +15,9 @@ body {
 
   }
 h1 {
-  color: white;
-  font-family: Verdana;
+  color: rgb(253, 253, 253);
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-style: oblique;
 }
 
 h2 {
@@ -83,4 +85,54 @@ a {
   }
   body {
       background-color: #435165;
- 
+  }
+  .login {
+      width: 400px;
+      background-color: #ffffff;
+      box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+      margin: 100px auto;
+  }
+  .login h1 {
+      text-align: center;
+      color: #5b6574;
+      font-size: 24px;
+      padding: 20px 0 20px 0;
+      border-bottom: 1px solid #dee0e4;
+  }
+  .login form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-top: 20px;
+  }
+  .login form label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      background-color: #3274d6;
+      color: #ffffff;
+  }
+  .login form input[type="password"], .login form input[type="text"] {
+      width: 310px;
+      height: 50px;
+      border: 1px solid #dee0e4;
+      margin-bottom: 20px;
+      padding: 0 15px;
+  }
+  .login form input[type="submit"] {
+      width: 100%;
+      padding: 15px;
+    margin-top: 20px;
+      background-color: #3274d6;
+      border: 0;
+      cursor: pointer;
+      font-weight: bold;
+      color: #ffffff;
+      transition: background-color 0.2s;
+  }
+  .login form input[type="submit"]:hover {
+    background-color: #2868c7;
+      transition: background-color 0.2s;
+  }
