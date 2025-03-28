@@ -1,6 +1,6 @@
 {
   "elements": [
-    "html15"
+    "html5"
   ],
   "extends": [
     "html-validate:recommended"
