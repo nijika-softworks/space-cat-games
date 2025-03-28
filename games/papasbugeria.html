@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+  <head>
+    <title>Papas Burgeria</title>
+    <style>
+      body {
+        background-color: #000;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      right click the game in order to go into fullscreen and have a better
+      experience - chromebook users, use alt+click.
+    </p>
+    <script>
+      window.RufflePlayer = window.RufflePlayer || {};
+      window.addEventListener("load", (event) => {
+        const ruffle = window.RufflePlayer.newest();
+        const player = ruffle.createPlayer();
+        const container = document.getElementById("container");
+        container.appendChild(player);
+        player.load("burger.swf");
+      });
+    </script>
+    <div id="container"></div>
+  </body>
+</html>
