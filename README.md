@@ -5,7 +5,7 @@ I am welcoming to contributions, but **please** test them before making a pull r
 # Space Cat Games - Minimal
 The minimal version of Space Cat Games is designed to be deployed on low-spec servers, and used on low-spec machines. Most features that are not game-related have been cut, but at the cost of less updates. It is on the "minimal" branch.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/8982e787-7109-477b-83bc-a04be9b1af4a/deploy-status)](https://app.netlify.com/sites/space-cat-games/deploys)
+
 
 
 
