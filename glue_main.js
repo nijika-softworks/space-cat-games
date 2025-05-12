@@ -99,7 +99,7 @@ class Main {
         nameDiv.innerHTML = name;
         messageDiv.innerHTML = message;
         return nameDiv.outerHTML + messageDiv.outerHTML;
-    }
+    } 
 
     onWindowLoad() {
         if (!this.xhrSucceeded) {
@@ -125,7 +125,7 @@ class Main {
         // [Note] We cannot save the game properly when Gatekeeper Path
         //   Randomization is in effect.
         return (
-            Utils.isNwjs() &&
+           Utils.isNwjs() &&
             process.mainModule.filename.startsWith("/private/var")
         );
     }
