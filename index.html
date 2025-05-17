@@ -26,9 +26,30 @@
 
   <div class="hero">
     <div class="container">
-      <h1>Welcome to Space Cat Games</h1>
+           <h1>Welcome to Space Cat Games</h1>
+      <div id="random-tip" class="random-tip"></div>
       <h6>This is version 13. Space Cat Games, libspacecat and libbevel are (C) Starry Systems 2025</h6>
-      <p>Your ultimate destination for free browser-based games. Play instantly without downloads or installations!</p>
+<!-- ...existing code... -->
+  <script src="js/main.js"></script>
+  <script>
+    // Random tips array
+    const tips = [
+      "Aishite Aishite Aishite!",
+      "Mayday! Go ahead and fire away!",
+      "Today I will too roll again!",
+      "Hey William, can you hear us?",
+      "Shut up with your complains!",
+      "	Hey, Kenji, can you see us?",
+      "It’s painful, it hurts. Break, break this binding spell, okay?",
+      "Who am I supposed to show my real self to?",
+      "That band's song, is a crutch to someone!"
+    ];
+    // Pick a random tip
+    const randomTip = tips[Math.floor(Math.random() * tips.length)];
+    // Display it
+    document.getElementById('random-tip').textContent = randomTip;
+  </script>
+<!-- ...existing code... -->
       <a href="games.html" class="btn">Play Now</a>
     </div>
   </div>
