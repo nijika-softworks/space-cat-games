@@ -1,8 +1,11 @@
+console.log("Space Cat Games (C) Starry Systems. Origially created by Team Astrocat.")
+console.log("Loaded js/main.js")
 // Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Add active class to current navigation item
     const currentPage = window.location.pathname.split("/").pop();
     const navLinks = document.querySelectorAll('.topnav a');
+    console.log("navLinks Loaded!")
     
     navLinks.forEach(link => {
         const linkHref = link.getAttribute('href');
@@ -39,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     img.src = img.dataset.src;
                     img.removeAttribute('data-src');
                     imageObserver.unobserve(img);
+                    console.log("Lazy loaded image: " + img.src);
                 }
             });
         });
@@ -51,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('img[data-src]').forEach(img => {
             img.src = img.dataset.src;
             img.removeAttribute('data-src');
+        
         });
     }
     
