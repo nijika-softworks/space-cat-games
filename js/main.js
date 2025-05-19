@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 window.scrollTo({
                     top: targetElement.offsetTop - 70,
                     behavior: 'smooth'
-                console.log("Smooth scroll to: " + targetId);
                 });
             }
         });
