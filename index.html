@@ -36,6 +36,8 @@
       <h6>This is version 13. Space Cat Games, libspacecat and libbevel are (C) Starry Systems 2025</h6>
 <!-- ...existing code... -->
   <script src="js/main.js"></script>
+<!-- ...existing code... -->
+  <script src="js/main.js"></script>
   <script>
     // Random tips array
     const tips = [
@@ -53,10 +55,15 @@
       "Oh, I see, so thats how it is.",
       "Microwave! Microwave! Microwave! Microwave! Microwave! Microwave! Microwave! Microwave! ",
     ];
-    // Pick a random tip
-    const randomTip = tips[Math.floor(Math.random() * tips.length)];
-    // Display it 
-    document.getElementById('random-tip').textContent = randomTip;
+
+    function showRandomTip() {
+      const randomTip = tips[Math.floor(Math.random() * tips.length)];
+      document.getElementById('random-tip').textContent = randomTip;
+      console.log("Random Tip Displayed:" + randomTip);
+    }
+
+    showRandomTip(); // Show one on load
+    setInterval(showRandomTip, 5000); // Change every 5 seconds
   </script>
 <!-- ...existing code... -->
       <a href="games.html" class="btn">Play Now</a>
