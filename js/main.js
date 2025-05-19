@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (linkHref === currentPage || 
             (currentPage === '' && linkHref === 'index.html')) {
             link.classList.add('active');
+        console.log("Active link: " + linkHref);
         }
     });
     
@@ -27,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 window.scrollTo({
                     top: targetElement.offsetTop - 70,
                     behavior: 'smooth'
+                console.log("Smooth scroll to: " + targetId);
                 });
             }
         });
@@ -86,15 +88,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
                 
                 document.body.appendChild(toggle);
+                console.log("Mobile nav toggle created!");
             }
         }
     };
     
     // Check if we need to create a responsive toggle
     createMobileNavToggle();
+    console.log("Responsive nav toggle check complete!");
     
     // Handle window resize
     window.addEventListener('resize', () => {
         createMobileNavToggle();
+        console.log("Window resized, checked for mobile nav toggle!");
     });
 });
