@@ -1,177 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Space Cat Games - Home</title>
-  <script
-    type="text/javascript"
-    src="https://www.bugherd.com/sidebarv2.js?apikey=dirlwq03grzkjludqxjtvg"
-    async="true"
-  ></script>
-  <link href="css/style.css" rel="stylesheet" type="text/css">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-</head>
-<body>
-  <noscript>
-    <h1>Hey there!</h1>
-    <h2>You need Javascript enabled to view this site!</h2>
-    <p>Error Code = 0x00004</p>
-  </noscript>
-  <div class="topnav">
-    <a href="index.html">Home</a>
-    <a href="games.html">Games</a>
-    <a href="news.html">News</a>
-    <a href="opensource.html">Source Code</a>
-    <a href="credits.html">Credits</a>
-    <a href="changelog.html">Changelog</a>
-    <a href="https://docs.google.com/document/d/e/2PACX-1vT-28hqhqnzJb3ABu47A7wYL6ei8MIE7DD7yGq1VrR6D7HSfrHjZlGfsneivTIdLFp16dcWPDhZhjx7/pub">Documentation</a>
-  </div>
-
-  <div class="hero">
-    <div class="container">
-           <h1>Welcome to Space Cat Games</h1>
-      <div id="random-tip" class="random-tip"></div>
-      <h6>This is version 13. Space Cat Games, libspacecat and libbevel are (C) Starry Systems 2025</h6>
-  <script src="js/main.js"></script>
-  <script>
-    // Random tips array
-    const tips = [
-      "Aishite Aishite Aishite!",
-      "Mayday! Go ahead and fire away!",
-      "Today I will too roll again!",
-      "Hey William, can you hear us?",
-      "Shut up with your complains!",
-      "	Hey, Kenji, can you see us?",
-      "It’s painful, it hurts. Break, break this binding spell, okay?",
-      "Who am I supposed to show my real self to?",
-      "That band's song, is a crutch to someone!",
-      "Cloudfart Turnstale don't work on Netlify...",
-      "I don't know what to say, but I want to say something.",
-      "Oh, I see, so thats how it is.",
-      "Microwave! Microwave! Microwave! Microwave! Microwave! Microwave! Microwave! Microwave! ",
-      "console.log(Random Tip Displayed: + randomTip);",
-      "Press F12 or Ctrl+Shift+I to open the console for secrets :)",
-    ];
-
-    function showRandomTip() {
-      const randomTip = tips[Math.floor(Math.random() * tips.length)];
-      document.getElementById('random-tip').textContent = randomTip;
-      console.log("Random Tip Displayed: " + randomTip);
-    }
-
-    showRandomTip(); // Show one on load
-    setInterval(showRandomTip, 5000); // Change every 5 seconds
-  </script>
-<!-- ...existing code... -->
-      <a href="games.html" class="btn">Play Now</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Space Cat Games - Home</title>
+    <script
+      type="text/javascript"
+      src="https://www.bugherd.com/sidebarv2.js?apikey=dirlwq03grzkjludqxjtvg"
+      async="true"
+    ></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <noscript>
+      <h1>Hey there!</h1>
+      <h2>You need Javascript enabled to view this site!</h2>
+      <p>Error Code = 0x00004</p>
+    </noscript>
+    <div class="topnav">
+      <a href="index.html">Home</a>
+      <a href="games.html">Games</a>
+      <a href="news.html">News</a>
+      <a href="opensource.html">Source Code</a>
+      <a href="credits.html">Credits</a>
+      <a href="changelog.html">Changelog</a>
+      <a
+        href="https://docs.google.com/document/d/e/2PACX-1vT-28hqhqnzJb3ABu47A7wYL6ei8MIE7DD7yGq1VrR6D7HSfrHjZlGfsneivTIdLFp16dcWPDhZhjx7/pub"
+        >Documentation</a
+      >
     </div>
-  </div>
-  <div class="marquee-container">
-    <marquee>Welcome to Space Cat Games! | Don't trigger Meowcat's Seishun Complex | The old UI was cool | No gradient? | This site is held together by glue and tape I swear | vercel | github pages lolz |</marquee>
-  </div>
 
-  <div class="container">
-    <section class="features">
-      <h2>Why Play at Space Cat Games?</h2>
-      <div class="features-grid">
-        <div class="feature">
-          <h3>Free Games</h3>
-          <p>All our games are completely free to play, with no hidden costs or subscriptions needed.</p>
-        </div>
-        <div class="feature">
-          <h3>No Downloads</h3>
-          <p>Play directly in your browser - no installations, no waiting, just instant gaming.</p>
-        </div>
-        <div class="feature">
-          <h3>Variety of Games</h3>
-          <p>From classics like Tetris and Snake to modern hits like Geometry Dash and CrazyCattle3D, we have something for everyone.</p>
-        </div>
-        <div class="feature">
-          <h3>Free and Open Source</h3>
-          <p>This website is free and Open Source, so you can always contribute!</p>
-        </div>
-      </div>
-    </section>
+    <div class="hero">
+      <div class="container">
+        <h1>Welcome to Space Cat Games</h1>
+        <div id="random-tip" class="random-tip"></div>
+        <h6>
+          This is version 13. Space Cat Games, libspacecat and libbevel are (C)
+          Starry Systems 2025
+        </h6>
+        <script src="js/main.js"></script>
+        <script>
+          // Random tips array
+          const tips = [
+            "Aishite Aishite Aishite!",
+            "Mayday! Go ahead and fire away!",
+            "Today I will too roll again!",
+            "Hey William, can you hear us?",
+            "Shut up with your complains!",
+            "	Hey, Kenji, can you see us?",
+            "It’s painful, it hurts. Break, break this binding spell, okay?",
+            "Who am I supposed to show my real self to?",
+            "That band's song, is a crutch to someone!",
+            "Cloudfart Turnstale don't work on Netlify...",
+            "I don't know what to say, but I want to say something.",
+            "Oh, I see, so thats how it is.",
+            "Microwave! Microwave! Microwave! Microwave! Microwave! Microwave! Microwave! Microwave! ",
+            "console.log(Random Tip Displayed: + randomTip);",
+            "Press F12 or Ctrl+Shift+I to open the console for secrets :)",
+            "1 year of service!",
+            "Stop your defender being a brick at the back and upgrade it with intense PAC DEF and PHY upgrades",
+            "undefined",
+          ];
 
-    <section class="featured-games">
-      <h2>Featured Games</h2>
-      <div class="games-grid">
-        <div class="game-item">
-          <button type="button" onclick="window.location.href='games/papaicecreamml'" title="Papa's Freezeria">
-            <img src="papasfreezeria_400x226.jpg" alt="Papa's Freezeria">
-          </button>
-          <p>Papa's Freezeria</p>
-        </div>
-        <div class="game-item">
-          <button type="button" onclick="window.location.href='games/minecraft.html'" title="Minecraft">
-            <img src="https://i.ibb.co/tT7XZRMW/Grass-Block-JE2.webp" alt="Minecraft">
-          </button>
-          <p>Minecraft</p>
-        </div>
-        <div class="game-item">
-          <button type="button" onclick="window.location.href='games/paperio.html'" title="Paper.io 2">
-            <img src="https://i.ibb.co/VYFygR7L/images-1.jpg" alt="Geometry Dash">
-          </button>
-          <p>Paper.io 2</p>
-        </div>
-        <div class="game-item">
-        <button type="button" onclick="window.location.href='https://crazycattle3dgame.neocities.org/'" title="Crazy Cattle 3D">
-          <img src="/images/cattlemoment.webp" alt="Crazy Cattle 3D">
-        </button>
-        <p>Crazy Cattle 3D</p>
-        </div>
-      </div>
-      <div class="cta-section">
-        <a href="games.html" class="btn">See All Games</a>
-      </div>
-    </section>
+          function showRandomTip() {
+            const randomTip = tips[Math.floor(Math.random() * tips.length)];
+            document.getElementById("random-tip").textContent = randomTip;
+            console.log("Random Tip Displayed: " + randomTip);
+          }
 
-    <section class="1channel-ad">
-      <h2>Check out 1channel!</h2>
-      <p>The new way to communicate on the web!</p>
-      <div class="game-item">
-        <a href="https://1channel.ct.ws" class="btn">1channel</a>
+          showRandomTip(); // Show one on load
+          setInterval(showRandomTip, 5000); // Change every 5 seconds
+        </script>
+        <!-- ...existing code... -->
+        <a href="games.html" class="btn">Play Now</a>
       </div>
-    </section>
-
+    </div>
     <div class="marquee-container">
-      <marquee>
-        <img src="neocities.png" width="100" height="30" alt="Neocities">
-        <img src="Team_Astrocat.png" width="70" height="30" alt="Team Astrocat">
-        <img src="gplv3.svg" width="70" height="30" alt="GPL v3">
-        <img src="mothracompat.gif" width="70" height="30" alt="Mothra Compatible">
-        <img src="https://9p.io/plan9/img/power36.gif" width="70" height="30" alt="Plan 9">
-        <a href="https://maschinensturmer.neocities.org/"><img src="https://maschinensturmer.neocities.org/ningenshikkakubotan.png" alt="Maschinensturmer"></a>
-        <a href="https://adilene.net/"><img src="https://i.ibb.co/9k8TjjhS/sitebutton.gif" alt="Adilene"></a>
-        <a href="https://zorrpu.neocities.org"><img src="https://zorrpu.com/stamps-etc/link-me/Zorp%2088x31.jpg" alt="Zorrpu"></a>
-        <a href="https://frutigeraeroarchive.org/"><img src="https://frutigeraeroarchive.org/images/buttons/frutigeraeroarchive_button.png" alt="Frutiger Aero Archive"></a>
-        <a href="https://winbows.neocities.org/" target="_top"><img src="https://winbows.neocities.org/resources/winbows-btn.png" title="Winbows XP" alt="Winbows XP"></a>
-        <a href="https://funnyorangecat.neocities.org"><img src="https://i.postimg.cc/kXmxWz6D/IMG-0352.png" alt="Funny Orange Cat"></a>
-        <a href="https://webgore.neocities.org/"><img src="https://webgore.neocities.org/images/sitebutton.gif" alt="Webgore"></a>
-        <a href="https://lopster.neocities.org/roring/roring"><img src="https://lopster.neocities.org/deco/buttons/roring%20button.gif" alt="Lopster"></a>
-      </marquee>
+      <marquee
+        >Welcome to Space Cat Games! | Don't trigger Meowcat's Seishun Complex |
+        The old UI was cool | No gradient? | This site is held together by glue
+        and tape I swear | vercel | github pages lolz |</marquee
+      >
     </div>
-  </div>
-  
 
-  <footer>
     <div class="container">
-      <div class="footer-content">
-        <div class="footer-links">
-          <a href="index.html">Home</a>
-          <a href="games.html">Games</a>
-          <a href="credits.html">Credits</a>
-          <a href="opensource.html">Open Source</a>
-          <a href="changelog.html">Changelog</a>
+      <section class="features">
+        <h2>Why Play at Space Cat Games?</h2>
+        <div class="features-grid">
+          <div class="feature">
+            <h3>Free Games</h3>
+            <p>
+              All our games are completely free to play, with no hidden costs or
+              subscriptions needed.
+            </p>
+          </div>
+          <div class="feature">
+            <h3>No Downloads</h3>
+            <p>
+              Play directly in your browser - no installations, no waiting, just
+              instant gaming.
+            </p>
+          </div>
+          <div class="feature">
+            <h3>Variety of Games</h3>
+            <p>
+              From classics like Tetris and Snake to modern hits like Geometry
+              Dash and CrazyCattle3D, we have something for everyone.
+            </p>
+          </div>
+          <div class="feature">
+            <h3>Free and Open Source</h3>
+            <p>
+              This website is free and Open Source, so you can always
+              contribute!
+            </p>
+          </div>
         </div>
-        <p class="copyright">© 2025 Starry Systems. All rights reserved.</p>
+      </section>
+
+      <section class="featured-games">
+        <h2>Featured Games</h2>
+        <div class="games-grid">
+          <div class="game-item">
+            <button
+              type="button"
+              onclick="window.location.href='games/papaicecreamml'"
+              title="Papa's Freezeria"
+            >
+              <img src="papasfreezeria_400x226.jpg" alt="Papa's Freezeria" />
+            </button>
+            <p>Papa's Freezeria</p>
+          </div>
+          <div class="game-item">
+            <button
+              type="button"
+              onclick="window.location.href='games/minecraft.html'"
+              title="Minecraft"
+            >
+              <img
+                src="https://i.ibb.co/tT7XZRMW/Grass-Block-JE2.webp"
+                alt="Minecraft"
+              />
+            </button>
+            <p>Minecraft</p>
+          </div>
+          <div class="game-item">
+            <button
+              type="button"
+              onclick="window.location.href='games/paperio.html'"
+              title="Paper.io 2"
+            >
+              <img
+                src="https://i.ibb.co/VYFygR7L/images-1.jpg"
+                alt="Geometry Dash"
+              />
+            </button>
+            <p>Paper.io 2</p>
+          </div>
+          <div class="game-item">
+            <button
+              type="button"
+              onclick="window.location.href='https://crazycattle3dgame.neocities.org/'"
+              title="Crazy Cattle 3D"
+            >
+              <img src="/images/cattlemoment.webp" alt="Crazy Cattle 3D" />
+            </button>
+            <p>Crazy Cattle 3D</p>
+          </div>
+        </div>
+        <div class="cta-section">
+          <a href="games.html" class="btn">See All Games</a>
+        </div>
+      </section>
+
+      <section class="1channel-ad">
+        <h2>Check out 1channel!</h2>
+        <p>The new way to communicate on the web!</p>
+        <div class="game-item">
+          <a href="https://1channel.ct.ws" class="btn">1channel</a>
+        </div>
+      </section>
+
+      <div class="marquee-container">
+        <marquee>
+          <img src="neocities.png" width="100" height="30" alt="Neocities" />
+          <img
+            src="Team_Astrocat.png"
+            width="70"
+            height="30"
+            alt="Team Astrocat"
+          />
+          <img src="gplv3.svg" width="70" height="30" alt="GPL v3" />
+          <img
+            src="mothracompat.gif"
+            width="70"
+            height="30"
+            alt="Mothra Compatible"
+          />
+          <img
+            src="https://9p.io/plan9/img/power36.gif"
+            width="70"
+            height="30"
+            alt="Plan 9"
+          />
+          <a href="https://maschinensturmer.neocities.org/"
+            ><img
+              src="https://maschinensturmer.neocities.org/ningenshikkakubotan.png"
+              alt="Maschinensturmer"
+          /></a>
+          <a href="https://adilene.net/"
+            ><img src="https://i.ibb.co/9k8TjjhS/sitebutton.gif" alt="Adilene"
+          /></a>
+          <a href="https://zorrpu.neocities.org"
+            ><img
+              src="https://zorrpu.com/stamps-etc/link-me/Zorp%2088x31.jpg"
+              alt="Zorrpu"
+          /></a>
+          <a href="https://frutigeraeroarchive.org/"
+            ><img
+              src="https://frutigeraeroarchive.org/images/buttons/frutigeraeroarchive_button.png"
+              alt="Frutiger Aero Archive"
+          /></a>
+          <a href="https://winbows.neocities.org/" target="_top"
+            ><img
+              src="https://winbows.neocities.org/resources/winbows-btn.png"
+              title="Winbows XP"
+              alt="Winbows XP"
+          /></a>
+          <a href="https://funnyorangecat.neocities.org"
+            ><img
+              src="https://i.postimg.cc/kXmxWz6D/IMG-0352.png"
+              alt="Funny Orange Cat"
+          /></a>
+          <a href="https://webgore.neocities.org/"
+            ><img
+              src="https://webgore.neocities.org/images/sitebutton.gif"
+              alt="Webgore"
+          /></a>
+          <a href="https://lopster.neocities.org/roring/roring"
+            ><img
+              src="https://lopster.neocities.org/deco/buttons/roring%20button.gif"
+              alt="Lopster"
+          /></a>
+        </marquee>
       </div>
     </div>
-    <script>(function(d, s, id) { var js, pjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//www.tickcounter.com/static/js/loader.js"; pjs.parentNode.insertBefore(js, pjs); }(document, "script", "tickcounter-sdk"));</script><a data-type="countup" data-id="367698" class="tickcounter" style="display:block; left:0; width:100%; height:50px; position:relative; padding-bottom:0; margin:0 auto;" title="Uptime" href="//www.tickcounter.com/countup">Uptime</a>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="games.html">Games</a>
+            <a href="credits.html">Credits</a>
+            <a href="opensource.html">Open Source</a>
+            <a href="changelog.html">Changelog</a>
+          </div>
+          <p class="copyright">© 2025 Starry Systems. All rights reserved.</p>
+        </div>
+      </div>
+      <script>
+        (function (d, s, id) {
+          var js,
+            pjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s);
+          js.id = id;
+          js.src = "//www.tickcounter.com/static/js/loader.js";
+          pjs.parentNode.insertBefore(js, pjs);
+        })(document, "script", "tickcounter-sdk");
+      </script>
+      <a
+        data-type="countup"
+        data-id="367698"
+        class="tickcounter"
+        style="
+          display: block;
+          left: 0;
+          width: 100%;
+          height: 50px;
+          position: relative;
+          padding-bottom: 0;
+          margin: 0 auto;
+        "
+        title="Uptime"
+        href="//www.tickcounter.com/countup"
+        >Uptime</a
+      >
     </footer>
 
-  <script src="js/main.js"></script>
-</body>
+    <script src="js/main.js"></script>
+  </body>
 </html>
