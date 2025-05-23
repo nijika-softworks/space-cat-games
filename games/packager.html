@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html class=3D"mdui-theme-auto" lang=3D"en" theme=3D"dark">
+
+<head>
+  <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-=8">
+  <link rel=3D"stylesheet" type=3D"text/css" href=3D"cid:css-bcae3b52-c030=-4e8a-b6b3-66ffbe4bb9bd@mhtml.blink" />
+  <link rel=3D"stylesheet" type=3D"tex=t/css" href=3D"cid:css-718a21b7-7935-4c56-ba53-34ba0e8bfb53@mhtml.blink" />=
+  <link rel=3D"stylesheet" type=3D"text/css" href=3D"cid:css-655ba3c8-8016-4a=e9-94a6-df702abc2727@mhtml.blink" />
+  <link rel=3D"stylesheet" type=3D"text/c=ss" href=3D"cid:css-6b90fa98-a122-4601-897b-37d21c6fee53@mhtml.blink" />
+  <li= nk rel=3D"stylesheet" type=3D"text/css" href=3D"cid:css-ea33abda-2e59-45c6-=b588-cbe4a19457df@mhtml.blink" />
+  <link rel=3D"stylesheet" type=3D"text/css"=href=3D"cid:css-6726f325-9e3a-48ee-88ab-ab80008a86a8@mhtml.blink" />
+  <link=rel=3D"stylesheet" type=3D"text/css" href=3D"cid:css-0754be1f-f3ee-4d5f-86f=e-78385efa0280@mhtml.blink" />
+  <meta name=3D"viewport" content=3D"width=3Dde=vice-width,initial-scale=3D1">
+  <base href="https://packager.40code.com/">
+  <title>Ikuyo Packager</title>
+  <meta name=3D"descript=ion" content=3D"Converts Scratch 3, 2, or 1 projects into HTML files, zip a=rchives, or
+    executable programs for Windows, macOS, and Linux. Faster and m=ore customizable than HTMLifier and forkphorus.">
+  <link href=3D"https://cdn.=bootcdn.net/ajax/libs/mdui/2.1.2/mdui.min.css" rel=3D"stylesheet">
+</head>
+
+<body class=3D"mdui-prose" p4-splash-theme=3D"dark" p4-loaded=3D""><input typ=e=3D"file"
+    class=3D"input-for-remembering-project-file" autocomplete=3D"on"=>
+  <div id=3D"app">
+    <main aria-hidden=3D"false" class=3D"is-not-safari">
+      <cent= er><mdui-card variant=3D"filled"><template shadowmode=3D"open"><!---->
+            <mdui= -ripple><template shadowmode=3D"open"><!---->
+                <div class=3D"surface "></di=
+v></template></mdui-ripple><!--?lit$735376735$--><slot></slot><!--?--></tem=
+plate> <div><h1>Ikuyo Packaging System</h1>  <p>Converts Scratch
+ projects into HTML files, zip archives, or executable programs for Windows
+,macOS, and Linux.</p></div></mdui-card></center>   <center><div><mdui-car=
+d accent=3D" #4C97FF" variant=3D"filled" style=3D""><template shadowmode=3D"=open"><!----><mdui-ripple><template
+                        shadowmode=3D"open"><!---->
+                        <div class==3D"surface "></div></template></mdui-ripple><!--?lit$735376735$--><slot>=
+</slot><!--?--></template><h2>Select Project</h2> <p>Select the project you=
+ want to package by copying and pasting the Scratch project link or using o=
+ne of the other modes. If you use a project you didn't make, make sure to c=
+redit the creator.</p> <div class=3D" options svelte-cekwmz">
+                          <div class=3D"o=ption file-input-option svelte-cekwmz"><label><input type=3D"radio"
+                                name=3D="project-type" value=3D"file"> File</label> <input type=3D"file"
+                              accept=3D"=.sb,.sb2,.sb3" class=3D"svelte-cekwmz"></div>
+                          <div class=3D"option svelte-c=ekwmz"><label><input type=3D"radio" name=3D"project-type"
+                                value=3D"url"> Ot=
+                              her URL</label> </div>
+                        </div> <mdui-button name=3D"" value=3D"" type=3D"but=ton" variant=3D"filled"><template
+                            shadowmode=3D"open"><!----><mdui-ripple>
+                              <= template shadowmode=3D"open"><!---->
+                                <div class=3D"surface "></div></templ=
+ate></mdui-ripple><!--?lit$735376735$--><button class=3D" _button button" pa=rt=3D"button">
+                                  <!--?lit$735376735$--><!---->
+                                  <slot name=3D"icon" part=3D"icon=" class=3D" icon">
+                                    <!--?lit$735376735$--><!--?lit$735376735$--><!--?--></slot=><!----><!---->
+                                    <slot part=3D"label" class=3D"label"></slot><!----><!---->
+                                    <s= lot name=3D"end-icon" part=3D"end-icon" class=3D"end-icon"><!--?lit$7353767=
+35$--><!--?lit$735376735$--><!--?-->
+                                  </slot><!----></button><!--?--></templa= te>Load Project</mdui-button></mdui-card>
+  </div>
+  </center>
+  <center><mdui-card= variant=3D"filled"><template shadowmode=3D"open"><!----><mdui-ripple>
+          <temp= late shadowmode=3D"open"><!---->
+            <div class=3D"surface "></div></template>=
+</mdui-ripple><!--?lit$735376735$--><slot></slot><!--?--></template> <p>Loa=
+d a project to continue</p></mdui-card></center>   <footer class=3D" svelte-=1c4nbyi">
+              <div><select>
+                  <option value=3D"system">Use system theme</option>
+                  <op= tion value=3D"light">Light</option>
+                    <option value=3D"dark">Dark</option>
+                    </se= lect>
+              </div>
+              <div><select>
+                  <option value=3D"en">English</option>
+                  <option value==3D"ca">Catal=C3=A0</option>
+                  <option value=3D"cs">=C4=8Cesky</option>
+                  <option= value=3D"de">Deutsch</option>
+                    <option value=3D"es">Espa=C3=B1ol (Espa=C3=B1=
+                      a)</option>
+                    <option value=3D"fi">Suomi</option>
+                    <option value=3D"fr">Fran=C3=
+                      =A7ais</option>
+                    <option value=3D"hu">Magyar</option>
+                    <option value=3D"it">Ita=
+                      liano</option>
+                    <option value=3D"ja">=E6=97=A5=E6=9C=AC=E8=AA=9E</option>
+                    <opt= ion value=3D"ko">=ED=95=9C=EA=B5=AD=EC=96=B4</option>
+                      <option value=3D"lt">L=
+                        ietuvi=C5=B3</option>
+                      <option value=3D"nb">Norsk Bokm=C3=A5l</option>
+                      <option= value=3D"nl">Nederlands</option>
+                        <option value=3D"pl">Polski</option>
+                        <optio= n value=3D"pt">Portugu=C3=AAs</option>
+                          <option value=3D"pt-br">Portugu=C3=AA=
+                            s Brasileiro</option>
+                          <option value=3D"ru">=D0=A0=D1=83=D1=81=D1=81=D0=BA=D0=
+                            =B8=D0=B9</option>
+                          <option value=3D"sl">Sloven=C5=A1=C4=8Dina</option>
+                          <optio= n value=3D"sv">Svenska</option>
+                            <option value=3D"tr">T=C3=BCrk=C3=A7e
+                          </optio= n>
+                          <option value=3D"uk">=D0=A3=D0=BA=D1=80=D0=B0=D1=97=D0=BD=D1=81=D1=8C=D0=
+                            =BA=D0=B0</option>
+                          <option value=3D"zh-cn">=E7=AE=80=E4=BD=93=E4=B8=AD=E6=96=
+                            =87</option>
+                          <option value=3D"zh-tw">=E7=B9=81=E9=AB=94=E4=B8=AD=E6=96=87</o= ption>
+                </select></div>
+              </footer>
+              </main>
+            </div>
+</body>
+
+</html>
+------MultipartBoundary--sSwd8kY8onBFmLvNmQkbD09tetEL3Li19uciukxAJ3----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://cdn.bootcdn.net/ajax/libs/mdui/2.1.2/mdui.min.css
+
+@charset "utf-8";
+
+:root { --mdui-breakpoint-xs: 0px; --mdui-breakpoint-sm: 600px; --mdui-brea=
+kpoint-md: 840px; --mdui-breakpoint-lg: 1080px; --mdui-breakpoint-xl: 1440p=
+x; --mdui-breakpoint-xxl: 1920px; }
+
+:root { --mdui-color-primary-light: 103,80,164; --mdui-color-primary-contai=
+ner-light: 234,221,255; --mdui-color-on-primary-light: 255,255,255; --mdui-=
+color-on-primary-container-light: 33,0,94; --mdui-color-inverse-primary-lig=
+ht: 208,188,255; --mdui-color-secondary-light: 98,91,113; --mdui-color-seco=
+ndary-container-light: 232,222,248; --mdui-color-on-secondary-light: 255,25=
+5,255; --mdui-color-on-secondary-container-light: 30,25,43; --mdui-color-te=
+rtiary-light: 125,82,96; --mdui-color-tertiary-container-light: 255,216,228=
+; --mdui-color-on-tertiary-light: 255,255,255; --mdui-color-on-tertiary-con=
+tainer-light: 55,11,30; --mdui-color-surface-light: 254,247,255; --mdui-col=
+or-surface-dim-light: 222,216,225; --mdui-color-surface-bright-light: 254,2=
+47,255; --mdui-color-surface-container-lowest-light: 255,255,255; --mdui-co=
+lor-surface-container-low-light: 247,242,250; --mdui-color-surface-containe=
+r-light: 243,237,247; --mdui-color-surface-container-high-light: 236,230,24=
+0; --mdui-color-surface-container-highest-light: 230,224,233; --mdui-color-=
+surface-variant-light: 231,224,236; --mdui-color-on-surface-light: 28,27,31=
+; --mdui-color-on-surface-variant-light: 73,69,78; --mdui-color-inverse-sur=
+face-light: 49,48,51; --mdui-color-inverse-on-surface-light: 244,239,244; -=
+-mdui-color-background-light: 254,247,255; --mdui-color-on-background-light=
+: 28,27,31; --mdui-color-error-light: 179,38,30; --mdui-color-error-contain=
+er-light: 249,222,220; --mdui-color-on-error-light: 255,255,255; --mdui-col=
+or-on-error-container-light: 65,14,11; --mdui-color-outline-light: 121,116,=
+126; --mdui-color-outline-variant-light: 196,199,197; --mdui-color-shadow-l=
+ight: 0,0,0; --mdui-color-surface-tint-color-light: 103,80,164; --mdui-colo=
+r-scrim-light: 0,0,0; --mdui-color-primary-dark: 208,188,255; --mdui-color-=
+primary-container-dark: 79,55,139; --mdui-color-on-primary-dark: 55,30,115;=
+--mdui-color-on-primary-container-dark: 234,221,255; --mdui-color-inverse-=
+primary-dark: 103,80,164; --mdui-color-secondary-dark: 204,194,220; --mdui-=
+color-secondary-container-dark: 74,68,88; --mdui-color-on-secondary-dark: 5=
+1,45,65; --mdui-color-on-secondary-container-dark: 232,222,248; --mdui-colo=
+r-tertiary-dark: 239,184,200; --mdui-color-tertiary-container-dark: 99,59,7=
+2; --mdui-color-on-tertiary-dark: 73,37,50; --mdui-color-on-tertiary-contai=
+ner-dark: 255,216,228; --mdui-color-surface-dark: 20,18,24; --mdui-color-su=
+rface-dim-dark: 20,18,24; --mdui-color-surface-bright-dark: 59,56,62; --mdu=
+i-color-surface-container-lowest-dark: 15,13,19; --mdui-color-surface-conta=
+iner-low-dark: 29,27,32; --mdui-color-surface-container-dark: 33,31,38; --m=
+dui-color-surface-container-high-dark: 43,41,48; --mdui-color-surface-conta=
+iner-highest-dark: 54,52,59; --mdui-color-surface-variant-dark: 73,69,79; -=
+-mdui-color-on-surface-dark: 230,225,229; --mdui-color-on-surface-variant-d=
+ark: 202,196,208; --mdui-color-inverse-surface-dark: 230,225,229; --mdui-co=
+lor-inverse-on-surface-dark: 49,48,51; --mdui-color-background-dark: 20,18,=
+24; --mdui-color-on-background-dark: 230,225,229; --mdui-color-error-dark: =
+242,184,181; --mdui-color-error-container-dark: 140,29,24; --mdui-color-on-=
+error-dark: 96,20,16; --mdui-color-on-error-container-dark: 249,222,220; --=
+mdui-color-outline-dark: 147,143,153; --mdui-color-outline-variant-dark: 68=
+,71,70; --mdui-color-shadow-dark: 0,0,0; --mdui-color-surface-tint-color-da=
+rk: 208,188,255; --mdui-color-scrim-dark: 0,0,0; font-size: 16px; }
+
+.mdui-theme-light, :root { color-scheme: light; --mdui-color-primary: var(-=
+-mdui-color-primary-light); --mdui-color-primary-container: var(--mdui-colo=
+r-primary-container-light); --mdui-color-on-primary: var(--mdui-color-on-pr=
+imary-light); --mdui-color-on-primary-container: var(--mdui-color-on-primar=
+y-container-light); --mdui-color-inverse-primary: var(--mdui-color-inverse-=
+primary-light); --mdui-color-secondary: var(--mdui-color-secondary-light); =
+--mdui-color-secondary-container: var(--mdui-color-secondary-container-ligh=
+t); --mdui-color-on-secondary: var(--mdui-color-on-secondary-light); --mdui=
+-color-on-secondary-container: var(--mdui-color-on-secondary-container-ligh=
+t); --mdui-color-tertiary: var(--mdui-color-tertiary-light); --mdui-color-t=
+ertiary-container: var(--mdui-color-tertiary-container-light); --mdui-color=
+-on-tertiary: var(--mdui-color-on-tertiary-light); --mdui-color-on-tertiary=
+-container: var(--mdui-color-on-tertiary-container-light); --mdui-color-sur=
+face: var(--mdui-color-surface-light); --mdui-color-surface-dim: var(--mdui=
+-color-surface-dim-light); --mdui-color-surface-bright: var(--mdui-color-su=
+rface-bright-light); --mdui-color-surface-container-lowest: var(--mdui-colo=
+r-surface-container-lowest-light); --mdui-color-surface-container-low: var(=
+--mdui-color-surface-container-low-light); --mdui-color-surface-container: =
+var(--mdui-color-surface-container-light); --mdui-color-surface-container-h=
+igh: var(--mdui-color-surface-container-high-light); --mdui-color-surface-c=
+ontainer-highest: var(--mdui-color-surface-container-highest-light); --mdui=
+-color-surface-variant: var(--mdui-color-surface-variant-light); --mdui-col=
+or-on-surface: var(--mdui-color-on-surface-light); --mdui-color-on-surface-=
+variant: var(--mdui-color-on-surface-variant-light); --mdui-color-inverse-s=
+urface: var(--mdui-color-inverse-surface-light); --mdui-color-inverse-on-su=
+rface: var(--mdui-color-inverse-on-surface-light); --mdui-color-background:=
+var(--mdui-color-background-light); --mdui-color-on-background: var(--mdui=
+-color-on-background-light); --mdui-color-error: var(--mdui-color-error-lig=
+ht); --mdui-color-error-container: var(--mdui-color-error-container-light);=
+--mdui-color-on-error: var(--mdui-color-on-error-light); --mdui-color-on-e=
+rror-container: var(--mdui-color-on-error-container-light); --mdui-color-ou=
+tline: var(--mdui-color-outline-light); --mdui-color-outline-variant: var(-=
+-mdui-color-outline-variant-light); --mdui-color-shadow: var(--mdui-color-s=
+hadow-light); --mdui-color-surface-tint-color: var(--mdui-color-surface-tin=
+t-color-light); --mdui-color-scrim: var(--mdui-color-scrim-light); color: r=
+gb(var(--mdui-color-on-background)); background-color: rgb(var(--mdui-color=
+-background)); }
+
+.mdui-theme-dark { color-scheme: dark; --mdui-color-primary: var(--mdui-col=
+or-primary-dark); --mdui-color-primary-container: var(--mdui-color-primary-=
+container-dark); --mdui-color-on-primary: var(--mdui-color-on-primary-dark)=
+; --mdui-color-on-primary-container: var(--mdui-color-on-primary-container-=
+dark); --mdui-color-inverse-primary: var(--mdui-color-inverse-primary-dark)=
+; --mdui-color-secondary: var(--mdui-color-secondary-dark); --mdui-color-se=
+condary-container: var(--mdui-color-secondary-container-dark); --mdui-color=
+-on-secondary: var(--mdui-color-on-secondary-dark); --mdui-color-on-seconda=
+ry-container: var(--mdui-color-on-secondary-container-dark); --mdui-color-t=
+ertiary: var(--mdui-color-tertiary-dark); --mdui-color-tertiary-container: =
+var(--mdui-color-tertiary-container-dark); --mdui-color-on-tertiary: var(--=
+mdui-color-on-tertiary-dark); --mdui-color-on-tertiary-container: var(--mdu=
+i-color-on-tertiary-container-dark); --mdui-color-surface: var(--mdui-color=
+-surface-dark); --mdui-color-surface-dim: var(--mdui-color-surface-dim-dark=
+); --mdui-color-surface-bright: var(--mdui-color-surface-bright-dark); --md=
+ui-color-surface-container-lowest: var(--mdui-color-surface-container-lowes=
+t-dark); --mdui-color-surface-container-low: var(--mdui-color-surface-conta=
+iner-low-dark); --mdui-color-surface-container: var(--mdui-color-surface-co=
+ntainer-dark); --mdui-color-surface-container-high: var(--mdui-color-surfac=
+e-container-high-dark); --mdui-color-surface-container-highest: var(--mdui-=
+color-surface-container-highest-dark); --mdui-color-surface-variant: var(--=
+mdui-color-surface-variant-dark); --mdui-color-on-surface: var(--mdui-color=
+-on-surface-dark); --mdui-color-on-surface-variant: var(--mdui-color-on-sur=
+face-variant-dark); --mdui-color-inverse-surface: var(--mdui-color-inverse-=
+surface-dark); --mdui-color-inverse-on-surface: var(--mdui-color-inverse-on=
+-surface-dark); --mdui-color-background: var(--mdui-color-background-dark);=
+--mdui-color-on-background: var(--mdui-color-on-background-dark); --mdui-c=
+olor-error: var(--mdui-color-error-dark); --mdui-color-error-container: var=
+(--mdui-color-error-container-dark); --mdui-color-on-error: var(--mdui-colo=
+r-on-error-dark); --mdui-color-on-error-container: var(--mdui-color-on-erro=
+r-container-dark); --mdui-color-outline: var(--mdui-color-outline-dark); --=
+mdui-color-outline-variant: var(--mdui-color-outline-variant-dark); --mdui-=
+color-shadow: var(--mdui-color-shadow-dark); --mdui-color-surface-tint-colo=
+r: var(--mdui-color-surface-tint-color-dark); --mdui-color-scrim: var(--mdu=
+i-color-scrim-dark); color: rgb(var(--mdui-color-on-background)); backgroun=
+d-color: rgb(var(--mdui-color-background)); }
+
+@media (prefers-color-scheme: dark) {
+.mdui-theme-auto { color-scheme: dark; --mdui-color-primary: var(--mdui-c=
+olor-primary-dark); --mdui-color-primary-container: var(--mdui-color-primar=
+y-container-dark); --mdui-color-on-primary: var(--mdui-color-on-primary-dar=
+k); --mdui-color-on-primary-container: var(--mdui-color-on-primary-containe=
+r-dark); --mdui-color-inverse-primary: var(--mdui-color-inverse-primary-dar=
+k); --mdui-color-secondary: var(--mdui-color-secondary-dark); --mdui-color-=
+secondary-container: var(--mdui-color-secondary-container-dark); --mdui-col=
+or-on-secondary: var(--mdui-color-on-secondary-dark); --mdui-color-on-secon=
+dary-container: var(--mdui-color-on-secondary-container-dark); --mdui-color=
+-tertiary: var(--mdui-color-tertiary-dark); --mdui-color-tertiary-container=
+: var(--mdui-color-tertiary-container-dark); --mdui-color-on-tertiary: var(=
+--mdui-color-on-tertiary-dark); --mdui-color-on-tertiary-container: var(--m=
+dui-color-on-tertiary-container-dark); --mdui-color-surface: var(--mdui-col=
+or-surface-dark); --mdui-color-surface-dim: var(--mdui-color-surface-dim-da=
+rk); --mdui-color-surface-bright: var(--mdui-color-surface-bright-dark); --=
+mdui-color-surface-container-lowest: var(--mdui-color-surface-container-low=
+est-dark); --mdui-color-surface-container-low: var(--mdui-color-surface-con=
+tainer-low-dark); --mdui-color-surface-container: var(--mdui-color-surface-=
+container-dark); --mdui-color-surface-container-high: var(--mdui-color-surf=
+ace-container-high-dark); --mdui-color-surface-container-highest: var(--mdu=
+i-color-surface-container-highest-dark); --mdui-color-surface-variant: var(=
+--mdui-color-surface-variant-dark); --mdui-color-on-surface: var(--mdui-col=
+or-on-surface-dark); --mdui-color-on-surface-variant: var(--mdui-color-on-s=
+urface-variant-dark); --mdui-color-inverse-surface: var(--mdui-color-invers=
+e-surface-dark); --mdui-color-inverse-on-surface: var(--mdui-color-inverse-=
+on-surface-dark); --mdui-color-background: var(--mdui-color-background-dark=
+); --mdui-color-on-background: var(--mdui-color-on-background-dark); --mdui=
+-color-error: var(--mdui-color-error-dark); --mdui-color-error-container: v=
+ar(--mdui-color-error-container-dark); --mdui-color-on-error: var(--mdui-co=
+lor-on-error-dark); --mdui-color-on-error-container: var(--mdui-color-on-er=
+ror-container-dark); --mdui-color-outline: var(--mdui-color-outline-dark); =
+--mdui-color-outline-variant: var(--mdui-color-outline-variant-dark); --mdu=
+i-color-shadow: var(--mdui-color-shadow-dark); --mdui-color-surface-tint-co=
+lor: var(--mdui-color-surface-tint-color-dark); --mdui-color-scrim: var(--m=
+dui-color-scrim-dark); color: rgb(var(--mdui-color-on-background)); backgro=
+und-color: rgb(var(--mdui-color-background)); }
+}
+
+:root { --mdui-elevation-level0: none; --mdui-elevation-level1: 0 0.5px 1.5=
+px 0 rgba(var(--mdui-color-shadow), 19%),0 0 1px 0 rgba(var(--mdui-color-sh=
+adow), 3.9%); --mdui-elevation-level2: 0 0.85px 3px 0 rgba(var(--mdui-color=
+-shadow), 19%),0 0.25px 1px 0 rgba(var(--mdui-color-shadow), 3.9%); --mdui-=
+elevation-level3: 0 1.25px 5px 0 rgba(var(--mdui-color-shadow), 19%),0 0.33=
+33px 1.5px 0 rgba(var(--mdui-color-shadow), 3.9%); --mdui-elevation-level4:=
+0 1.85px 6.25px 0 rgba(var(--mdui-color-shadow), 19%),0 0.5px 1.75px 0 rgb=
+a(var(--mdui-color-shadow), 3.9%); --mdui-elevation-level5: 0 2.75px 9px 0 =
+rgba(var(--mdui-color-shadow), 19%),0 0.25px 3px 0 rgba(var(--mdui-color-sh=
+adow), 3.9%); }
+
+:root { --mdui-motion-easing-linear: cubic-bezier(0, 0, 1, 1); --mdui-motio=
+n-easing-standard: cubic-bezier(0.2, 0, 0, 1); --mdui-motion-easing-standar=
+d-accelerate: cubic-bezier(0.3, 0, 1, 1); --mdui-motion-easing-standard-dec=
+elerate: cubic-bezier(0, 0, 0, 1); --mdui-motion-easing-emphasized: var(--m=
+dui-motion-easing-standard); --mdui-motion-easing-emphasized-accelerate: cu=
+bic-bezier(0.3, 0, 0.8, 0.15); --mdui-motion-easing-emphasized-decelerate: =
+cubic-bezier(0.05, 0.7, 0.1, 1); --mdui-motion-duration-short1: 50ms; --mdu=
+i-motion-duration-short2: 100ms; --mdui-motion-duration-short3: 150ms; --md=
+ui-motion-duration-short4: 200ms; --mdui-motion-duration-medium1: 250ms; --=
+mdui-motion-duration-medium2: 300ms; --mdui-motion-duration-medium3: 350ms;=
+--mdui-motion-duration-medium4: 400ms; --mdui-motion-duration-long1: 450ms=
+; --mdui-motion-duration-long2: 500ms; --mdui-motion-duration-long3: 550ms;=
+--mdui-motion-duration-long4: 600ms; --mdui-motion-duration-extra-long1: 7=
+00ms; --mdui-motion-duration-extra-long2: 800ms; --mdui-motion-duration-ext=
+ra-long3: 900ms; --mdui-motion-duration-extra-long4: 1000ms; }
+
+.mdui-prose { line-height: 1.75; overflow-wrap: break-word; }
+
+.mdui-prose :first-child { margin-top: 0px; }
+
+.mdui-prose :last-child { margin-bottom: 0px; }
+
+.mdui-prose code, .mdui-prose kbd, .mdui-prose pre, .mdui-prose pre tt, .md=
+ui-prose samp { font-family: Consolas, Courier, "Courier New", monospace; }
+
+.mdui-prose caption { text-align: left; }
+
+.mdui-prose [draggable=3D"true"], .mdui-prose [draggable] { cursor: move; }
+
+.mdui-prose [draggable=3D"false"] { cursor: inherit; }
+
+.mdui-prose dl, .mdui-prose form, .mdui-prose ol, .mdui-prose p, .mdui-pros=
+e ul { margin-top: 1.25em; margin-bottom: 1.25em; }
+
+.mdui-prose a { text-decoration: none; outline: 0px; color: rgb(var(--mdui-=
+color-primary)); }
+
+.mdui-prose a:focus, .mdui-prose a:hover { border-bottom: .0625rem solid rg=
+b(var(--mdui-color-primary)); }
+
+.mdui-prose small { font-size: 0.875em; }
+
+.mdui-prose strong { font-weight: 600; }
+
+.mdui-prose blockquote { margin: 1.6em 2em; padding-left: 1em; border-left:=
+.25rem solid rgb(var(--mdui-color-surface-variant)); }
+
+@media only screen and (max-width: 599.98px) {
+.mdui-prose blockquote { margin: 1.6em 0px; }
+}
+
+.mdui-prose blockquote footer { font-size: 86%; color: rgb(var(--mdui-color=
+-on-surface-variant)); }
+
+.mdui-prose mark { color: inherit; background-color: rgb(var(--mdui-color-s=
+econdary-container)); border-bottom: .0625rem solid rgb(var(--mdui-color-se=
+condary)); margin: 0px 0.375rem; padding: 0.125rem; }
+
+.mdui-prose h1, .mdui-prose h2, .mdui-prose h3, .mdui-prose h4, .mdui-prose=
+h5, .mdui-prose h6 { font-weight: 400; }
+
+.mdui-prose h1 small, .mdui-prose h2 small, .mdui-prose h3 small, .mdui-pro=
+se h4 small, .mdui-prose h5 small, .mdui-prose h6 small { font-weight: inhe=
+rit; font-size: 65%; color: rgb(var(--mdui-color-on-surface-variant)); }
+
+.mdui-prose h1 strong, .mdui-prose h2 strong, .mdui-prose h3 strong, .mdui-=
+prose h4 strong, .mdui-prose h5 strong, .mdui-prose h6 strong { font-weight=
+: 600; }
+
+.mdui-prose h1 { font-size: 2.5em; margin-top: 0px; margin-bottom: 1.25em; =
+line-height: 1.1111; }
+
+.mdui-prose h2 { font-size: 1.875em; margin-top: 2.25em; margin-bottom: 1.1=
+25em; line-height: 1.3333; }
+
+.mdui-prose h3 { font-size: 1.5em; margin-top: 2em; margin-bottom: 1em; lin=
+e-height: 1.6; }
+
+.mdui-prose h4 { font-size: 1.25em; margin-top: 1.875em; margin-bottom: 0.8=
+75em; line-height: 1.5; }
+
+.mdui-prose h2 + *, .mdui-prose h3 + *, .mdui-prose h4 + *, .mdui-prose hr =
++ * { margin-top: 0px; }
+
+.mdui-prose code, .mdui-prose kbd { font-size: 0.875em; color: rgb(var(--md=
+ui-color-on-surface-container)); background-color: rgba(var(--mdui-color-su=
+rface-variant),.28); padding: 0.125rem 0.375rem; border-radius: var(--mdui-=
+shape-corner-extra-small); }
+
+.mdui-prose kbd { font-size: 0.9em; }
+
+.mdui-prose abbr[title] { text-decoration: none; cursor: help; border-botto=
+m: .0625rem dotted rgb(var(--mdui-color-on-surface-variant)); }
+
+.mdui-prose ins, .mdui-prose u { text-decoration: none; border-bottom: .062=
+5rem solid rgb(var(--mdui-color-on-surface-variant)); }
+
+.mdui-prose del { text-decoration: line-through; }
+
+.mdui-prose hr { margin-top: 3em; margin-bottom: 3em; border-top: none; bor=
+der-right: none; border-left: none; border-image: initial; border-bottom: .=
+0625rem solid rgb(var(--mdui-color-surface-variant)); }
+
+.mdui-prose pre { margin-top: 1.7143em; margin-bottom: 1.7143em; }
+
+.mdui-prose pre code { padding: 0.8571em 1.1429em; overflow-x: auto; backgr=
+ound-color: rgb(var(--mdui-color-surface-container)); color: rgb(var(--mdui=
+-color-on-surface-container)); border-radius: var(--mdui-shape-corner-extra=
+-small); }
+
+.mdui-prose ol, .mdui-prose ul { padding-left: 1.625em; }
+
+.mdui-prose ul { list-style-type: disc; }
+
+.mdui-prose ol { list-style-type: decimal; }
+
+.mdui-prose ol[type=3D"A"] { list-style-type: upper-alpha; }
+
+.mdui-prose ol[type=3D"a"] { list-style-type: lower-alpha; }
+
+.mdui-prose ol[type=3D"I"] { list-style-type: upper-roman; }
+
+.mdui-prose ol[type=3D"i"] { list-style-type: lower-roman; }
+
+.mdui-prose ol[type=3D"1"] { list-style-type: decimal; }
+
+.mdui-prose li { margin-top: 0.5em; margin-bottom: 0.5em; }
+
+.mdui-prose ol > li, .mdui-prose ul > li { padding-left: 0.375em; }
+
+.mdui-prose ol > li > p, .mdui-prose ul > li > p { margin-top: 0.75em; marg=
+in-bottom: 0.75em; }
+
+.mdui-prose ol > li > :first-child, .mdui-prose ul > li > :first-child { ma=
+rgin-top: 1.25em; }
+
+.mdui-prose ol > li > :last-child, .mdui-prose ul > li > :last-child { marg=
+in-bottom: 1.25em; }
+
+.mdui-prose ol > li::marker { font-weight: 400; color: rgb(var(--mdui-color=
+-on-surface-variant)); }
+
+.mdui-prose ul > li::marker { color: rgb(var(--mdui-color-on-surface-varian=
+t)); }
+
+.mdui-prose ol ol, .mdui-prose ol ul, .mdui-prose ul ol, .mdui-prose ul ul =
+{ margin-top: 0.75em; margin-bottom: 0.75em; }
+
+.mdui-prose fieldset, .mdui-prose img { border: none; }
+
+.mdui-prose figure, .mdui-prose img, .mdui-prose video { margin-top: 2em; m=
+argin-bottom: 2em; max-width: 100%; }
+
+.mdui-prose figure > * { margin-top: 0px; margin-bottom: 0px; }
+
+.mdui-prose figcaption { font-size: 0.875em; line-height: 1.4286; margin-to=
+p: 0.8571em; color: rgb(var(--mdui-color-on-surface-variant)); }
+
+.mdui-prose figcaption:empty::before { z-index: -1; cursor: text; content: =
+attr(placeholder); color: rgb(var(--mdui-color-on-surface-variant)); }
+
+.mdui-prose table { margin-top: 2em; margin-bottom: 2em; border: .0625rem s=
+olid rgb(var(--mdui-color-surface-variant)); border-radius: var(--mdui-shap=
+e-corner-large); }
+
+.mdui-table { width: 100%; overflow-x: auto; margin-top: 2em; margin-bottom=
+: 2em; border: .0625rem solid rgb(var(--mdui-color-surface-variant)); borde=
+r-radius: var(--mdui-shape-corner-large); }
+
+.mdui-table table { margin-top: 0px; margin-bottom: 0px; border: none; bord=
+er-radius: 0px; }
+
+.mdui-prose table, .mdui-table table { width: 100%; text-align: left; borde=
+r-collapse: collapse; border-spacing: 0px; }
+
+.mdui-prose td, .mdui-prose th, .mdui-table td, .mdui-table th { border-top=
+: .0625rem solid rgb(var(--mdui-color-surface-variant)); }
+
+.mdui-prose td:not(:first-child), .mdui-prose th:not(:first-child), .mdui-t=
+able td:not(:first-child), .mdui-table th:not(:first-child) { border-left: =
+.0625rem solid rgb(var(--mdui-color-surface-variant)); }
+
+.mdui-prose td:not(:last-child), .mdui-prose th:not(:last-child), .mdui-tab=
+le td:not(:last-child), .mdui-table th:not(:last-child) { border-right: .06=
+25rem solid rgb(var(--mdui-color-surface-variant)); }
+
+.mdui-prose tbody:first-child tr:first-child td, .mdui-prose thead:first-ch=
+ild tr:first-child th, .mdui-table tbody:first-child tr:first-child td, .md=
+ui-table thead:first-child tr:first-child th { border-top: 0px; }
+
+.mdui-prose tfoot td, .mdui-prose tfoot th, .mdui-prose thead td, .mdui-pro=
+se thead th, .mdui-table tfoot td, .mdui-table tfoot th, .mdui-table thead =
+td, .mdui-table thead th { position: relative; vertical-align: middle; padd=
+ing: 1.125rem 1rem; font-weight: var(--mdui-typescale-title-medium-weight);=
+letter-spacing: var(--mdui-typescale-title-medium-tracking); line-height: =
+var(--mdui-typescale-title-medium-line-height); color: rgb(var(--mdui-color=
+-on-surface-variant)); box-shadow: var(--mdui-elevation-level1); }
+
+.mdui-prose tbody td, .mdui-prose tbody th, .mdui-table tbody td, .mdui-tab=
+le tbody th { padding: 0.875rem 1rem; }
+
+.mdui-prose tbody th, .mdui-table tbody th { vertical-align: middle; font-w=
+eight: inherit; }
+
+.mdui-prose tbody td, .mdui-table tbody td { vertical-align: baseline; }
+
+:root { --mdui-shape-corner-none: 0; --mdui-shape-corner-extra-small: 0.25r=
+em; --mdui-shape-corner-small: 0.5rem; --mdui-shape-corner-medium: 0.75rem;=
+--mdui-shape-corner-large: 1rem; --mdui-shape-corner-extra-large: 1.75rem;=
+--mdui-shape-corner-full: 1000rem; }
+
+:root { --mdui-state-layer-hover: 0.08; --mdui-state-layer-focus: 0.12; --m=
+dui-state-layer-pressed: 0.12; --mdui-state-layer-dragged: 0.16; }
+
+:root { --mdui-typescale-display-large-weight: 400; --mdui-typescale-displa=
+y-medium-weight: 400; --mdui-typescale-display-small-weight: 400; --mdui-ty=
+pescale-display-large-line-height: 4rem; --mdui-typescale-display-medium-li=
+ne-height: 3.25rem; --mdui-typescale-display-small-line-height: 2.75rem; --=
+mdui-typescale-display-large-size: 3.5625rem; --mdui-typescale-display-medi=
+um-size: 2.8125rem; --mdui-typescale-display-small-size: 2.25rem; --mdui-ty=
+pescale-display-large-tracking: 0rem; --mdui-typescale-display-medium-track=
+ing: 0rem; --mdui-typescale-display-small-tracking: 0rem; --mdui-typescale-=
+headline-large-weight: 400; --mdui-typescale-headline-medium-weight: 400; -=
+-mdui-typescale-headline-small-weight: 400; --mdui-typescale-headline-large=
+-line-height: 2.5rem; --mdui-typescale-headline-medium-line-height: 2.25rem=
+; --mdui-typescale-headline-small-line-height: 2rem; --mdui-typescale-headl=
+ine-large-size: 2rem; --mdui-typescale-headline-medium-size: 1.75rem; --mdu=
+i-typescale-headline-small-size: 1.5rem; --mdui-typescale-headline-large-tr=
+acking: 0rem; --mdui-typescale-headline-medium-tracking: 0rem; --mdui-types=
+cale-headline-small-tracking: 0rem; --mdui-typescale-title-large-weight: 40=
+0; --mdui-typescale-title-medium-weight: 500; --mdui-typescale-title-small-=
+weight: 500; --mdui-typescale-title-large-line-height: 1.75rem; --mdui-type=
+scale-title-medium-line-height: 1.5rem; --mdui-typescale-title-small-line-h=
+eight: 1.25rem; --mdui-typescale-title-large-size: 1.375rem; --mdui-typesca=
+le-title-medium-size: 1rem; --mdui-typescale-title-small-size: 0.875rem; --=
+mdui-typescale-title-large-tracking: 0rem; --mdui-typescale-title-medium-tr=
+acking: 0.009375rem; --mdui-typescale-title-small-tracking: 0.00625rem; --m=
+dui-typescale-label-large-weight: 500; --mdui-typescale-label-medium-weight=
+: 500; --mdui-typescale-label-small-weight: 500; --mdui-typescale-label-lar=
+ge-line-height: 1.25rem; --mdui-typescale-label-medium-line-height: 1rem; -=
+-mdui-typescale-label-small-line-height: 0.375rem; --mdui-typescale-label-l=
+arge-size: 0.875rem; --mdui-typescale-label-medium-size: 0.75rem; --mdui-ty=
+pescale-label-small-size: 0.6875rem; --mdui-typescale-label-large-tracking:=
+0.00625rem; --mdui-typescale-label-medium-tracking: 0.03125rem; --mdui-typ=
+escale-label-small-tracking: 0.03125rem; --mdui-typescale-body-large-weight=
+: 400; --mdui-typescale-body-medium-weight: 400; --mdui-typescale-body-smal=
+l-weight: 400; --mdui-typescale-body-large-line-height: 1.5rem; --mdui-type=
+scale-body-medium-line-height: 1.25rem; --mdui-typescale-body-small-line-he=
+ight: 1rem; --mdui-typescale-body-large-size: 1rem; --mdui-typescale-body-m=
+edium-size: 0.875rem; --mdui-typescale-body-small-size: 0.75rem; --mdui-typ=
+escale-body-large-tracking: 0.009375rem; --mdui-typescale-body-medium-track=
+ing: 0.015625rem; --mdui-typescale-body-small-tracking: 0.025rem; }
+
+.mdui-lock-screen { overflow: hidden !important; }
+------MultipartBoundary--sSwd8kY8onBFmLvNmQkbD09tetEL3Li19uciukxAJ3----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-0754be1f-f3ee-4d5f-86fe-78385efa0280@mhtml.blink
+
+@charset "utf-8";
+=0A
+------MultipartBoundary--sSwd8kY8onBFmLvNmQkbD09tetEL3Li19uciukxAJ3----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-6726f325-9e3a-48ee-88ab-ab80008a86a8@mhtml.blink
+
+@charset "utf-8";
+
+:root { --transparent: rgba(255, 255, 255, 0); --white: hsl(0, 0%, 100%); -=
+-th-white: hsl(0, 0%, 100%); --black: hsl(0, 0%, 0%); --th-black: hsl(0, 0%=
+, 0%); --lightGrey: hsl(0, 0%, 94%); --th-grey-white: hsl(210, 10%, 97%); -=
+-th-grey-light: hsl(210, 10%, 94.8%); --th-grey-medium: hsl(212, 10%, 94%);=
+--th-grey: hsl(216, 22%, 91%); --th-grey-dark: hsl(221, 20%, 78%); --th-sl=
+ate: hsl(221, 20%, 33%); --th-slate-light: hsl(222, 20%, 45%); --th-slate-d=
+ark: hsl(222, 22%, 18%); --th-slate-alt: #333F57; --th-slate-hover: #3E4A62=
+; --th-slate-dark-hover800: hsl(220, 22%, 24%); --th-slate-dark-active800: =
+hsl(219, 24%, 26%); --th-slate-dark-hover600: hsl(222, 22%, 21%); --th-slat=
+e-dark-active600: hsl(221, 24%, 23%); --th-cool-grey-600: hsl(203, 16%, 44%=
+); --th-cool-grey-700: hsl(204, 18%, 30%); --th-cool-grey-750: hsl(203, 18%=
+, 32%); --th-cool-grey-800: hsl(209, 20%, 25%); --th-cool-grey-850: hsl(209=
+, 20%, 21%); --th-cool-grey-900: hsl(210, 24%, 16%); --fontColorDark: var( =
+--th-slate-dark); --fontColorWhite: hsl(0, 0%, 100%); --list-item-hover: hs=
+l(225, 20%, 96%); --list-item-light-hover: hsl(210, 20%, 98%); --list-item-=
+hover-dark: hsla(222, 22%, 18%, 0.50); --list-item-light-hover-dark: hsla(2=
+22, 20%, 33%, 0.50); --greyTransparent: hsla(222, 22%, 18%, 0.12); --whiteT=
+ransparent: hsla(0, 0%, 100%, 0.12); --defaultColor: hsl(220, 20%, 91%); --=
+defaultColorHover: hsl(220, 19%, 78%); --defaultColorActive: hsl(220, 19%, =
+68%); --defaultColorSelected: hsl(221, 20%, 75%); --buttonBorderColor: 2px =
+solid hsl(220, 20%, 91%); --buttonBorderColorHover: 2px solid hsl(220, 19%,=
+78%); --buttonBorderColorActive: 2px solid hsl(220, 19%, 68%); --buttonBor=
+derColorSelected: 2px solid hsl(221, 20%, 75%); --iconFillColor: var( --th-=
+slate-dark ); --primaryColor: hsl(211, 100%, 45%); --primaryColorHover: hsl=
+(211, 100%, 35%); --primaryColorActive: hsl(211, 100%, 25%); --primaryButto=
+nBorder: 2px solid hsl(211, 100%, 45%); --primaryButtonBorderHover: 2px sol=
+id hsl(211, 100%, 35%); --primaryButtonBorderActive: 2px solid hsl(211, 100=
+%, 25%); --secondaryColor: var(--th-slate); --secondaryColorHover: hsl(221,=
+20%, 23%); --secondaryColorActive: hsl(221, 20%, 13%); --secondaryButtonBo=
+rderColor: 2px solid var(--th-slate); --secondaryButtonBorderColorHover: 2p=
+x solid hsl(221, 20%, 23%); --secondaryButtonBorderColorActive: 2px solid h=
+sl(221, 20%, 13%); --disabledColor: hsl(0, 0%, 50%); --disabledBackgroundCo=
+lor: hsl(0, 0%, 95%); --brandColorGreen: hsl(76, 60%, 52%); --brandColorGre=
+enActive: hsl(76, 62%, 40%); --primaryColorGreen: hsl(79, 100%, 24%); --pri=
+maryColorGreenHover: hsl(79, 100%, 14%); --primaryColorGreenActive: hsl(79,=
+100%, 4%); --buttonBorderGreen: 2px solid hsl(79, 100%, 24%); --buttonBord=
+erGreenHover: 2px solid hsl(79, 100%, 14%); --buttonBorderGreenActive: 2px =
+solid hsl(79, 100%, 4%); --brandColorPink: hsl(344, 98%, 59%); --primaryCol=
+orPink: #e12362; --primaryColorPinkHover: hsl(340, 76%, 41%); --primaryColo=
+rPinkActive: hsl(340, 76%, 31%); --buttonBorderPink: 2px solid hsl(340, 76%=
+, 51%); --buttonBorderPinkHover: 2px solid hsl(340, 76%, 41%); --buttonBord=
+erPinkActive: 2px solid hsl(340, 76%, 31%); --brandColorTeal: hsl(180, 85%,=
+34%); --primaryColorTeal: hsl(184, 50%, 35%); --primaryColorTealHover: hsl=
+(184, 50%, 25%); --primaryColorTealActive: hsl(184, 50%, 15%); --buttonBord=
+erTeal: 2px solid hsl(184, 50%, 35%); --buttonBorderTealHover: 2px solid hs=
+l(184, 50%, 25%); --buttonBorderTealActive: 2px solid hsl(184, 50%, 15%); -=
+-brandColorPurple: hsl(264, 100%, 68%); --primaryColorPurple: hsl(264, 83%,=
+62%); --primaryColorPurpleHover: hsl(264, 83%, 52%); --primaryColorPurpleA=
+ctive: hsl(264, 83%, 42%); --buttonBorderPurple: 2px solid hsl(264, 83%, 62=
+%); --buttonBorderPurpleHover: 2px solid hsl(264, 83%, 52%); --buttonBorder=
+PurpleActive: 2px solid hsl(264, 83%, 42%); --brandColorOrange: hsl(33, 94%=
+, 48%); --primaryColorOrange: hsl(15, 79%, 45%); --primaryColorOrangeHover:=
+hsl(15, 80%, 35%); --primaryColorOrangeActive: hsl(15, 80%, 25%); --button=
+BorderOrange: 2px solid hsl(15, 79%, 45%); --buttonBorderOrangeHover: 2px s=
+olid hsl(15, 80%, 35%); --buttonBorderOrangeActive: 2px solid hsl(15, 80%, =
+25%); --brandColorBlue: hsl(197, 100%, 50%); --brandColorBlueActive: hsl(19=
+7, 100%, 39%); --brandColorBlueWCAG: hsl(197, 100%, 42%); --primaryColorBlu=
+e: hsl(201, 100%, 37%); --primaryColorBlueHover: hsl(201, 100%, 27%); --pri=
+maryColorBlueActive: hsl(201, 100%, 17%); --buttonBorderBlue: 2px solid hsl=
+(201, 100%, 37%); --buttonBorderBlueHover: 2px solid hsl(201, 100%, 27%); -=
+-buttonBorderBlueActive: 2px solid hsl(201, 100%, 17%); --BrandcolorYellow:=
+hsl(41, 90%, 61%); --primaryColorReachDeck: hsl(209, 100%, 39%); --primary=
+ColorReachDeckHover: hsl(209, 100%, 29%); --primaryColorReachDeckActive: hs=
+l(209, 100%, 19%); --buttonBorderReachDeck: 2px solid hsl(209, 100%, 39%); =
+--buttonBorderReachDeckHover: 2px solid hsl(209, 100%, 29%); --buttonBorder=
+ReachDeckActive: 2px solid hsl(209, 100%, 19%); --reachDeckEditorColor: hsl=
+(112, 100%, 26%); --launchpadButtonLight: hsl(210, 10%, 96%); --launchpadBu=
+ttonLightHover: hsl(220, 8%, 92%); --launchpadButtonLightActive: hsl(0, 0%,=
+90%); --ContrastPinkOrbitNoteHover: hsl(343, 81%, 48%); --ContrastPinkOrbi=
+tNoteActive: hsl(345, 96%, 42%); --ContrastButtonBorderPink: hsl(345, 96%, =
+42%); --primaryColorClaroNavy: hsl(207, 74%, 27%); --primaryColorClaroNavyH=
+over: hsl(206, 83%, 21%); --primaryColorClaroNavyActive: hsl(206, 89%, 17%)=
+; --buttonBorderClaro: 2px solid hsl(207, 74%, 27%); --buttonBorderClaroHov=
+er: 2px solid hsl(206, 83%, 21%); --buttonBorderClaroActive: 2px solid hsl(=
+206, 89%, 17%); --primaryColorClaroBlue: hsl(201, 100%, 37%); --primaryColo=
+rClaroBlueHover: hsl(201, 100%, 31%); --primaryColorClaroBlueActive: hsl(20=
+1, 100%, 27%); --claroDark: hsl(218, 54%, 20%); --claroGrey: hsl(217, 31%, =
+68%); --claroBlue: hsl(191, 88%, 40%); --claroBlueAlt: hsl(188, 78%, 50%); =
+--claroGreen: hsl(75, 63%, 51%); --altColor: var(--claroGreen); --altColorH=
+over: hsl(75, 70%, 40%); --altColorActive: hsl(75, 77%, 33%); --altButtonBo=
+rderColor: 2px solid var(--claroGreen); --altButtonBorderColorHover: 2px so=
+lid hsl(75, 70%, 40%); --altButtonBorderColorActive: 2px solid hsl(75, 77%,=
+33%); --brandColorLingdys: hsl(0, 82%, 49%); --primaryColorLingdys: hsl(21=
+7, 34%, 38%); --primaryColorLingdysHover: hsl(217, 37%, 24%); --primaryColo=
+rLingdysActive: hsl(217, 39%, 18%); --buttonBorderLingdys: 2px solid hsl(21=
+7, 34%, 38%); --buttonBorderLingdysHover: 2px solid hsl(217, 37%, 24%); --b=
+uttonBorderLingdysActive: 2px solid hsl(217, 39%, 18%); --brandColorAppWrit=
+er: #F70790; --primaryColorAppWriter: #D8087F; --primaryColorAppWriterHover=
+: #B40669; --primaryColorAppWriterActive: #9F055C; --buttonBorderAppwriter:=
+2px solid #D8087F; --buttonBorderAppwriterHover: 2px solid #B40669; --butt=
+onBorderAppWriterActive: 2px solid #9F055C; --iconToggleFillOrbitNote: hsl(=
+196, 99%, 50%); --textColor: var( --th-slate-dark ); --textColorLight: var(=
+--th-white ); --border: 1px solid var( --th-grey ); --borderDark: 1px soli=
+d var( --th-grey-dark ); --infoColor: hsl(194, 77%, 24%); --successColor: h=
+sla(134, 71%, 43%, 0.584); --errorColor: hsl(0, 71%, 51%); --warningColor: =
+hsl(45, 97%, 51%); --infoBackgroundColor: hsl(180, 100%, 99%); --successBac=
+kgroundColor: hsl(78, 100%, 98%); --errorBackgroundColor: hsl(0, 100%, 98%)=
+; --warningBackgroundColor: hsl(35, 100%, 98%); --notificationDarkModeBackg=
+round: hsl(218, 22%, 37%); --infoBorderColor: hsl(191, 44%, 82%); --success=
+BorderColor: hsl(100, 28%, 69%); --errorBorderColor: hsl(0, 37%, 73%); --wa=
+rningBorderColor: hsl(41, 30%, 71%); --notificationDarkModeBorder: hsl(217,=
+19%, 41%); --infoTitleColor: hsl(194, 77%, 24%); --successTitleColor: hsl(=
+121, 48%, 23%); --errorTitleColor: hsl(1, 47%, 40%); --warningTitleColor: h=
+sl(37, 92%, 25%); --infoWarningColor: hsl(194, 77%, 24%); --successWarningC=
+olor: hsla(121, 48%, 23%, 0.8); --errorWarningColor: hsla(1, 47%, 40%, 0.8)=
+; --warningWarningColor: hsla(37, 92%, 25%, 0.8); --buttonBorderRadius: 30p=
+x; --buttonRoundness: 30px; --buttonNoBackgroundTextColor: var( --th-slate-=
+dark); --buttonNoBackgroundIconColor: var( --th-slate-dark); --buttonNoBack=
+groundColor: transparent; --buttonNoBackgroundColorHover: var(--icon-button=
+-background-hover-color); --buttonNoBackgroundColorActive: var(--icon-butto=
+n-background-active-color); --buttonNoBackgroundBorder: 2px solid transpare=
+nt; --buttonNoBackgroundBorderHover: 2px solid transparent; --buttonNoBackg=
+roundBorderActive: 2px solid transparent; --activeDotColor: inherit; --them=
+eColorDefault: var(--defaultColor); --themeColorGroundworks: var(--primaryC=
+olor); --themeColorReadWrite: var(--primaryColorPurple); --themeColorEquati=
+o: var(--primaryColorBlue); --themeColorBrowsealoud: var(--primaryColorOran=
+ge); --themeColorWriq: var(--primaryColorTeal); --themeColorFluencyTutor: v=
+ar(--primaryColorGreen); --themeColorSnapVerter: var(--primaryColorGreen); =
+--themeColorSpeechStream: var(--primaryColorPink); --themeColorTexthelp: va=
+r(--primaryColorTeal); --themeColorReachDeck: var(--primaryColorReachDeck);=
+--themeColorPdfReader: var(--primaryColorBlue); --uniloginBackgroundColor:=
+#F7F7F7; --uniloginWindowBackgroundColor: var(--primaryColorBlue); --line-=
+height-base: 1.5; --zindex-modal: 1050; --modal-dialog-margin: 2em; --modal=
+-content-border-radius: 1px; --modal-inner-padding: 1.5em; --modal-title-pa=
+dding: 1.5em; --modal-title-line-height: var(--line-height-base); --modal-c=
+ontent-bg: #fff; --modal-content-border-color: rgba(0, 0, 0, .2); --modal-c=
+ontent-fallback-border-color: #999; --modal-backdrop-bg: #000; --modal-back=
+drop-opacity: .5; --modal-header-border-color: #e5e5e5; --modal-footer-bord=
+er-color: var(--modal-header-border-color); --modal-header-background-color=
+: #f5f5f5; --select-border: 1px solid #DADADA; --select-background: hsl(0, =
+0%, 100%); --select-background-color: #efefef; --select-background-color-ho=
+ver: hsl(0, 0%, 97%); --input-border: 1px solid #DADADA; --input-background=
+-color: #ffffff; --settings-title-color: var(--primaryColor); --settings-it=
+em-background-color: var(--th-white); --settings-item-background-hover-colo=
+r: var(--th-grey-medium); --settings-item-background-active-color: var(--th=
+-grey); --list-group-background-color: transparent; --list-group-item-backg=
+round-color: var(--th-white); --list-group-item-background-hover-color: var=
+(--th-grey-light); --list-group-item-background-active-color: var(--th-grey=
+); --list-group-item-icon-color: var(--th-slate-dark); --ListGroupSearchIte=
+mColor: var(--th-white); --ListGroupSearchItemColorHover: #f9fafb; --ListGr=
+oupSearchItemTextColor: var(--th-slate); --ListGroupSearchItemBorderColor: =
+hsla(0, 0%, 0%, 0.15); --ListGroupSearchItemAsideColor: hsl(0, 0%, 95%); --=
+ListGroupSearchItemAsideTextColor: #000; --toolbar-button-disabled: hsl(0, =
+0%, 96.1%); --toolbar-button-background: hsl(0, 0%, 96.1%); --toolbar-butto=
+n-hover-background: hsl(0, 0%, 80%); --toolbar-button-color: hsl(0, 0%, 0%)=
+; --toolbar-button-hover-active-background: hsl(0, 0%, 70.2%); --toolbar-bu=
+tton-default-size: 43px; --toolbar-button-focus-color: hsl(213, 71.3%, 60.4=
+%); --toolbar-button-svg-color: hsl(0, 0%, 29%); --toolbar-button-toggle-co=
+lor: hsl(264, 100%, 68%); --panel-inner-padding: .7em; --icon-button-backgr=
+ound-default-color: hsla(0, 0%, 0%, 0.077); --icon-button-background-hover-=
+color: hsla(0, 0%, 0%, 0.125); --icon-button-background-active-color: hsla(=
+0, 0%, 0%, 0.187); --icon-button-background-default-color-dark: rgba(255, 2=
+55, 255, 0.077); --icon-button-background-hover-color-dark: rgba(255, 255, =
+255, 0.146); --icon-button-background-active-color-dark: rgba(255, 255, 255=
+, 0.221); --icon-button-border-color: solid 2px transparent; --menuIconFill=
+Color: var(--th-slate); --cardIconFillColor: var(--th-slate); --default-men=
+u-notify-background-colour: hsl(264, 100%, 68%); --toolbarButtonBackgroundC=
+olor: var( --defaultColor); --toolbarButtonBackgroundHoverColor: var( --ico=
+n-button-background-hover-color); --toolbarButtonBackgroundActiveColor: var=
+( --icon-button-background-active-color); --toolbarIconHoverFill: var( --th=
+-slate); --toolbarIconToggleFill: var( --primaryColor); --dashboardContentB=
+ackgroundColor: #fff; --dashboardHeaderBackgroundColor: #fff; --dashboardSi=
+debarBorderTopColor: var( --lightGrey); --dashboardTextColor: var(--th-slat=
+e); --dashboardTitleTextColor: var(--fontColorDark); --dashboardSubTitleTex=
+tColor: var(--th-slate-light); --dashboardCardBackgroundColor: var(--white)=
+; --dashboardCardBackgroundHoverColor: var(--th-grey-light); --dashboardCar=
+dBackgroundActiveColor: var(--lightGrey); --dashboardCardHighlightColor: va=
+r(--primaryColor); --dashboardCardBorderColor: var(--lightGrey); --dashboar=
+dCardFooterLinkColor: var(--primaryColor); --dashboardCardAuditorColor: hsl=
+(208, 100%, 43%); --dashboardCardAuditorLabelColor: hsl(208, 100%, 43%); --=
+dashboardCardEditorLabelColor: var(--reachDeckEditorColor); --dashboardCard=
+ToolbarColor: var(--primaryColorOrange); --dashboardCardToolbarLabelColor: =
+var(--primaryColorOrange); --dashboardPaneBackgroundColor: #fcfcfc; --dashb=
+oardPaneBorderColor: rgba(92, 106, 138, 0.4); --dashboardPaneDashedBorderCo=
+lor: var(--dashboardDashedBorderLight); --dashboardDashedBorderLight: url("=
+data:image/svg+xml,%3csvg width=3D'100%25' height=3D'100%25' xmlns=3D'http:=
+//www.w3.org/2000/svg'%3e%3crect width=3D'100%25' height=3D'100%25' fill=3D=
+'none' stroke=3D'%235C6A8ACC' stroke-width=3D'2' stroke-dasharray=3D'4%2c 8=
+' stroke-dashoffset=3D'0' stroke-linecap=3D'square'/%3e%3c/svg%3e"); --dash=
+boardDashedBorderDark: url("data:image/svg+xml,%3csvg width=3D'100%25' heig=
+ht=3D'100%25' xmlns=3D'http://www.w3.org/2000/svg'%3e%3crect width=3D'100%2=
+5' height=3D'100%25' fill=3D'none' stroke=3D'%23323E52FF' stroke-width=3D'2=
+' stroke-dasharray=3D'4%2c 8' stroke-dashoffset=3D'0' stroke-linecap=3D'squ=
+are'/%3e%3c/svg%3e"); --icon-opacity: 1; --accordionBackgroundColor: #fff; =
+--accordionTextColor: #484848; --accordionTextBottomColor: #484848; --accor=
+dionIconColor: var(--toolbarWhite); --accordionBackgroundColorHover: #f9faf=
+b; --tableBackgroundColor: none; --tableBackgroundHeaderColor: #F9FAFB; --t=
+ableBackgroundAltColor: #f7f7f7; --tableBackgroundHoverColor: hsl(210, 20%,=
+98%); --tableBorderColor: #E2E2E3; --tableTextColor: #484848; --buttonLink=
+TextColor: var( --primaryColor) !important; --buttonLinkIconColor: var( --p=
+rimaryColor) !important; }
+
+.th-wq, .th-th { --toolbarBackgroundColor: var(--defaultColor); --themeColo=
+rDefault: var(--defaultColor); --themeColorPrimary: var(--themeColorWriq); =
+--themeColorSecondary: var(--secondaryColor); --dashboardTopColor: var(--br=
+andColorTeal); --dashboardTitleColor: var(--themeColorWriq); --iconFillColo=
+r: var(--white); --buttonBackgroundColor: var(--defaultColor); --buttonBack=
+groundHoverColor: var(--defaultColorHover); --buttonBackgroundActiveColor: =
+var(--defaultColorActive); --buttonTextColor: var(--fontColorDark); --butto=
+nTextHoverColor: var(--fontColorDark); --buttonTextActiveColor: var(--fontC=
+olorDark); --buttonTextVisitedColor: var(--fontColorDark); --buttonBorder: =
+var(--buttonBorder); --buttonBorderHover: var(--buttonBorderColorHover); --=
+buttonBorderRadius: var(--buttonRoundness); --buttonIconFillColor: var(--bl=
+ack); --primaryButtonBackgroundColor: var(--primaryColorTeal); --primaryBut=
+tonBackgroundHoverColor: var(--primaryColorTealHover); --primaryButtonBackg=
+roundActiveColor: var(--primaryColorTealActive); --primaryButtonBorderActiv=
+e: var(--buttonBorderTealActive); --primaryButtonTextColor: var(--fontColor=
+White); --primaryButtonTextHoverColor: var(--fontColorWhite); --primaryButt=
+onTextActiveColor: var(--fontColorWhite); --primaryButtonTextVisitedColor: =
+var(--fontColorWhite); --primaryButtonBorder: var(--buttonBorderTeal); --pr=
+imaryButtonBorderHover: var(--buttonBorderTealHover); --primaryButtonBorder=
+Radius: var(--buttonRoundness); --primaryButtonIconFillColor: var(--white);=
+--secondaryButtonBackgroundColor: var(--secondaryColor); --secondaryButton=
+BackgroundHoverColor: var(--secondaryColorHover); --secondaryButtonBackgrou=
+ndActiveColor: var(--secondaryColorActive); --secondaryButtonTextColor: var=
+(--fontColorWhite); --secondaryButtonTextHoverColor: var(--fontColorWhite);=
+--secondaryButtonTextActiveColor: var(--fontColorWhite); --secondaryButton=
+TextVisitedColor: var(--fontColorWhite); --secondaryButtonBorder: var(--sec=
+ondaryButtonBorder); --secondaryButtonBorderHover: var(--secondaryButtonBor=
+derColorHover); --secondaryButtonBorderRadius: var(--buttonRoundness); --se=
+condaryButtonIconFillColor: var(--white); --table-hover-item: var(--list-it=
+em-light-hover); --settingsTitleColor: var(--themeColorPrimary); }
+
+.th-rw, .th-wa { --themeColorDefault: var(--defaultColor); --themeColorPrim=
+ary: var(--themeColorReadWrite); --themeColorSecondary: var(--secondaryColo=
+r); --toolbarBackgroundColor: var(--defaultColor); --toolbarIconFill: var(-=
+-th-slate); --toolbarIconHoverFill: var(--th-slate); --toolbarIconActiveFil=
+l: var(--th-slate); --toolbarIconToggledHoverFill: var(--primaryColorPurple=
+); --toolbarIconToggleFill: var(--primaryColorPurple); --toolbarIconToggleH=
+overFill: var(--primaryColorPurple); --dashboardTopColor: var(--brandColorP=
+urple); --dashboardTitleColor: var(--themeColorReadWrite); --iconFillColor:=
+var(--th-slate-dark); --buttonBackgroundColor: var(--defaultColor); --butt=
+onBackgroundHoverColor: var(--defaultColorHover); --buttonBackgroundActiveC=
+olor: var(--defaultColorActive); --buttonTextColor: var(--fontColorDark); -=
+-buttonTextHoverColor: var(--fontColorDark); --buttonTextActiveColor: var(-=
+-fontColorDark); --buttonTextVisitedColor: var(--fontColorDark); --buttonBo=
+rder: var(--buttonBorder); --buttonBorderHover: var(--buttonBorderColorHove=
+r); --buttonBorderActive: var(--buttonBorderColorActive); --buttonBorderRad=
+ius: var(--buttonRoundness); --buttonIconFillColor: var(--black); --primary=
+ButtonBackgroundColor: var(--primaryColorPurple); --primaryButtonBackground=
+HoverColor: var(--primaryColorPurpleHover); --primaryButtonBackgroundActive=
+Color: var(--primaryColorPurpleActive); --primaryButtonBorderActive: var(--=
+buttonBorderPurpleActive); --primaryButtonTextColor: var(--fontColorWhite);=
+--primaryButtonTextHoverColor: var(--fontColorWhite); --primaryButtonTextA=
+ctiveColor: var(--fontColorWhite); --primaryButtonTextVisitedColor: var(--f=
+ontColorWhite); --primaryButtonBorder: var(--buttonBorderPurple); --primary=
+ButtonBorderHover: var(--buttonBorderPurpleHover); --primaryButtonBorderRad=
+ius: var(--buttonRoundness); --primaryButtonIconFillColor: var(--white); --=
+secondaryButtonBackgroundColor: var(--secondaryColor); --secondaryButtonBac=
+kgroundHoverColor: var(--secondaryColorHover); --secondaryButtonBackgroundA=
+ctiveColor: var(--secondaryColorActive); --secondaryButtonTextColor: var(--=
+fontColorWhite); --secondaryButtonTextHoverColor: var(--fontColorWhite); --=
+secondaryButtonTextActiveColor: var(--fontColorWhite); --secondaryButtonTex=
+tVisitedColor: var(--fontColorWhite); --secondaryButtonBorder: var(--second=
+aryButtonBorder); --secondaryButtonBorderHover: var(--secondaryButtonBorder=
+ColorHover); --secondaryButtonBorderRadius: var(--buttonRoundness); --secon=
+daryButtonIconFillColor: var(--white); --table-hover-item: var(--list-item-=
+light-hover); --settingsTitleColor: var(--themeColorPrimary); --menuNotifyB=
+ackgroundColour: var(--brandColorPurple); --uniloginBackgroundColor: #FAF7F=
+F; --uniloginWindowBackgroundColor: var(--primaryColorPurple); }
+
+.th-pr { --themeColorDefault: var(--defaultColor); --themeColorPrimary: var=
+(--themeColorPdfReader); --themeColorSecondary: var(--secondaryColor); --pr=
+imaryButtonBackgroundColor: var(--primaryColorBlue); --primaryButtonBackgro=
+undHoverColor: var(--primaryColorBlueHover); --primaryButtonBackgroundActiv=
+eColor: var(--primaryColorBlueActive); --primaryButtonBorderActive: var(--b=
+uttonBorderBlueActive); --primaryButtonTextColor: var(--fontColorWhite); --=
+primaryButtonTextHoverColor: var(--fontColorWhite); --primaryButtonTextActi=
+veColor: var(--fontColorWhite); --primaryButtonTextVisitedColor: var(--font=
+ColorWhite); --primaryButtonBorder: var(--buttonBorderBlue); --primaryButto=
+nBorderHover: var(--buttonBorderBlueHover); --primaryButtonBorderRadius: va=
+r(--buttonRoundness); --primaryButtonIconFillColor: var(--white); --toolbar=
+BackgroundColor: var(--th-grey); --toolbarButtonBackgroundColor: var(--th-g=
+rey); --toolbarButtonBackgroundHoverColor: var(--ContrastPinkOrbitNoteHover=
+); --toolbarButtonBackgroundActiveColor: var(--ContrastPinkOrbitNoteActive)=
+; --toolbarButtonBorderActive: var(--ContrastButtonBorderPink); --toolbarIc=
+onFill: var(--th-slate); --toolbarIconHoverFill: var(--white); --toolbarIco=
+nActiveFill: var(--white); --toolbarIconToggleFill: var(--ContrastPinkOrbit=
+NoteActive); --toolbarIconToggleHoverFill: var(--white); --toolbarIconToggl=
+edHoverFill: var(--white); --iconButtonBackgroundDefaultColor: var(--icon-b=
+utton-background-default-color); --iconButtonBackgroundHoverColor: var(--ic=
+on-button-background-hover-color); --iconButtonBackgroundActiveColor: var(-=
+-icon-button-background-active-color); --iconButtonBorderColor: 2px solid t=
+ransparent; --iconFillColor: var(--th-slate); --panelBackgroundColor: var(-=
+-th-grey-light); --panelBackgroundColorLight: var(--white); --panelBackgrou=
+ndColorDark: var(--th-grey); --fontColor: var(--th-slate-dark); --borderCol=
+or: 1px solid var(--th-grey-dark); --settingsTitleColor: var(--themeColorPr=
+imary); --menuNotifyBackgroundColour: var(--brandColorPink); --dashboardTop=
+Color: var(--primaryColorBlue); --dashboardTitleColor: var(--themeColorEqua=
+tio); --cardIconFillColor: var(--primaryColorBlue); }
+
+.th-eq { --themeColorDefault: var(--defaultColor); --themeColorPrimary: var=
+(--themeColorEquatio); --themeColorSecondary: var(--secondaryColor); --dash=
+boardTopColor: var(--brandColorBlue); --dashboardTitleColor: var(--themeCol=
+orEquatio); --iconFillColor: var(--th-slate-dark); --buttonBackgroundColor:=
+var(--defaultColor); --buttonBackgroundHoverColor: var(--defaultColorHover=
+); --buttonBackgroundActiveColor: var(--defaultColorActive); --buttonTextCo=
+lor: var(--fontColorDark); --buttonTextHoverColor: var(--fontColorDark); --=
+buttonTextActiveColor: var(--fontColorDark); --buttonTextVisitedColor: var(=
+--fontColorDark); --buttonBorder: var(--buttonBorder); --buttonBorderHover:=
+var(--buttonBorderColorHover); --buttonBorderRadius: var(--buttonRoundness=
+); --buttonIconFillColor: var(--black); --primaryButtonBackgroundColor: var=
+(--primaryColorBlue); --primaryButtonBackgroundHoverColor: var(--primaryCol=
+orBlueHover); --primaryButtonBackgroundActiveColor: var(--primaryColorBlueA=
+ctive); --primaryButtonBorderActive: var(--buttonBorderBlueActive); --prima=
+ryButtonTextColor: var(--fontColorWhite); --primaryButtonTextHoverColor: va=
+r(--fontColorWhite); --primaryButtonTextActiveColor: var(--fontColorWhite);=
+--primaryButtonTextVisitedColor: var(--fontColorWhite); --primaryButtonBor=
+der: var(--buttonBorderBlue); --primaryButtonBorderHover: var(--buttonBorde=
+rBlueHover); --primaryButtonBorderRadius: var(--buttonRoundness); --primary=
+ButtonIconFillColor: var(--white); --secondaryButtonBackgroundColor: var(--=
+secondaryColor); --secondaryButtonBackgroundHoverColor: var(--secondaryColo=
+rHover); --secondaryButtonBackgroundActiveColor: var(--secondaryColorActive=
+); --secondaryButtonTextColor: var(--fontColorWhite); --secondaryButtonText=
+HoverColor: var(--fontColorWhite); --secondaryButtonTextActiveColor: var(--=
+fontColorWhite); --secondaryButtonTextVisitedColor: var(--fontColorWhite); =
+--secondaryButtonBorder: var(--secondaryButtonBorder); --secondaryButtonBor=
+derHover: var(--secondaryButtonBorderColorHover); --secondaryButtonBorderRa=
+dius: var(--buttonRoundness); --secondaryButtonIconFillColor: var(--white);=
+--table-hover-item: var(--list-item-light-hover); --settingsTitleColor: va=
+r(--themeColorPrimary); --uniloginBackgroundColor: #F2F9FF; --uniloginWindo=
+wBackgroundColor: var(--brandColorBlueWCAG); }
+
+.th-ba { --themeColorDefault: var(--defaultColor); --themeColorPrimary: var=
+(--themeColorBrowsealoud); --themeColorSecondary: var(--secondaryColor); --=
+toolbarBackgroundColor: var(--th-grey); --toolbarIconButtonFillColor: var(-=
+-th-slate); --toolbarButtonBackgroundColor: var(--th-grey); --toolbarButton=
+BackgroundHoverColor: var(--primaryColorOrangeHover); --toolbarButtonBackgr=
+oundActiveColor: var(--primaryColorOrangeActive); --toolbarButtonBorderActi=
+ve: var(--buttonBorderOrange); --toolbarIconFill: var(--th-slate); --toolba=
+rIconHoverFill: var(--th-slate); --toolbarIconActiveFill: var(--primaryColo=
+rBlue); --toolbarIconToggleFill: var(--primaryColorBlue); --toolbarIconTogg=
+leHoverFill: var(--white); --dashboardTopColor: var(--brandColorOrange); --=
+dashboardTitleColor: var(--themeColorBrowsealoud); --iconFillColor: var(--w=
+hite); --buttonBackgroundColor: var(--defaultColor); --buttonBackgroundHove=
+rColor: var(--defaultColorHover); --buttonBackgroundActiveColor: var(--defa=
+ultColorActive); --buttonTextColor: var(--fontColorDark); --buttonTextHover=
+Color: var(--fontColorDark); --buttonTextActiveColor: var(--fontColorDark);=
+--buttonTextVisitedColor: var(--fontColorDark); --buttonBorder: var(--butt=
+onBorder); --buttonBorderHover: var(--buttonBorderColorHover); --buttonBord=
+erRadius: var(--buttonRoundness); --buttonBorderIconFillColor: var(--black)=
+; --primaryButtonBackgroundColor: var(--primaryColorOrange); --primaryButto=
+nBackgroundHoverColor: var(--primaryColorOrangeHover); --primaryButtonBackg=
+roundActiveColor: var(--primaryColorOrangeActive); --primaryButtonBorderAct=
+ive: var(--buttonBorderOrangeActive); --primaryButtonTextColor: var(--fontC=
+olorWhite); --primaryButtonTextHoverColor: var(--fontColorWhite); --primary=
+ButtonTextActiveColor: var(--fontColorWhite); --primaryButtonTextVisitedCol=
+or: var(--fontColorWhite); --primaryButtonBorder: var(--buttonBorderOrange)=
+; --primaryButtonBorderHover: var(--buttonBorderOrangeHover); --primaryButt=
+onBorderRadius: var(--buttonRoundness); --primaryButtonIconFillColor: var(-=
+-white); --secondaryButtonBackgroundColor: var(--secondaryColor); --seconda=
+ryButtonBackgroundHoverColor: var(--secondaryColorHover); --secondaryButton=
+BackgroundActiveColor: var(--secondaryColorActive); --secondaryButtonTextCo=
+lor: var(--fontColorWhite); --secondaryButtonTextHoverColor: var(--fontColo=
+rWhite); --secondaryButtonTextActiveColor: var(--fontColorWhite); --seconda=
+ryButtonTextVisitedColor: var(--fontColorWhite); --secondaryButtonBorder: v=
+ar(--secondaryButtonBorder); --secondaryButtonBorderHover: var(--secondaryB=
+uttonBorderColorHover); --secondaryButtonBorderRadius: var(--buttonRoundnes=
+s); --secondaryButtonIconFillColor: var(--white); --table-hover-item: var(-=
+-list-item-light-hover); --settingsTitleColor: var(--themeColorPrimary); --=
+menuNotifyBackgroundColour: var(--white); }
+
+.th-ba .gw-menu-notification--inline { --menuNotifyBackgroundColour: var(--=
+themeColorBrowsealoud); }
+
+.th-at { --themeColorDefault: var(--defaultColor); --themeColorPrimary: var=
+(--themeColorReachDeck); --themeColorSecondary: var(--secondaryColor); --to=
+olbarBackgroundColor: var(--defaultColor); --toolbarIconFill: var(--th-slat=
+e); --toolbarIconHoverFill: var(--th-slate); --toolbarIconActiveFill: var(-=
+-th-slate); --toolbarIconToggledHoverFill: var(--primaryColorBlue); --toolb=
+arIconToggleFill: var(--primaryColorBlue); --toolbarIconToggleHoverFill: va=
+r(--primaryColorBlue); --dashboardTitleColor: var(--th-slate-dark); --iconF=
+illColor: var(--th-slate-dark); --buttonBackgroundColor: var(--defaultColor=
+); --buttonBackgroundHoverColor: var(--defaultColorHover); --buttonBackgrou=
+ndActiveColor: var(--defaultColorActive); --buttonTextColor: var(--fontColo=
+rDark); --buttonTextHoverColor: var(--fontColorDark); --buttonTextActiveCol=
+or: var(--fontColorDark); --buttonTextVisitedColor: var(--fontColorDark); -=
+-buttonBorder: var(--buttonBorder); --buttonBorderHover: var(--buttonBorder=
+ColorHover); --buttonBorderRadius: var(--buttonRoundness); --buttonBorderIc=
+onFillColor: var(--black); --primaryButtonBackgroundColor: var(--primaryCol=
+orReachDeck); --primaryButtonBackgroundHoverColor: var(--primaryColorReachD=
+eckHover); --primaryButtonBackgroundActiveColor: var(--primaryColorReachDec=
+kActive); --primaryButtonBorderActive: var(--buttonBorderReachDeckActive); =
+--primaryButtonTextColor: var(--fontColorWhite); --primaryButtonTextHoverCo=
+lor: var(--fontColorWhite); --primaryButtonTextActiveColor: var(--fontColor=
+White); --primaryButtonTextVisitedColor: var(--fontColorWhite); --primaryBu=
+ttonBorder: var(--buttonBorderReachDeck); --primaryButtonBorderHover: var(-=
+-buttonBorderReachDeckHover); --primaryButtonBorderRadius: var(--buttonRoun=
+dness); --primaryButtonIconFillColor: var(--white); --secondaryButtonBackgr=
+oundColor: var(--secondaryColor); --secondaryButtonBackgroundHoverColor: va=
+r(--secondaryColorHover); --secondaryButtonBackgroundActiveColor: var(--sec=
+ondaryColorActive); --secondaryButtonTextColor: var(--fontColorWhite); --se=
+condaryButtonTextHoverColor: var(--fontColorWhite); --secondaryButtonTextAc=
+tiveColor: var(--fontColorWhite); --secondaryButtonTextVisitedColor: var(--=
+fontColorWhite); --secondaryButtonBorder: var(--secondaryButtonBorder); --s=
+econdaryButtonBorderHover: var(--secondaryButtonBorderColorHover); --second=
+aryButtonBorderRadius: var(--buttonRoundness); --secondaryButtonIconFillCol=
+or: var(--white); --dashboardTopColor: #E12362; --dashboardContentBackgroun=
+dColor: #F2F5F9; --tableBackgroundHeaderColor: #DFE1E5; --table-hover-item:=
+var(--list-item-light-hover); --settingsTitleColor: var(--themeColorPrimar=
+y); }
+
+.th-rd { font-size: 10px; --themeColorDefault: var(--defaultColor); --theme=
+ColorPrimary: var(--themeColorReachDeck); --themeColorSecondary: var(--seco=
+ndaryColor); --toolbarBackgroundColor: var(--defaultColor); --toolbarIconFi=
+ll: var(--th-slate); --toolbarIconHoverFill: var(--th-slate); --toolbarIcon=
+ActiveFill: var(--th-slate); --toolbarIconToggledHoverFill: var(--primaryCo=
+lorBlue); --toolbarIconToggleFill: var(--primaryColorBlue); --toolbarIconTo=
+ggleHoverFill: var(--primaryColorBlue); --dashboardTopColor: var(--th-grey)=
+; --dashboardTitleColor: var(--th-slate-dark); --iconFillColor: var(--th-sl=
+ate-dark); --buttonBackgroundColor: var(--defaultColor); --buttonBackground=
+HoverColor: var(--defaultColorHover); --buttonBackgroundActiveColor: var(--=
+defaultColorActive); --buttonTextColor: var(--fontColorDark); --buttonTextH=
+overColor: var(--fontColorDark); --buttonTextActiveColor: var(--fontColorDa=
+rk); --buttonTextVisitedColor: var(--fontColorDark); --buttonBorder: var(--=
+buttonBorder); --buttonBorderHover: var(--buttonBorderColorHover); --button=
+BorderRadius: var(--buttonRoundness); --buttonBorderIconFillColor: var(--bl=
+ack); --primaryButtonBackgroundColor: var(--primaryColorReachDeck); --prima=
+ryButtonBackgroundHoverColor: var(--primaryColorReachDeckHover); --primaryB=
+uttonBackgroundActiveColor: var(--primaryColorReachDeckActive); --primaryBu=
+ttonBorderActive: var(--buttonBorderReachDeckActive); --primaryButtonTextCo=
+lor: var(--fontColorWhite); --primaryButtonTextHoverColor: var(--fontColorW=
+hite); --primaryButtonTextActiveColor: var(--fontColorWhite); --primaryButt=
+onTextVisitedColor: var(--fontColorWhite); --primaryButtonBorder: var(--but=
+tonBorderReachDeck); --primaryButtonBorderHover: var(--buttonBorderReachDec=
+kHover); --primaryButtonBorderRadius: var(--buttonRoundness); --primaryButt=
+onIconFillColor: var(--white); --secondaryButtonBackgroundColor: var(--seco=
+ndaryColor); --secondaryButtonBackgroundHoverColor: var(--secondaryColorHov=
+er); --secondaryButtonBackgroundActiveColor: var(--secondaryColorActive); -=
+-secondaryButtonTextColor: var(--fontColorWhite); --secondaryButtonTextHove=
+rColor: var(--fontColorWhite); --secondaryButtonTextActiveColor: var(--font=
+ColorWhite); --secondaryButtonTextVisitedColor: var(--fontColorWhite); --se=
+condaryButtonBorder: var(--secondaryButtonBorder); --secondaryButtonBorderH=
+over: var(--secondaryButtonBorderColorHover); --secondaryButtonBorderRadius=
+: var(--buttonRoundness); --secondaryButtonIconFillColor: var(--white); --t=
+able-hover-item: var(--list-item-light-hover); --settingsTitleColor: var(--=
+themeColorPrimary); }
+
+.th-ss { --themeColorDefault: var(--defaultColor); --themeColorPrimary: var=
+(--themeColorSpeechStream); --themeColorSecondary: var(--secondaryColor); -=
+-dashboardTopColor: var(--brandColorPink); --dashboardTitleColor: var(--the=
+meColorSpeechStream); --iconFillColor: var(--th-slate-dark); --buttonBackgr=
+oundColor: var(--defaultColor); --buttonBackgroundHoverColor: var(--default=
+ColorHover); --buttonBackgroundActiveColor: var(--defaultColorActive); --bu=
+ttonTextColor: var(--fontColorDark); --buttonTextHoverColor: var(--fontColo=
+rDark); --buttonTextActiveColor: var(--fontColorDark); --buttonTextVisitedC=
+olor: var(--fontColorDark); --buttonBorder: var(--buttonBorder); --buttonBo=
+rderHover: var(--buttonBorderColorHover); --buttonBorderRadius: var(--butto=
+nRoundness); --buttonBorderIconFillColor: var(--black); --primaryButtonBack=
+groundColor: var(--themeColorSpeechStream); --primaryButtonBackgroundHoverC=
+olor: var(--primaryColorPinkHover); --primaryButtonBackgroundActiveColor: v=
+ar(--primaryColorPinkActive); --primaryButtonBorderActive: var(--buttonBord=
+erPinkActive); --primaryButtonTextColor: var(--fontColorWhite); --primaryBu=
+ttonTextHoverColor: var(--fontColorWhite); --primaryButtonTextActiveColor: =
+var(--fontColorWhite); --primaryButtonTextVisitedColor: var(--fontColorWhit=
+e); --primaryButtonBorder: var(--buttonBorderPink); --primaryButtonBorderHo=
+ver: var(--buttonBorderPinkHover); --primaryButtonBorderRadius: var(--butto=
+nRoundness); --primaryButtonIconFillColor: var(--white); --secondaryButtonB=
+ackgroundColor: var(--secondaryColor); --secondaryButtonBackgroundHoverColo=
+r: var(--secondaryColorHover); --secondaryButtonBackgroundActiveColor: var(=
+--secondaryColorActive); --secondaryButtonTextColor: var(--fontColorWhite);=
+--secondaryButtonTextHoverColor: var(--fontColorWhite); --secondaryButtonT=
+extActiveColor: var(--fontColorWhite); --secondaryButtonTextVisitedColor: v=
+ar(--fontColorWhite); --secondaryButtonBorder: var(--secondaryButtonBorder)=
+; --secondaryButtonBorderHover: var(--secondaryButtonBorderColorHover); --s=
+econdaryButtonBorderRadius: var(--buttonRoundness); --secondaryButtonIconFi=
+llColor: var(--white); --table-hover-item: var(--list-item-light-hover); --=
+settingsTitleColor: var(--themeColorPrimary); }
+
+.th-st { --uniloginBackgroundColor: #F2F9FF; --uniloginWindowBackgroundColo=
+r: #2A3953; }
+
+.th-sv, .th-ft { --themeColorDefault: var(--defaultColor); --themeColorPrim=
+ary: var(--themeColorFluencyTutor); --themeColorSecondary: var(--secondaryC=
+olor); --dashboardTopColor: var(--brandColorGreen); --dashboardTitleColor: =
+var(--themeColorFluencyTutor); --iconFillColor: var(--th-slate-dark); --but=
+tonBackgroundColor: var(--defaultColor); --buttonBackgroundHoverColor: var(=
+--defaultColorHover); --buttonBackgroundActiveColor: var(--defaultColorActi=
+ve); --buttonTextColor: var(--fontColorDark); --buttonTextHoverColor: var(-=
+-fontColorDark); --buttonTextActiveColor: var(--fontColorDark); --buttonTex=
+tVisitedColor: var(--fontColorDark); --buttonBorder: var(--buttonBorder); -=
+-buttonBorderHover: var(--buttonBorderColorHover); --buttonBorderRadius: va=
+r(--buttonRoundness); --buttonBorderIconFillColor: var(--black); --primaryB=
+uttonBackgroundColor: var(--themeColorFluencyTutor); --primaryButtonBackgro=
+undHoverColor: var(--primaryColorGreenHover); --primaryButtonBackgroundActi=
+veColor: var(--primaryColorGreenActive); --primaryButtonBorderActive: var(-=
+-buttonBorderGreenActive); --primaryButtonTextColor: var(--fontColorWhite);=
+--primaryButtonTextHoverColor: var(--fontColorWhite); --primaryButtonTextA=
+ctiveColor: var(--fontColorWhite); --primaryButtonTextVisitedColor: var(--f=
+ontColorWhite); --primaryButtonBorder: var(--buttonBorderGreen); --primaryB=
+uttonBorderHover: var(--buttonBorderGreenHover); --primaryButtonBorderRadiu=
+s: var(--buttonRoundness); --primaryButtonIconFillColor: var(--white); --se=
+condaryButtonBackgroundColor: var(--secondaryColor); --secondaryButtonBackg=
+roundHoverColor: var(--secondaryColorHover); --secondaryButtonBackgroundAct=
+iveColor: var(--secondaryColorActive); --secondaryButtonTextColor: var(--fo=
+ntColorWhite); --secondaryButtonTextHoverColor: var(--fontColorWhite); --se=
+condaryButtonTextActiveColor: var(--fontColorWhite); --secondaryButtonTextV=
+isitedColor: var(--fontColorWhite); --secondaryButtonBorder: var(--secondar=
+yButtonBorder); --secondaryButtonBorderHover: var(--secondaryButtonBorderCo=
+lorHover); --secondaryButtonBorderRadius: var(--buttonRoundness); --seconda=
+ryButtonIconFillColor: var(--white); --table-hover-item: var(--list-item-li=
+ght-hover); --settingsTitleColor: var(--themeColorPrimary); }
+
+.th-cr { --themeColorDefault: var(--defaultColor); --themeColorPrimary: var=
+(--primaryColorClaroNavy); --themeColorSecondary: var(--secondaryColor); --=
+buttonBackgroundColor: var(--defaultColor); --buttonBackgroundHoverColor: v=
+ar(--defaultColorHover); --buttonBackgroundActiveColor: var(--defaultColorA=
+ctive); --buttonTextColor: var(--fontColorDark); --buttonTextHoverColor: va=
+r(--fontColorDark); --buttonTextActiveColor: var(--fontColorDark); --button=
+TextVisitedColor: var(--fontColorDark); --buttonBorder: var(--buttonBorder)=
+; --buttonBorderHover: var(--buttonBorderColorHover); --buttonBorderRadius:=
+var(--buttonRoundness); --buttonBorderIconFillColor: var(--black); --prima=
+ryButtonBackgroundColor: var(--primaryColorClaroNavy); --primaryButtonBackg=
+roundHoverColor: var(--primaryColorClaroNavyHover); --primaryButtonBackgrou=
+ndActiveColor: var(--primaryColorClaroNavyActive); --primaryButtonBorderAct=
+ive: var(--buttonBorderClaroActive); --primaryButtonTextColor: var(--fontCo=
+lorWhite); --primaryButtonTextHoverColor: var(--fontColorWhite); --primaryB=
+uttonTextActiveColor: var(--fontColorWhite); --primaryButtonTextVisitedColo=
+r: var(--fontColorWhite); --primaryButtonBorder: var(--buttonBorderClaro); =
+--primaryButtonBorderHover: var(--buttonBorderClaroHover); --primaryButtonB=
+orderRadius: var(--buttonRoundness); --primaryButtonIconFillColor: var(--wh=
+ite); --altButtonBackgroundColor: var(--altColor); --altButtonBackgroundHov=
+erColor: var(--altColorHover); --altButtonBackgroundActiveColor: var(--altC=
+olorActive); --altButtonTextColor: var(--fontColorWhite); --altButtonTextHo=
+verColor: var(--fontColorWhite); --altButtonTextActiveColor: var(--fontColo=
+rWhite); --altButtonTextVisitedColor: var(--fontColorWhite); --altButtonBor=
+der: var(--altButtonBorder); --altButtonBorderHover: var(--altButtonBorderC=
+olorHover); --altButtonBorderRadius: var(--buttonRoundness); --altButtonIco=
+nFillColor: var(--white); --uniloginBackgroundColor: #F2F9FF; --uniloginWin=
+dowBackgroundColor: var(--themeColorPrimary); }
+
+.th-wh { background: rgb(246, 246, 246); --themeColorDefault: var(--default=
+Color); --themeColorPrimary: var(--primaryColorClaroNavy); --themeColorSeco=
+ndary: var(--secondaryColor); --buttonBackgroundColor: var(--defaultColor);=
+--buttonBackgroundHoverColor: var(--defaultColorHover); --buttonBackground=
+ActiveColor: var(--defaultColorActive); --buttonTextColor: var(--fontColorD=
+ark); --buttonTextHoverColor: var(--fontColorDark); --buttonTextActiveColor=
+: var(--fontColorDark); --buttonTextVisitedColor: var(--fontColorDark); --b=
+uttonBorder: var(--buttonBorder); --buttonBorderHover: var(--buttonBorderCo=
+lorHover); --buttonBorderRadius: var(--buttonRoundness); --buttonBorderIcon=
+FillColor: var(--black); --primaryButtonBackgroundColor: var(--primaryColor=
+ClaroBlue); --primaryButtonBackgroundHoverColor: var(--primaryColorClaroBlu=
+eHover); --primaryButtonBackgroundActiveColor: var(--primaryColorClaroBlueA=
+ctive); --primaryButtonBorderActive: var(--buttonBorderClaroActive); --prim=
+aryButtonTextColor: var(--fontColorWhite); --primaryButtonTextHoverColor: v=
+ar(--fontColorWhite); --primaryButtonTextActiveColor: var(--fontColorWhite)=
+; --primaryButtonTextVisitedColor: var(--fontColorWhite); --primaryButtonBo=
+rder: var(--primaryColorClaroBlue); --primaryButtonBorderHover: var(--prima=
+ryColorClaroBlueHover); --primaryButtonBorderRadius: var(--buttonRoundness)=
+; --primaryButtonIconFillColor: var(--white); --altButtonBackgroundColor: v=
+ar(--altColor); --altButtonBackgroundHoverColor: var(--altColorHover); --al=
+tButtonBackgroundActiveColor: var(--altColorActive); --altButtonTextColor: =
+var(--fontColorWhite); --altButtonTextHoverColor: var(--fontColorWhite); --=
+altButtonTextActiveColor: var(--fontColorWhite); --altButtonTextVisitedColo=
+r: var(--fontColorWhite); --altButtonBorder: var(--altButtonBorder); --altB=
+uttonBorderHover: var(--altButtonBorderColorHover); --altButtonBorderRadius=
+: var(--buttonRoundness); --altButtonIconFillColor: var(--white); --unilogi=
+nBackgroundColor: #F2F9FF; --uniloginWindowBackgroundColor: var(--primaryCo=
+lorClaroNavy); }
+
+.th-lds { --themeColorDefault: var(--defaultColor); --themeColorPrimary: va=
+r(--primaryColorLingdys); --themeColorSecondary: var(--secondaryColor); --b=
+uttonBackgroundColor: var(--defaultColor); --buttonBackgroundHoverColor: va=
+r(--defaultColorHover); --buttonBackgroundActiveColor: var(--defaultColorAc=
+tive); --buttonTextColor: var(--fontColorDark); --buttonTextHoverColor: var=
+(--fontColorDark); --buttonTextActiveColor: var(--fontColorDark); --buttonT=
+extVisitedColor: var(--fontColorDark); --buttonBorder: var(--buttonBorder);=
+--buttonBorderHover: var(--buttonBorderColorHover); --buttonBorderRadius: =
+var(--buttonRoundness); --buttonBorderIconFillColor: var(--black); --primar=
+yButtonBackgroundColor: var(--primaryColorLingdys); --primaryButtonBackgrou=
+ndHoverColor: var(--primaryColorLingdysHover); --primaryButtonBackgroundAct=
+iveColor: var(--primaryColorLingdysActive); --primaryButtonBorderActive: va=
+r(--buttonBorderLingdysActive); --primaryButtonTextColor: var(--fontColorWh=
+ite); --primaryButtonTextHoverColor: var(--fontColorWhite); --primaryButton=
+TextActiveColor: var(--fontColorWhite); --primaryButtonTextVisitedColor: va=
+r(--fontColorWhite); --primaryButtonBorder: var(--buttonBorderLingdys); --p=
+rimaryButtonBorderHover: var(--buttonBorderLingdysHover); --primaryButtonBo=
+rderRadius: var(--buttonRoundness); --primaryButtonIconFillColor: var(--whi=
+te); --altButtonBackgroundColor: var(--altColor); --altButtonBackgroundHove=
+rColor: var(--altColorHover); --altButtonBackgroundActiveColor: var(--altCo=
+lorActive); --altButtonTextColor: var(--fontColorWhite); --altButtonTextHov=
+erColor: var(--fontColorWhite); --altButtonTextActiveColor: var(--fontColor=
+White); --altButtonTextVisitedColor: var(--fontColorWhite); --altButtonBord=
+er: var(--altButtonBorder); --altButtonBorderHover: var(--altButtonBorderCo=
+lorHover); --altButtonBorderRadius: var(--buttonRoundness); --altButtonIcon=
+FillColor: var(--white); --uniloginBackgroundColor: #F2F9FF; --uniloginWind=
+owBackgroundColor: var(--themeColorPrimary); }
+
+.th-aw { --themeColorDefault: var(--defaultColor); --themeColorPrimary: var=
+(--primaryColorClaroNavy); --themeColorSecondary: var(--secondaryColor); --=
+buttonBackgroundColor: var(--defaultColor); --buttonBackgroundHoverColor: v=
+ar(--defaultColorHover); --buttonBackgroundActiveColor: var(--defaultColorA=
+ctive); --buttonTextColor: var(--fontColorDark); --buttonTextHoverColor: va=
+r(--fontColorDark); --buttonTextActiveColor: var(--fontColorDark); --button=
+TextVisitedColor: var(--fontColorDark); --buttonBorder: var(--buttonBorder)=
+; --buttonBorderHover: var(--buttonBorderColorHover); --buttonBorderRadius:=
+var(--buttonRoundness); --buttonBorderIconFillColor: var(--black); --prima=
+ryButtonBackgroundColor: var(--primaryColorAppWriter); --primaryButtonBackg=
+roundHoverColor: var(--primaryColorAppWriterHover); --primaryButtonBackgrou=
+ndActiveColor: var(--primaryColorAppWriterActive); --primaryButtonBorderAct=
+ive: var(--buttonBorderAppWriterActive); --primaryButtonTextColor: var(--fo=
+ntColorWhite); --primaryButtonTextHoverColor: var(--fontColorWhite); --prim=
+aryButtonTextActiveColor: var(--fontColorWhite); --primaryButtonTextVisited=
+Color: var(--fontColorWhite); --primaryButtonBorder: var(--buttonBorderAppW=
+riter); --primaryButtonBorderHover: var(--buttonBorderAppWriterHover); --pr=
+imaryButtonBorderRadius: var(--buttonRoundness); --primaryButtonIconFillCol=
+or: var(--white); --altButtonBackgroundColor: var(--altColor); --altButtonB=
+ackgroundHoverColor: var(--altColorHover); --altButtonBackgroundActiveColor=
+: var(--altColorActive); --altButtonTextColor: var(--fontColorWhite); --alt=
+ButtonTextHoverColor: var(--fontColorWhite); --altButtonTextActiveColor: va=
+r(--fontColorWhite); --altButtonTextVisitedColor: var(--fontColorWhite); --=
+altButtonBorder: var(--altButtonBorder); --altButtonBorderHover: var(--altB=
+uttonBorderColorHover); --altButtonBorderRadius: var(--buttonRoundness); --=
+altButtonIconFillColor: var(--white); --uniloginBackgroundColor: #F7F7F7; -=
+-uniloginWindowBackgroundColor: var(--primaryColorAppWriter); }
+
+.dark-mode { --toolbarBackgroundColor: var(--th-slate-dark); --toolbarButto=
+nBackgroundColor: var(--th-slate-dark); --toolbarButtonBackgroundHoverColor=
+: var(--icon-button-background-hover-color-dark); --toolbarButtonBackground=
+ActiveColor: var(--icon-button-background-active-color-dark); --toolbarButt=
+onBorderActive: var(--buttonBorderPink); --toolbarIconFill: var(--white); -=
+-toolbarIconHoverFill: var(--white); --toolbarIconActiveFill: var(--white);=
+--dashboardHeaderBackgroundColor: var(--th-slate-dark); --dashboardSidebar=
+BorderTopColor: var(--th-slate); --dashboardSidebarBackgroundColor: var(--t=
+h-slate-dark); --dashboardContentBackgroundColor: var(--th-slate); --dashbo=
+ardCardBackgroundColor: var(--th-slate-dark); --dashboardCardBackgroundHove=
+rColor: var(--th-slate-dark-hover600); --dashboardCardBackgroundActiveColor=
+: var(--th-slate-dark-active600); --dashboardCardHighlightColor: var(--bran=
+dColorBlue); --dashboardTextColor: var(--th-white); --dashboardTitleTextCol=
+or: var(--th-white); --dashboardSubTitleTextColor: var(--th-white); --menuI=
+conFillColor: var(--white); --iconButtonBackgroundDefaultColor: var(--icon-=
+button-background-default-color-dark); --iconButtonBackgroundHoverColor: va=
+r(--icon-button-background-hover-color-dark); --iconButtonBackgroundActiveC=
+olor: var(--icon-button-background-active-color-dark); --iconButtonBorderCo=
+lor: 2px solid transparent; --iconFillColor: var(--white); --buttonLinkText=
+Color: var(--white); --buttonLinkIconColor: var(--white); --buttonNoBackgro=
+undTextColor: var(--white); --buttonNoBackgroundIconColor: var(--white); --=
+buttonNoBackgroundColor: transparent; --buttonNoBackgroundColorHover: var(-=
+-icon-button-background-hover-color-dark); --buttonNoBackgroundColorActive:=
+var(--icon-button-background-active-color-dark); --buttonNoBackgroundBorde=
+r: 2px solid transparent; --buttonNoBackgroundBorderHover: 2px solid transp=
+arent; --buttonNoBackgroundBorderActive: 2px solid transparent; --panelBack=
+groundColor: var(--th-slate); --panelBackgroundColorLight: var(--th-slate-l=
+ight); --panelBackgroundColorDark: var(--th-slate-dark); --fontColor: var(-=
+-textColorLight); --borderColor: 1px solid var(--th-slate-light); --infoBac=
+kgroundColor: var(--notificationDarkModeBackground); --successBackgroundCol=
+or: var(--notificationDarkModeBackground); --errorBackgroundColor: var(--no=
+tificationDarkModeBackground); --warningBackgroundColor: var(--notification=
+DarkModeBackground); --infoBorderColor: var(--notificationDarkModeBorder); =
+--successBorderColor: var(--notificationDarkModeBorder); --errorBorderColor=
+: var(--notificationDarkModeBorder); --warningBorderColor: var(--notificati=
+onDarkModeBorder); --infoWarningColor: #fff; --successWarningColor: #fff; -=
+-errorWarningColor: #fff; --warningWarningColor: #fff; --infoTitleColor: #f=
+ff; --successTitleColor: #fff; --errorTitleColor: #fff; --warningTitleColor=
+: #fff; --accordionBackgroundColor: var(--th-slate-dark); --accordionTextCo=
+lor: #fff; --accordionTextBottomColor: #f5f5f5; --accordionIconColor: var(-=
+-toolbarWhite); --accordionBackgroundColorHover: var(--th-slate-dark-hover6=
+00); --tableBackgroundColor: var(--th-slate); --tableBackgroundHeaderColor:=
+var(--th-slate-alt); --tableBackgroundAltColor: var(--th-slate-alt); --tab=
+leBackgroundHoverColor: var(--th-slate-hover); --tableBorderColor: var(--th=
+-slate-dark); --tableTextColor: #fff; --ListGroupSearchItemColor: var(--th-=
+slate-dark); --ListGroupSearchItemColorHover: var(--th-slate-dark-hover800)=
+; --ListGroupSearchItemTextColor: var(--th-white); --ListGroupSearchItemBor=
+derColor: rgba(0, 0, 0, 0.225); --ListGroupSearchItemAsideColor: var(--th-s=
+late-dark); --ListGroupSearchItemAsideTextColor: #fff; --inputBorder: 1px s=
+olid var(--th-slate); --inputTextColor: var( --th-white); --inputBackground=
+Color: var(--th-cool-grey-800); --modalHeaderBackgroundColor: var(--th-cool=
+-grey-800); --modalContentBackgroundColor: var(--th-cool-grey-700); --modal=
+ContentBorderColorHeader: var(--th-cool-grey-700); --modalContentBorderColo=
+rFooter: var(--th-cool-grey-700); --modalTextColor: var(--th-white); --sett=
+ingsDialogBackgroundColor: var(--th-cool-grey-700); --settingsDialogMenuBac=
+kgroundColor: var(--th-cool-grey-800); --settingsDialogItemSelectedBackgrou=
+ndColor: var(--th-slate-dark); --settingsDialogItemBackgroundColorHover: va=
+r(--th-cool-grey-700); --settingsDialogItemBackgroundColorActive: var(--th-=
+cool-grey-600); --settingsTitleColor: #fff; --selectBorder: 1px solid var( =
+--slate-light); --selectBackgroundColor: var( --th-slate); --selectBackgrou=
+ndColorHover: rgba(255, 255, 255, 0.146); --selectBackgroundColorActive: rg=
+ba(255, 255, 255, 0.221); --listGroupBackgroundColor: transparent; --listGr=
+oupItemTextColor: var(--th-white); --listGroupItemBackgroundColor: var(--th=
+-cool-grey-800); --listGroupItemActionsBackgroundColor: var(--th-cool-grey-=
+850); --listGroupItemBackgroundColorHover: var(--th-cool-grey-700); --listG=
+roupItemBackgroundColorActive: var(--th-cool-grey-600); --listGroupItemIcon=
+Color: var(--th-white); --listGroupItemArrowColor: var(--th-cool-grey-800);=
+}
+
+.dark-mode.th-rw { --toolbarIconActiveFill: var(--white); --toolbarIconTogg=
+ledHoverFill: var(--brandColorPurple); --toolbarIconToggleFill: var(--brand=
+ColorPurple); --toolbarIconToggleHoverFill: var(--brandColorPurple); }
+
+.dark-mode.th-pr { --toolbarButtonBackgroundHoverColor: var(--primaryColorB=
+lue); --toolbarButtonBackgroundActiveColor: var(--primaryColorBlueHover); -=
+-toolbarButtonBorderActive: var(--buttonBorderBlueActive); --toolbarIconTog=
+gleFill: var(--iconToggleFillOrbitNote); --textColor: var(--textColorLight)=
+; --cardIconFillColor: var(--brandColorBlue); --primaryButtonBackgroundColo=
+r: var(--primaryColor); --primaryButtonBackgroundHoverColor: var(--primaryC=
+olorHover); --primaryButtonBackgroundActiveColor: var(--primaryColorActive)=
+; --primaryButtonBorderActive: var(--primaryButtonBorderActive); --primaryB=
+uttonBorder: var(--primaryButtonBorder); --primaryButtonBorderHover: var(--=
+primaryButtonBorderHover); --dashboardTopColor: var(--primaryColorBlue); --=
+dashboardTitleColor: var(--themeColorEquatio); --dashboardPaneBackgroundCol=
+or: var(--th-slate-dark); --dashboardPaneBorderColor: var(--th-slate-dark);=
+--dashboardPaneDashedBorderColor: var(--dashboardDashedBorderDark); --list=
+GroupItemBackgroundColor: var(--th-slate-dark); --listGroupItemBackgroundCo=
+lorHover: var(--th-slate-dark-hover800); --listGroupItemBackgroundColorActi=
+ve: var(--th-slate-dark-active800); --listGroupTileBackgroundColorActive: v=
+ar(--th-slate-dark-active800); --list-item-hover: var(--listGroupItemBackgr=
+oundColorHover); }
+
+.dark-mode.th-rd { --toolbarIconToggledHoverFill: var(--brandColorBlue); --=
+toolbarIconToggleFill: var(--brandColorBlue); --toolbarIconToggleHoverFill:=
+var(--brandColorBlue); --dashboardTopColor: var(--th-slate); --dashboardCa=
+rdAuditorColor: var(--primaryColorBlue); --dashboardCardAuditorLabelColor: =
+var(--th-grey); --dashboardCardEditorColor: var(--reachDeckEditorColor); --=
+dashboardCardEditorLabelColor: var(--th-grey); --dashboardCardToolbarColor:=
+var(--primaryColorOrange); --dashboardCardToolbarLabelColor: var(--th-grey=
+); --dashboardCardBorderColor: var(--th-slate-light); --dashboardCardFooter=
+LinkColor: hsl(197, 100%, 50%); --icon-opacity: .9; --cardIconFillColor: va=
+r(--th-white); --listGroupItemBackgroundColor: var(--th-slate-dark); --list=
+GroupItemBackgroundColorHover: var(--th-slate-dark-hover800); --listGroupIt=
+emBackgroundColorActive: var(--th-slate-dark-active800); --listGroupTileBac=
+kgroundColorActive: var(--th-slate-dark-active800); --list-item-hover: var(=
+--listGroupItemBackgroundColorHover); }
+
+.dark-mode .gw-select { background: url("data:image/svg+xml,<svg xmlns=3D'h=ttp://www.w3.org/2000/svg'
+  xmlns:xlink=3D'http://www.w3.org/1999/xlink' hei=ght=3D'22px' width=3D'22px' viewBox=3D'0 0 18 18'>%3Cpath d=3D'M7.41
+  7.84L1=
+  2 12.42l4.59-4.58L18 9.25l-6 6-6-6z' fill=3D'%23fff'/%3E%3Cpath d=3D'M0-.75=
+  h24v24H0z' fill=3D'none'/%3E</svg>") right 0.9em top 40% / 1.3em no-repeat,=
+0px 0px / 100% repeat transparent; border: 1px solid rgb(255, 255, 255); c=
+olor: rgb(255, 255, 255); }
+
+.dark-mode .gw-select > option { background: rgb(67, 78, 101); }
+
+@media (prefers-color-scheme: dark) {
+:root .day.dark-scheme { background: rgb(51, 51, 51); color: white; }
+:root .night.dark-scheme { background: black; color: rgb(221, 221, 221); =
+}
+}
+
+@media (prefers-color-scheme: light) {
+:root .day.light-scheme { background: white; color: rgb(85, 85, 85); }
+:root .night.light-scheme { background: rgb(238, 238, 238); color: black;=
+}
+}
+
+.th-rw { --listGroupItemBackgroundColorActive: white; --squareButtonBackgro=
+undHover: #f5f5f5; --squareButtonIconFillColor: rgb(36, 42, 56); --squareBu=
+ttonActiveBackGroundColor: #EFEFEF; --squareButtonIconTickColor: #506C7E; }
+
+.dark-mode { --listGroupItemBackgroundColorFocus: rgb(63, 79, 90); --modalT=
+extColorFocus: white; --listGroupItemBackgroundColorActive: rgb(36, 45, 51)=
+; --modalTextColorActive: white; --squareButtonBackgroundHover: rgb(56, 71,=
+81); --squareButtonIconFillColor: white; --squareButtonActiveBackGroundCol=
+or: #24323E; --squareButtonIconTickColor: #FFF; }
+
+.dark-mode.th-rw { --toolbarIconButtonFillColor: var(--white); }
+
+.gw-toolbar--s1 { --fontSize: 5px; }
+
+.gw-toolbar--s2 { --fontSize: 10px; }
+
+.gw-toolbar--s3 { --fontSize: 15px; }
+
+.gw-toolbar--s4 { --fontSize: 20px; }
+
+.gw-listitem-fontsize-s10 { --gw-listitem-fontsize: 10px !important; }
+
+.gw-listitem-fontsize-s11 { --gw-listitem-fontsize: 11px !important; }
+
+.gw-listitem-fontsize-s12 { --gw-listitem-fontsize: 12px !important; }
+
+.gw-listitem-fontsize-s13 { --gw-listitem-fontsize: 13px !important; }
+
+.gw-listitem-fontsize-s14 { --gw-listitem-fontsize: 14px !important; }
+
+.gw-listitem-fontsize-s15 { --gw-listitem-fontsize: 15px !important; }
+
+.gw-listitem-fontsize-s16 { --gw-listitem-fontsize: 16px !important; }
+
+.gw-listitem-fontsize-s17 { --gw-listitem-fontsize: 17px !important; }
+
+.gw-listitem-fontsize-s18 { --gw-listitem-fontsize: 18px !important; }
+
+.gw-listitem-fontsize-s19 { --gw-listitem-fontsize: 19px !important; }
+
+.gw-listitem-fontsize-s20 { --gw-listitem-fontsize: 20px !important; }
+
+.gw-listitem-fontsize-s21 { --gw-listitem-fontsize: 21px !important; }
+
+.gw-listitem-fontsize-s22 { --gw-listitem-fontsize: 22px !important; }
+
+.gw-listitem-fontsize-s23 { --gw-listitem-fontsize: 23px !important; }
+
+.gw-listitem-fontsize-s24 { --gw-listitem-fontsize: 24px !important; }
+
+:root { --fontSize: 10px; }
+
+.gw-info { --notification-bg-color: var(--infoBackgroundColor); --notificat=
+ion-border-color: var(--infoBorderColor); --notification-color: var(--infoT=
+itleColor); }
+
+.gw-success { --notification-bg-color: var(--successBackgroundColor); --not=
+ification-border-color: var(--successBorderColor); --notification-color: va=
+r(--successTitleColor); }
+
+.gw-error { --notification-bg-color: var(--errorBackgroundColor); --notific=
+ation-border-color: var(--errorBorderColor); --notification-color: var(--er=
+rorTitleColor); }
+
+.gw-warning { --notification-bg-color: var(--warningBackgroundColor); --not=
+ification-border-color: var(--warningBorderColor); --notification-color: va=
+r(--warningTitleColor); }
+
+.th-rw { --toolbarIconToggleFill: var(--primaryColorPurple); --toolbarIconT=
+oggleHoverFill: var(--primaryColorPurple); }
+
+.gw-toolbar--undocked { --toolbarWidth: fit-content; --toolbarDisplay: bloc=
+k; --toolbarPosition: fixed; }
+
+.gw-ul--small { --liWidth: 150px; }
+
+.gw-ul--medium { --liWidth: 300px; }
+
+.gw-ul--large { --liWidth: 450px; }
+------MultipartBoundary--sSwd8kY8onBFmLvNmQkbD09tetEL3Li19uciukxAJ3----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-ea33abda-2e59-45c6-b588-cbe4a19457df@mhtml.blink
+
+@charset "utf-8";
+
+input[type=3D"text"].svelte-cekwmz { max-width: 300px; flex-grow: 1; }
+
+.options.svelte-cekwmz { margin: 12px 0px; }
+
+.option.svelte-cekwmz { min-height: 25px; display: flex; align-items: cente=
+r; flex-wrap: wrap; }
+
+input[type=3D"text"].svelte-cekwmz, input[type=3D"file"].svelte-cekwmz { ma=
+rgin-left: 4px; }
+------MultipartBoundary--sSwd8kY8onBFmLvNmQkbD09tetEL3Li19uciukxAJ3----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-6b90fa98-a122-4601-897b-37d21c6fee53@mhtml.blink
+
+@charset "utf-8";
+
+.reset.svelte-7upl3d { float: right; }
+------MultipartBoundary--sSwd8kY8onBFmLvNmQkbD09tetEL3Li19uciukxAJ3----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-655ba3c8-8016-4ae9-94a6-df702abc2727@mhtml.blink
+
+@charset "utf-8";
+
+[p4-modal-visible] { overflow: hidden; }
+
+.modal.svelte-15nxjx { position: fixed; top: 0px; left: 0px; width: 100%; h=
+eight: 100%; z-index: 20; display: flex; align-items: center; justify-conte=
+nt: center; background-color: rgba(0, 0, 0, 0.75); word-break: break-word; =
+}
+
+.technical.svelte-15nxjx { font-style: italic; }
+------MultipartBoundary--sSwd8kY8onBFmLvNmQkbD09tetEL3Li19uciukxAJ3----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-718a21b7-7935-4c56-ba53-34ba0e8bfb53@mhtml.blink
+
+@charset "utf-8";
+
+footer.svelte-1c4nbyi { text-align: center; }
+------MultipartBoundary--sSwd8kY8onBFmLvNmQkbD09tetEL3Li19uciukxAJ3----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-bcae3b52-c030-4e8a-b6b3-66ffbe4bb9bd@mhtml.blink
+
+@charset "utf-8";
+
+:root { --mdui-color-primary-light: 103, 80, 164; --mdui-color-primary-dark=
+: 208, 188, 255; }
+
+.foo { background-color: rgb(var(--mdui-color-primary)); }
+
+.input-for-remembering-project-file { display: none; }
+
+mdui-card { padding: 15px; width: min(725px, -10px + 100vw); }
+------MultipartBoundary--sSwd8kY8onBFmLvNmQkbD09tetEL3Li19uciukxAJ3------
