@@ -1651,10 +1651,10 @@
   },
   function (e, a) {
     e.exports = {
-      APP_NAME: "40code打包器",
-      WEBSITE: "https://packager.40code.com/",
+      APP_NAME: "Ikuyo Packaging System",
+      WEBSITE: "https://spacecatgame.netlify.app",
       COPYRIGHT_NOTICE:
-        "Copyright (C) 2021-2024 Thomas Weber\n\nThe Source Code Form of this program is available under the terms of the\nMozilla Public License, v. 2.0. You can obtain a copy of the license at\nhttps://www.mozilla.org/en-US/MPL/2.0/.",
+        "Copyright (C) 2021-2024 Thomas Weber\n\nThis version has been modified by 40code and Starry Systems.",
       ACCENT_COLOR: "#ff4c4c",
       SOURCE_CODE: "https://github.com/TurboWarp/packager",
       FEEDBACK_PRIMARY: {
@@ -3092,7 +3092,7 @@
           } else {
             if ("post" !== n) throw new Error("Unknown type");
             (t = `${Math.random()}`),
-              (r = "40code作品"),
+              (r = "Ikuyo Packaging System"),
               (a = await (await I(window.postData, i)).promise);
           }
           return { projectId: o, uniqueId: t, title: r, project: a };
