@@ -7,7 +7,7 @@ I am welcoming to contributions, but **please** test them before making a pull r
 The minimal version of Space Cat Games is designed to be deployed on low-spec servers, and used on low-spec machines. Most features that are not game-related have been cut, but at the cost of less updates. It is on the "minimal" branch.
 
 ## Contributors
-
+[![All Contributors](https://img.shields.io/github/all-contributors/Starry-Systems/projectName?color=ee8449&style=flat-square)](#contributors)
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
