@@ -33,13 +33,12 @@
 
   <div class="hero">
     <div class="container">
-      <img src="https://files.catbox.moe/559g2s.gif">
+      <h1 id="main-header">Welcome to Space Cat Games</h1>
       <div id="random-tip" class="random-tip"></div>
       <h6>
         This is version 13. Space Cat Games, libspacecat and libbevel are (C)
         Starry Systems 2025
       </h6>
-      <script src="js/main.js"></script>
       <script>
         // Random tips array
         const tips = [
@@ -68,7 +67,9 @@
           "Oh, that girl, said what she said",
           "Just once more?",
           "No more!",
-
+          "*also known as Floppa Games",
+          "I love the smell of burnt toast in the morning!",
+          ""
         ];
 
         function showRandomTip() {
@@ -77,10 +78,20 @@
           console.log("Random Tip Displayed: " + randomTip);
         }
 
+        // Header randomization: 1 in 10 chance for Japanese
+        function randomizeHeader() {
+          const header = document.getElementById("main-header");
+          if (Math.random() < 0.1) {
+            header.textContent = "スペースキャットゲーム";
+          } else {
+            header.textContent = "Welcome to Space Cat Games";
+          }
+        }
+
+        randomizeHeader();
         showRandomTip(); // Show one on load
         setInterval(showRandomTip, 5000); // Change every 5 seconds
       </script>
-      <!-- ...existing code... -->
       <a href="games.html" class="btn">Play Now</a>
     </div>
   </div>
