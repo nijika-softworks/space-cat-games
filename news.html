@@ -224,5 +224,37 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <!-- FPS Counter -->
+<div id="fps-counter" style="
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: rgba(20,20,20,0.8);
+  color: #0f0;
+  font-family: monospace;
+  font-size: 16px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  z-index: 9999;
+  pointer-events: none;
+">FPS: --</div>
+<script>
+  (function() {
+    let lastFrame = performance.now();
+    let frames = 0;
+    let fps = 0;
+    function loop(now) {
+      frames++;
+      if (now - lastFrame >= 1000) {
+        fps = frames;
+        frames = 0;
+        lastFrame = now;
+        document.getElementById('fps-counter').textContent = 'FPS: ' + fps;
+      }
+      requestAnimationFrame(loop);
+    }
+    requestAnimationFrame(loop);
+  })();
+</script>
   </body>
 </html>
