@@ -11,8 +11,42 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
-
+<script>
+  window.addEventListener('load', function() {
+    const spinner = document.getElementById('loading-spinner');
+    if (spinner) {
+      spinner.style.opacity = '0';
+      setTimeout(() => spinner.style.display = 'none', 400);
+    }
+  });
+</script>
 <body>
+  <div id="loading-spinner" style="
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(30,32,34,0.95);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.4s;
+  ">
+    <div style="
+      border: 8px solid #eee;
+      border-top: 8px solid #e74c3c;
+      border-radius: 50%;
+      width: 64px;
+      height: 64px;
+      animation: spin 1s linear infinite;
+    "></div>
+  </div>
+  <style>
+    @keyframes spin {
+      0% { transform: rotate(0deg);}
+      100% { transform: rotate(360deg);}
+    }
+  </style>
+<!-- ...existing code... -->
   <noscript>
     <h1>Hey there!</h1>
     <h2>You need Javascript enabled to view this site!</h2>
