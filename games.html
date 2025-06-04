@@ -35,31 +35,44 @@
     <h1>Games Collection</h1>
     <p>Browse our extensive collection of free browser games. Click on any game to start playing instantly!</p>
 
-    <div class="marquee-container">
-      <marquee>
-        <img src="neocities.png" width="100" height="30" alt="Neocities">
-        <img src="Team_Astrocat.png" width="70" height="30" alt="Team Astrocat">
-        <img src="gplv3.svg" width="70" height="30" alt="GPL v3">
-        <img src="mothracompat.gif" width="70" height="30" alt="Mothra Compatible">
-        <img src="https://9p.io/plan9/img/power36.gif" width="70" height="30" alt="Plan 9">
-        <a href="https://maschinensturmer.neocities.org/"><img
-            src="https://maschinensturmer.neocities.org/ningenshikkakubotan.png" alt="Maschinensturmer"></a>
-        <a href="https://adilene.net/"><img src="https://i.ibb.co/9k8TjjhS/sitebutton.gif" alt="Adilene"></a>
-        <a href="https://zorrpu.neocities.org"><img src="https://zorrpu.com/stamps-etc/link-me/Zorp%2088x31.jpg"
-            alt="Zorrpu"></a>
-        <a href="https://frutigeraeroarchive.org/"><img
-            src="https://frutigeraeroarchive.org/images/buttons/frutigeraeroarchive_button.png"
-            alt="Frutiger Aero Archive"></a>
-        <a href="https://winbows.neocities.org/" target="_top"><img
-            src="https://winbows.neocities.org/resources/winbows-btn.png" title="Winbows XP" alt="Winbows XP"></a>
-        <a href="https://funnyorangecat.neocities.org"><img src="https://i.postimg.cc/kXmxWz6D/IMG-0352.png"
-            alt="Funny Orange Cat"></a>
-        <a href="https://webgore.neocities.org/"><img src="https://webgore.neocities.org/images/sitebutton.gif"
-            alt="Webgore"></a>
-        <a href="https://lopster.neocities.org/roring/roring"><img
-            src="https://lopster.neocities.org/deco/buttons/roring%20button.gif" alt="Lopster"></a>
-      </marquee>
-    </div>
+   <!-- Ad Roster Display -->
+<div id="ad-roster" style="margin: 2em auto; max-width: 480px; text-align: center;"></div>
+<script>
+// List of ads (add more as needed)
+const ads = [
+  {
+    title: "Your Ad Here!",
+    image: "ads/adhere.webp",
+    link: "submitad.html"
+  },
+  {
+    title: "Advertise Here!",
+    image: "ads/adhere.webp",
+    link: "submitad.html"
+  },
+  // Example: Add more ads below
+  // {
+  //   title: "Cool Game!",
+  //   image: "ads/coolgame.png",
+  //   link: "https://example.com"
+  // }
+];
+
+// Function to display a random ad
+function showRandomAd() {
+  const ad = ads[Math.floor(Math.random() * ads.length)];
+  document.getElementById('ad-roster').innerHTML = `
+    <a href="${ad.link}" target="_blank" style="text-decoration:none;color:inherit;">
+      <img src="${ad.image}" alt="${ad.title}" style="max-width:100%;border-radius:8px;box-shadow:0 2px 8px #000a;">
+      <div style="margin-top:0.5em;font-weight:bold;">${ad.title}</div>
+    </a>
+  `;
+}
+
+// Show a new ad every 10 seconds
+showRandomAd();
+setInterval(showRandomAd, 10000);
+</script>
 
     <h2>All Games</h2>
     <!-- Eplinx.com / Banner / 468x60 / Full Banner --><ins class="aso-zone" data-zone="138908"></ins>
