@@ -1,11 +1,11 @@
 /* Reset and base styles */
 .ad-img-small {
-    max-width: 180px;
-    max-height: 90px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px #000a;
-  }
-  
+  max-width: 180px;
+  max-height: 90px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #000a;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -58,7 +58,6 @@ h3 {
   font-size: 2rem;
   padding: 15px 0;
 }
-
 
 p {
   margin-bottom: 15px;
@@ -256,9 +255,10 @@ h6 {
   display: inline-block;
 }
 
+/* --- RED HOVER FOR GAME BUTTON TEXT --- */
 .game-item:hover p,
 .game-item:focus-within p {
-  color: #3498db;
+  color: #e74c3c;
   transform: scale(1.05);
 }
 
@@ -268,7 +268,7 @@ h6 {
   position: absolute;
   width: 100%;
   height: 2px;
-  background-color: #3498db;
+  background-color: #e74c3c;
   bottom: -3px;
   left: 0;
   transform: scaleX(0);
