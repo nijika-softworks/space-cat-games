@@ -448,72 +448,29 @@ footer {
 /* ...existing code... */
 
 /* Dark Theme Support */
-body.dark-theme {
-  background: #181a1b !important;
-  color: #eee !important;
-}
-
-body.dark-theme .container,
-body.dark-theme .credits-section,
-body.dark-theme .license-section {
-  background: #23272a !important;
-  color: #eee !important;
-  box-shadow: 0 2px 12px #000a;
-}
-
-body.dark-theme .topnav {
-  background: #181a1b !important;
-}
-
-body.dark-theme .topnav a,
-body.dark-theme .footer-links a {
-  color: #eee !important;
-}
-
-body.dark-theme .topnav a:hover,
-body.dark-theme .topnav a.active {
-  background: #23272a !important;
+body.dark-theme,
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme h5,
+body.dark-theme h6,
+body.dark-theme p,
+body.dark-theme li,
+body.dark-theme span,
+body.dark-theme label,
+body.dark-theme a,
+body.dark-theme th,
+body.dark-theme td,
+body.dark-theme input,
+body.dark-theme textarea,
+body.dark-theme select {
   color: #fff !important;
 }
 
 /* Keep hero gradient, just change text to white in dark mode */
 body.dark-theme .hero {
   background: linear-gradient(to right, #b51313, #2c3e50) !important;
-  color: #fff !important;
 }
 
-body.dark-theme .hero h1,
-body.dark-theme .hero p {
-  color: #fff !important;
-}
-
-body.dark-theme .footer-content,
-body.dark-theme footer {
-  background: #181a1b !important;
-  color: #eee !important;
-}
-
-body.dark-theme .marquee-container {
-  background: #23272a !important;
-  color: #eee !important;
-}
-
-body.dark-theme input,
-body.dark-theme textarea,
-body.dark-theme select {
-  background: #23272a !important;
-  color: #eee !important;
-  border: 1px solid #444 !important;
-}
-
-body.dark-theme .btn {
-  background: #444 !important;
-  color: #fff !important;
-}
-
-body.dark-theme .btn:hover {
-  background: #e74c3c !important;
-  color: #fff !important;
-}
-
-/* ...existing code... */
+/* ...rest of your dark theme CSS... */
