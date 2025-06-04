@@ -468,8 +468,25 @@ body.dark-theme select {
   color: #fff !important;
 }
 
-/* Keep hero gradient, just change text to white in dark mode */
+/* Strong dark theme override for all backgrounds */
+body.dark-theme,
+body.dark-theme .container,
+body.dark-theme .credits-section,
+body.dark-theme .license-section,
+body.dark-theme .archive-section,
+body.dark-theme .footer-content,
+body.dark-theme footer,
+body.dark-theme .marquee-container,
+body.dark-theme .topnav,
+body.dark-theme .hero,
+body.dark-theme .archive-item {
+  background: #181a1b !important;
+  color: #fff !important;
+}
+
+/
 body.dark-theme .hero {
   background: linear-gradient(to right, #b51313, #2c3e50) !important;
+  color: #fff !important;
 }
 
