@@ -47,6 +47,12 @@ h2 {
   padding: 15px 0;
   border-bottom: 2px solid #e0e0e0;
 }
+h3 {
+  font-size: 2rem;
+  padding: 15px 0;
+  border-bottom: 2px solid #e0e0e0;
+}
+
 
 p {
   margin-bottom: 15px;
