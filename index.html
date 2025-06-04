@@ -14,73 +14,65 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
   </head>
 
-  <body>
-    <noscript>
-      <h1>Hey there!</h1>
-      <h2>You need Javascript enabled to view this site!</h2>
-      <p>Error Code = 0x00004</p>
-    </noscript>
-    <h3 class="palestine">Free Palestine</h3>
-    <div class="topnav">
-      <a href="index.html">Home</a>
-      <a href="games.html">Games</a>
-      <a href="news.html">News</a>
-      <a href="opensource.html">Source Code</a>
-      <a href="credits.html">Credits</a>
-      <a href="changelog.html">Changelog</a>
-      <a href="https://starry-sys.betteruptime.com/">Status</a>
-      <!-- DO NOT CHANGE THIS. CHANGING THIS WILL RESULT IN TERMINATED EDIT PERMISSIONS!-->
-      <a
-        href="https://docs.google.com/document/d/e/2PACX-1vT-28hqhqnzJb3ABu47A7wYL6ei8MIE7DD7yGq1VrR6D7HSfrHjZlGfsneivTIdLFp16dcWPDhZhjx7/pub"
-        >Documentation</a
-      >
-      <a href="archive.html">Archive</a>
-    </div>
-    <div class="hero">
-      <div class="container">
-        <h1 id="main-header">Welcome to Space Cat Games Version 13</h1>
-        <div id="random-tip" class="random-tip"></div>
-        <h6>
-          This is version 13. Space Cat Games, libspacecat and libbevel are (C)
-          Starry Systems 2025
-        </h6>
-        <script>
-          // Random tips array
-          const tips = [
-            "Aishite Aishite Aishite!",
-            "Mayday! Go ahead and fire away!",
-            "Today I will too roll again!",
-            "Hey William, can you hear us?",
-            "Shut up with your complains!",
-            "	Hey, Kenji, can you see us?",
-            "It’s painful, it hurts. Break, break this binding spell, okay?",
-            "Who am I supposed to show my real self to?",
-            "That band's song, is a crutch to someone!",
-            "Cloudfart Turnstale don't work on Netlify...",
-            "I don't know what to say, but I want to say something.",
-            "Oh, I see, so thats how it is.",
-            "Microwave! Microwave! Microwave! Microwave! Microwave! Microwave! Microwave! Microwave! ",
-            "console.log(Random Tip Displayed: + randomTip);",
-            "Press F12 or Ctrl+Shift+I to open the console for secrets :)",
-            "1 year of service!",
-            "Stop your defender being a brick at the back and upgrade it with intense PAC DEF and PHY upgrades",
-            "undefined",
-            "The Big Orange R",
-            "µSpaceCat should exist fr",
-            "My spine ejected out of me like a PEZ dispenser!",
-            "From the fermented juice to the keys to the car to the trees",
-            "Oh, that girl, said what she said",
-            "Just once more?",
-            "No more!",
-            "*also known as Floppa Games",
-            "I love the smell of burnt toast in the morning!",
-            "Do all the balls from Slope just fall in the void forever?",
-            "Funky Banana Ice Cream",
-            "Lock in for a Free Biscuit!",
-            "I LOVE BATTERY ACID!!!!!!!!!!",
-            "Powered by Jekyll",
-            "Free Palestine",
-          ];
+<body>
+  <noscript>
+    <h1>Hey there!</h1>
+    <h2>You need Javascript enabled to view this site!</h2>
+    <p>Error Code = 0x00004</p>
+  </noscript>
+  <div class="topnav">
+    <a href="index.html">Home</a>
+    <a href="games.html">Games</a>
+    <a href="news.html">News</a>
+    <a href="opensource.html">Source Code</a>
+    <a href="credits.html">Credits</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="https://starry-sys.betteruptime.com/">Status</a> <!-- DO NOT CHANGE THIS. CHANGING THIS WILL RESULT IN TERMINATED EDIT PERMISSIONS!-->
+    <a
+      href="https://docs.google.com/document/d/e/2PACX-1vT-28hqhqnzJb3ABu47A7wYL6ei8MIE7DD7yGq1VrR6D7HSfrHjZlGfsneivTIdLFp16dcWPDhZhjx7/pub">Documentation</a>
+    <a href="archive.html">Archive</a>
+  </div>
+
+  <div class="hero">
+    <div class="container">
+      <h1 id="main-header">Welcome to Space Cat Games</h1>
+      <div id="random-tip" class="random-tip"></div>
+      <h6>
+        This is version 13. Space Cat Games, libspacecat and libbevel are (C)
+        Starry Systems 2025
+      </h6>
+      <script>
+        // Random tips array
+        const tips = [
+          "Aishite Aishite Aishite!",
+          "Mayday! Go ahead and fire away!",
+          "Today I will too roll again!",
+          "Hey William, can you hear us?",
+          "Shut up with your complains!",
+          "	Hey, Kenji, can you see us?",
+          "It’s painful, it hurts. Break, break this binding spell, okay?",
+          "Who am I supposed to show my real self to?",
+          "That band's song, is a crutch to someone!",
+          "Cloudfart Turnstale don't work on Netlify...",
+          "I don't know what to say, but I want to say something.",
+          "Oh, I see, so thats how it is.",
+          "Microwave! Microwave! Microwave! Microwave! Microwave! Microwave! Microwave! Microwave! ",
+          "console.log(Random Tip Displayed: + randomTip);",
+          "Press F12 or Ctrl+Shift+I to open the console for secrets :)",
+          "1 year of service!",
+          "Stop your defender being a brick at the back and upgrade it with intense PAC DEF and PHY upgrades",
+          "undefined",
+          "The Big Orange R",
+          "µSpaceCat should exist fr",
+          "My spine ejected out of me like a PEZ dispenser!",
+          "From the fermented juice to the keys to the car to the trees",
+          "Oh, that girl, said what she said",
+          "Just once more?",
+          "No more!",
+          "*also known as Floppa Games",
+          "I love the smell of burnt toast in the morning!",
+          "Do all the balls from Slope just fall in the void forever?"
+        ];
 
           function showRandomTip() {
             const randomTip = tips[Math.floor(Math.random() * tips.length)];
