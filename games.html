@@ -63,8 +63,8 @@ function showRandomAd() {
   const ad = ads[Math.floor(Math.random() * ads.length)];
   document.getElementById('ad-roster').innerHTML = `
     <a href="${ad.link}" target="_blank" style="text-decoration:none;color:inherit;">
-      <img src="${ad.image}" alt="${ad.title}" style="max-width:100%;border-radius:8px;box-shadow:0 2px 8px #000a;">
-      <div style="margin-top:0.5em;font-weight:bold;">${ad.title}</div>
+      <img src="${ad.image}" alt="${ad.title}" style="max-width:160px;max-height:80px;border-radius:8px;box-shadow:0 2px 8px #000a;">
+      <div style="margin-top:0.5em;font-weight:bold;font-size:1em;">${ad.title}</div>
     </a>
   `;
 }

@@ -1,4 +1,11 @@
 /* Reset and base styles */
+.ad-img-small {
+    max-width: 180px;
+    max-height: 90px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #000a;
+  }
+  
 * {
   margin: 0;
   padding: 0;
