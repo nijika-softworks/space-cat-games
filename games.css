@@ -19,7 +19,7 @@
 }
 
 .category-btn:hover {
-  background-color: #2980b9;
+  background-color: #8b1a1a;
 }
 
 .category-btn.active {
@@ -71,7 +71,7 @@
 }
 
 .sort-select:focus {
-  border-color: #3498db;
+  border-color: #ff0000;
 }
 
 /* Game rating stars */

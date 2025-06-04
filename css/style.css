@@ -1,4 +1,11 @@
 /* Reset and base styles */
+.ad-img-small {
+  max-width: 180px;
+  max-height: 90px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #000a;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -46,6 +53,10 @@ h2 {
   font-size: 2rem;
   padding: 15px 0;
   border-bottom: 2px solid #e0e0e0;
+}
+h3 {
+  font-size: 2rem;
+  padding: 15px 0;
 }
 
 p {
@@ -102,7 +113,7 @@ h6 {
 
 /* Hero section */
 .hero {
-  background: linear-gradient(to right, #3498db, #2c3e50);
+  background: linear-gradient(to right, #b51313, #2c3e50);
   color: white;
   padding: 60px 20px;
   text-align: center;
@@ -244,9 +255,10 @@ h6 {
   display: inline-block;
 }
 
+/* --- RED HOVER FOR GAME BUTTON TEXT --- */
 .game-item:hover p,
 .game-item:focus-within p {
-  color: #3498db;
+  color: #e74c3c;
   transform: scale(1.05);
 }
 
@@ -256,7 +268,7 @@ h6 {
   position: absolute;
   width: 100%;
   height: 2px;
-  background-color: #3498db;
+  background-color: #e74c3c;
   bottom: -3px;
   left: 0;
   transform: scaleX(0);
@@ -433,3 +445,48 @@ footer {
     margin: 5px 10px;
   }
 }
+/* ...existing code... */
+
+/* Dark Theme Support */
+body.dark-theme,
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme h5,
+body.dark-theme h6,
+body.dark-theme p,
+body.dark-theme li,
+body.dark-theme span,
+body.dark-theme label,
+body.dark-theme a,
+body.dark-theme th,
+body.dark-theme td,
+body.dark-theme input,
+body.dark-theme textarea,
+body.dark-theme select {
+  color: #fff !important;
+}
+
+/* Strong dark theme override for all backgrounds */
+body.dark-theme,
+body.dark-theme .container,
+body.dark-theme .credits-section,
+body.dark-theme .license-section,
+body.dark-theme .archive-section,
+body.dark-theme .footer-content,
+body.dark-theme footer,
+body.dark-theme .marquee-container,
+body.dark-theme .topnav,
+body.dark-theme .hero,
+body.dark-theme .archive-item {
+  background: #181a1b !important;
+  color: #fff !important;
+}
+
+
+body.dark-theme .hero {
+  background: linear-gradient(to right, #b51313, #2c3e50) !important;
+  color: #fff !important;
+}
+
