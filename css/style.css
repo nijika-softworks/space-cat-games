@@ -445,6 +445,8 @@ footer {
     margin: 5px 10px;
   }
 }
+/* ...existing code... */
+
 /* Dark Theme Support */
 body.dark-theme {
   background: #181a1b !important;
@@ -474,8 +476,14 @@ body.dark-theme .topnav a.active {
   color: #fff !important;
 }
 
+/* Keep hero gradient, just change text to white in dark mode */
 body.dark-theme .hero {
-  background: linear-gradient(to right, #23272a, #181a1b) !important;
+  background: linear-gradient(to right, #b51313, #2c3e50) !important;
+  color: #fff !important;
+}
+
+body.dark-theme .hero h1,
+body.dark-theme .hero p {
   color: #fff !important;
 }
 
@@ -507,3 +515,5 @@ body.dark-theme .btn:hover {
   background: #e74c3c !important;
   color: #fff !important;
 }
+
+/* ...existing code... */
