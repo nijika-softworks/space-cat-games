@@ -73,6 +73,9 @@
             "*also known as Floppa Games",
             "I love the smell of burnt toast in the morning!",
             "Do all the balls from Slope just fall in the void forever?",
+            "There is a one in 10 chance to get a different title text...",
+            "Scarlet Police on Ghetto Patrol!",
+            "Cirno Funky!",
           ];
 
           function showRandomTip() {
@@ -86,8 +89,10 @@
             const header = document.getElementById("main-header");
             if (Math.random() < 0.1) {
               header.textContent = "スペースキャットゲーム バージョン14";
+              console.log("Japanese header loaded.");
             } else {
               header.textContent = "Welcome to Space Cat Games 14";
+              console.log("Standard header loaded.");
             }
           }
 
