@@ -11,8 +11,42 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
-
+<script>
+  window.addEventListener('load', function() {
+    const spinner = document.getElementById('loading-spinner');
+    if (spinner) {
+      spinner.style.opacity = '0';
+      setTimeout(() => spinner.style.display = 'none', 400);
+    }
+  });
+</script>
 <body>
+  <div id="loading-spinner" style="
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(30,32,34,0.95);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.4s;
+  ">
+    <div style="
+      border: 8px solid #eee;
+      border-top: 8px solid #e74c3c;
+      border-radius: 50%;
+      width: 64px;
+      height: 64px;
+      animation: spin 1s linear infinite;
+    "></div>
+  </div>
+  <style>
+    @keyframes spin {
+      0% { transform: rotate(0deg);}
+      100% { transform: rotate(360deg);}
+    }
+  </style>
+<!-- ...existing code... -->
   <noscript>
     <h1>Hey there!</h1>
     <h2>You need Javascript enabled to view this site!</h2>
@@ -26,6 +60,7 @@
     <a href="credits.html">Credits</a>
     <a href="changelog.html">Changelog</a>
     <a href="archive.html">Archive</a>
+    <a href="submitad.html">Submit Ad!</a>
     <a
       href="https://docs.google.com/document/d/e/2PACX-1vT-28hqhqnzJb3ABu47A7wYL6ei8MIE7DD7yGq1VrR6D7HSfrHjZlGfsneivTIdLFp16dcWPDhZhjx7/pub">Documentation</a>
     <a href="https://starry-sys.betteruptime.com/">Status</a>
@@ -35,31 +70,45 @@
     <h1>Games Collection</h1>
     <p>Browse our extensive collection of free browser games. Click on any game to start playing instantly!</p>
 
-    <div class="marquee-container">
-      <marquee>
-        <img src="neocities.png" width="100" height="30" alt="Neocities">
-        <img src="Team_Astrocat.png" width="70" height="30" alt="Team Astrocat">
-        <img src="gplv3.svg" width="70" height="30" alt="GPL v3">
-        <img src="mothracompat.gif" width="70" height="30" alt="Mothra Compatible">
-        <img src="https://9p.io/plan9/img/power36.gif" width="70" height="30" alt="Plan 9">
-        <a href="https://maschinensturmer.neocities.org/"><img
-            src="https://maschinensturmer.neocities.org/ningenshikkakubotan.png" alt="Maschinensturmer"></a>
-        <a href="https://adilene.net/"><img src="https://i.ibb.co/9k8TjjhS/sitebutton.gif" alt="Adilene"></a>
-        <a href="https://zorrpu.neocities.org"><img src="https://zorrpu.com/stamps-etc/link-me/Zorp%2088x31.jpg"
-            alt="Zorrpu"></a>
-        <a href="https://frutigeraeroarchive.org/"><img
-            src="https://frutigeraeroarchive.org/images/buttons/frutigeraeroarchive_button.png"
-            alt="Frutiger Aero Archive"></a>
-        <a href="https://winbows.neocities.org/" target="_top"><img
-            src="https://winbows.neocities.org/resources/winbows-btn.png" title="Winbows XP" alt="Winbows XP"></a>
-        <a href="https://funnyorangecat.neocities.org"><img src="https://i.postimg.cc/kXmxWz6D/IMG-0352.png"
-            alt="Funny Orange Cat"></a>
-        <a href="https://webgore.neocities.org/"><img src="https://webgore.neocities.org/images/sitebutton.gif"
-            alt="Webgore"></a>
-        <a href="https://lopster.neocities.org/roring/roring"><img
-            src="https://lopster.neocities.org/deco/buttons/roring%20button.gif" alt="Lopster"></a>
-      </marquee>
-    </div>
+   <!-- Ad Roster Display -->
+<div id="ad-roster" style="margin: 2em auto; max-width: 480px; text-align: center;"></div>
+<p>This is an ad. Ads here are managed by us at Starry Systems.</p>
+<script>
+// List of ads (add more as needed)
+const ads = [
+  {
+    title: "Your Ad Here!",
+    image: "ads/adhere.webp",
+    link: "submitad.html"
+  },
+  {
+    title: "View the source code!",
+    image: "ads/htmlad.png",
+    link: "https://github.com/Starry-Systems/space-cat-games"
+  },
+  // Example: Add more ads below
+  // {
+  //   title: "Cool Game!",
+  //   image: "ads/coolgame.png",
+  //   link: "https://example.com"
+  // }
+];
+
+// Function to display a random ad
+function showRandomAd() {
+  const ad = ads[Math.floor(Math.random() * ads.length)];
+  document.getElementById('ad-roster').innerHTML = `
+    <a href="${ad.link}" target="_blank" style="text-decoration:none;color:inherit;">
+      <img src="${ad.image}" alt="${ad.title}" style="max-width:160px;max-height:80px;border-radius:8px;box-shadow:0 2px 8px #000a;">
+      <div style="margin-top:0.5em;font-weight:bold;font-size:1em;">${ad.title}</div>
+    </a>
+  `;
+}
+
+// Show a new ad every 10 seconds
+showRandomAd();
+setInterval(showRandomAd, 10000);
+</script>
 
     <h2>All Games</h2>
     <!-- Eplinx.com / Banner / 468x60 / Full Banner --><ins class="aso-zone" data-zone="138908"></ins>
@@ -327,7 +376,7 @@
 
       <div class="game-item">
         <button type="button" onclick="window.location.href='games/sushi.html'" title="Papa's Sushiria">
-          <img src="cheeseria_300x300.jpg" alt="Papa's Sushiria">
+          <img src="images/icon_300x300_papassushiria.jpg" alt="Papa's Sushiria">
         </button>
         <p>Papa's Sushiria</p>
       </div>
@@ -398,7 +447,7 @@
         </button>
         <p>FIFA 2007</p>
       </div>
-       <div class="game-item">
+      <div class="game-item">
         <button type="button" onclick="window.location.href='/games/taptap.html'" title="Tap Goal">
           <img src="/images/tapcap.png" alt="Tap Goal">
         </button>
@@ -410,7 +459,7 @@
         </button>
         <p>Cookie Clicker</p>
       </div>
-    <div class="game-item">
+      <div class="game-item">
         <button type="button" onclick="window.location.href='/games/moto.html'" title="MotoX3M">
           <img src="/images/motocap.avif" alt="motocap.avif">
         </button>
@@ -421,6 +470,26 @@
           <img src="/images/noimg.png" alt="No Image available">
         </button>
         <p>Helios Proxy</p>
+      </div>
+      <div class="game-item">
+        <button type="button" onclick="window.location.href='/games/chickengame2.html'" title="Chicken Game 2">
+          <img src="/images/chickencap.png" alt="Chicken Game 2">
+        </button>
+        <p>Chicken Game 2</p>
+      </div>
+      <div class="game-item">
+        <button type="button" onclick="window.location.href='https://supertuxkart.pages.dev/'" title="SuperTuxKart">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3wVhcyQV-z7il2CAUbDkZJKkWTUe9lrR_3A&s"
+            alt="SuperTuxKart">
+        </button>
+        <p>SuperTuxKart</p>
+      </div>
+      <div class="game-item">
+        <button type="button" onclick="window.location.href='/games/gamble1928.html'" title="gamble1928">
+          <img src="/images/1928cap.png"
+            alt="gamble1928">
+        </button>
+        <p>gamble1928</p>
       </div>
     </div>
 
@@ -439,23 +508,23 @@
         </button>
         <p>File to Base64</p>
       </div>
-    <div class="game-item">
-      <button type="button" onclick="window.location.href='/games/packager.html'" title="Ikuyo Packaging System">
-        <img src="/images/noimg.png" alt="No Image available">
+      <div class="game-item">
+        <button type="button" onclick="window.location.href='/games/packager.html'" title="Ikuyo Packaging System">
+          <img src="/images/noimg.png" alt="No Image available">
         </button>
         <p>Ikuyo Packaging System</p>
-    </div>
-      <div class="game-item">
-      <button type="button" onclick="window.location.href='/games/htmlrunner.html'" title="Ikuyo Packaging System">
-         <img src="/images/noimg.png" alt="No Image available">
-        </button>
-      <p>HTML Rapid Prototyping Tool</p>
       </div>
-     <div class="game-item">
+      <div class="game-item">
+        <button type="button" onclick="window.location.href='/games/htmlrunner.html'" title="Ikuyo Packaging System">
+          <img src="/images/noimg.png" alt="No Image available">
+        </button>
+        <p>HTML Rapid Prototyping Tool</p>
+      </div>
+      <div class="game-item">
         <button type="button" onclick="window.location.href='/games/textedit.html'" title="µEdit">
           <img src="/images/noimg.png" alt="No Image available">
         </button>
-      <p>µEdit</p>
+        <p>µEdit</p>
       </div>
     </div>
 
@@ -485,13 +554,40 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
-  <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
-    new Crate({
-      server: '1348773043287363604', // Starry Systems
-      channel: '1362156308333199482' // #chat
-    })
-  </script>
+
+  <!-- FPS Counter -->
+<div id="fps-counter" style="
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: rgba(20,20,20,0.8);
+  color: #0f0;
+  font-family: monospace;
+  font-size: 16px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  z-index: 9999;
+  pointer-events: none;
+">FPS: --</div>
+<script>
+  (function() {
+    let lastFrame = performance.now();
+    let frames = 0;
+    let fps = 0;
+    function loop(now) {
+      frames++;
+      if (now - lastFrame >= 1000) {
+        fps = frames;
+        frames = 0;
+        lastFrame = now;
+        document.getElementById('fps-counter').textContent = 'FPS: ' + fps;
+      }
+      requestAnimationFrame(loop);
+    }
+    requestAnimationFrame(loop);
+  })();
+</script>
+  <script src="js/themeswitcher.js"></script>
 </body>
 
 </html>
