@@ -21,6 +21,8 @@
     <meta property="og:type" content="website" /> 
   </head>
   <!-- Place this where your #commit-banner is defined (before </body>) -->
+<body class="dark-theme">
+  <!-- Place this where your #commit-banner is defined (before </body>) -->
 <div id="commit-banner">
   <button id="commit-banner-toggle" aria-label="Toggle commit banner" style="background:none;border:none;color:#ffe600;font-size:1.2em;cursor:pointer;outline:none;padding:0 10px 0 0;">
     ▼
@@ -92,7 +94,7 @@
     })
     .catch(() => {
       document.querySelector("#commit-banner .scrolling-text").textContent =
-        "Could not load commit info. Is GitHub API blocked?";
+        "Could not load commit info.";
     });
 
   // Toggle show/hide
@@ -107,6 +109,7 @@
     });
   });
 </script>
+    <noscript>
       <h1>Hey there!</h1>
       <h2>You need Javascript enabled to view this site!</h2>
       <p>Error Code = 0x00004</p>
