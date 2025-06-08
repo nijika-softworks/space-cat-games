@@ -21,6 +21,88 @@
   });
 </script>
 <body>
+  <div id="commit-banner">
+  <button id="commit-banner-toggle" aria-label="Toggle commit banner">▼</button>
+  <span class="scrolling-text"></span>
+</div>
+<button id="commit-banner-float-toggle" aria-label="Show commit banner" style="display:none;position:fixed;right:24px;bottom:0;z-index:100001;background:#222;border:2px solid #b59f00;border-bottom:none;border-radius:8px 8px 0 0;color:#ffe600;font-size:1.2em;cursor:pointer;outline:none;padding:0 10px;user-select:none;height:28px;align-items:center;box-shadow:0 -2px 8px rgba(0,0,0,0.2);">▲</button>
+<style>
+  #commit-banner {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  background: #222;
+  color: #ffe600;
+  font-family: 'Arial Black', Arial, sans-serif;
+  font-size: 0.95em;
+  z-index: 99999;
+  white-space: nowrap;
+  overflow: hidden;
+  height: 32px;
+  border-top: 2px solid #b59f00;
+  transition: transform 0.3s;
+  pointer-events: auto;
+}
+#commit-banner.hide {
+  transform: translateY(100%);
+}
+#commit-banner .scrolling-text {
+  display: block;
+  min-width: 100vw;
+  /* Ensures the text is always at least as wide as the banner */
+  animation: scroll-left 20s linear infinite;
+  overflow: hidden;
+  white-space: nowrap;
+  will-change: transform;
+}
+@keyframes scroll-left {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+</style>
+<script>
+  // GitHub org/repo info
+  const user = "Starry-Systems";
+  const repo = "space-cat-games";
+  fetch(`https://api.github.com/repos/${user}/${repo}/commits?per_page=1`)
+    .then(r => r.json())
+    .then(data => {
+      if (!data[0]) return;
+      const commit = data[0];
+      const hash = commit.sha.substring(0, 7);
+      const title = commit.commit.message.split('\n')[0];
+      const committer = commit.commit.committer.name;
+      const date = new Date(commit.commit.committer.date).toLocaleString();
+      const text = `Last Commit: ${hash} — "${title}" by ${committer} at ${date}`;
+      document.querySelector("#commit-banner .scrolling-text").textContent = text;
+    })
+    .catch(() => {
+      document.querySelector("#commit-banner .scrolling-text").textContent =
+        "Could not load commit info. Is GitHub API Blocked?";
+    });
+
+  // Toggle show/hide with floating button
+  document.addEventListener("DOMContentLoaded", function () {
+    const banner = document.getElementById("commit-banner");
+    const toggle = document.getElementById("commit-banner-toggle");
+    const floatToggle = document.getElementById("commit-banner-float-toggle");
+    toggle.addEventListener("click", function (e) {
+      banner.classList.add("hide");
+      toggle.style.display = "none";
+      floatToggle.style.display = "flex";
+      e.stopPropagation();
+    });
+    floatToggle.addEventListener("click", function (e) {
+      banner.classList.remove("hide");
+      toggle.style.display = "flex";
+      floatToggle.style.display = "none";
+      e.stopPropagation();
+    });
+  });
+</script>
   <div id="loading-spinner" style="
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
