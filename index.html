@@ -47,8 +47,31 @@
 
     <div class="hero">
       <div class="container">
-        <h1 id="main-header">Welcome to Space Cat Games 14</h1>
-        <div id="random-tip" class="random-tip"></div>
+       <!-- ...existing code... -->
+<h1 id="main-header">
+  Welcome to Space Cat Games 14
+  <span id="random-tip" class="random-tip"></span>
+</h1>
+
+<style>
+
+  .random-tip {
+    display: inline-block;
+    margin-left: 18px;
+    color: #ffe600;
+    font-style: italic;
+    font-size: 1.2em;
+    transform: rotate(-12deg);
+    text-shadow: 2px 2px 0 #b59f00, 0 0 8px #fff700;
+    vertical-align: middle;
+    background: none;
+    border: none;
+    padding: 0 6px;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+    /* Optional: animate the appearance */
+    transition: opacity 0.3s;
+  }
+</style>
         <script>
           // Random tips array
           const tips = [
@@ -97,6 +120,7 @@
             "please don't block our ads",
             "OH NO THE PTA ARE AFTER US AGAIN!",
             "The most Cutting Edge games website.",
+            "Down for 5 days and running!",
           ];
 
           function showRandomTip() {
