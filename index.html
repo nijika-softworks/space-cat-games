@@ -28,53 +28,37 @@
 <button id="commit-banner-float-toggle" aria-label="Show commit banner" style="display:none;position:fixed;right:24px;bottom:0;z-index:100001;background:#222;border:2px solid #b59f00;border-bottom:none;border-radius:8px 8px 0 0;color:#ffe600;font-size:1.2em;cursor:pointer;outline:none;padding:0 10px;user-select:none;height:28px;align-items:center;box-shadow:0 -2px 8px rgba(0,0,0,0.2);">▲</button>
 <style>
   #commit-banner {
-    display: flex;
-    align-items: center;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
-    background: #222;
-    color: #ffe600;
-    font-family: 'Arial Black', Arial, sans-serif;
-    font-size: 0.95em;
-    z-index: 99999;
-    white-space: nowrap;
-    overflow: hidden;
-    height: 32px;
-    border-top: 2px solid #b59f00;
-    transition: transform 0.3s;
-    pointer-events: auto;
-  }
-  #commit-banner .scrolling-text {
-    display: inline-block;
-    padding-left: 100vw;
-    animation: scroll-left 20s linear infinite;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-  #commit-banner.hide {
-    transform: translateY(100%);
-  }
-  #commit-banner-toggle {
-    background: none;
-    border: none;
-    color: #ffe600;
-    font-size: 1.2em;
-    cursor: pointer;
-    outline: none;
-    padding: 0 10px 0 0;
-    user-select: none;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    z-index: 100000;
-    position: relative;
-  }
-  @keyframes scroll-left {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
-  }
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  background: #222;
+  color: #ffe600;
+  font-family: 'Arial Black', Arial, sans-serif;
+  font-size: 0.95em;
+  z-index: 99999;
+  white-space: nowrap;
+  overflow: hidden;
+  height: 32px;
+  border-top: 2px solid #b59f00;
+  transition: transform 0.3s;
+  pointer-events: auto;
+}
+#commit-banner .scrolling-text {
+  display: block;
+  min-width: 100vw;
+  /* Ensures the text is always at least as wide as the banner */
+  animation: scroll-left 20s linear infinite;
+  overflow: hidden;
+  white-space: nowrap;
+  will-change: transform;
+}
+@keyframes scroll-left {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
 </style>
 <script>
   // GitHub org/repo info
