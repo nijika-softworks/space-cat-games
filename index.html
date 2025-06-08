@@ -20,8 +20,13 @@
     <meta property="og:url" content="https://spacecatgames.netlify.app" />
     <meta property="og:type" content="website" /> 
   </head>
-  <!-- Add this just before </body> -->
-<div id="commit-banner"></div>
+  <!-- Place this where your #commit-banner is defined (before </body>) -->
+<div id="commit-banner">
+  <button id="commit-banner-toggle" aria-label="Toggle commit banner" style="background:none;border:none;color:#ffe600;font-size:1.2em;cursor:pointer;outline:none;padding:0 10px 0 0;">
+    ▼
+  </button>
+  <span class="scrolling-text"></span>
+</div>
 <style>
   #commit-banner {
     position: fixed;
@@ -39,12 +44,30 @@
     display: flex;
     align-items: center;
     border-top: 2px solid #b59f00;
-    pointer-events: none;
+    transition: transform 0.3s;
+    pointer-events: auto;
   }
   #commit-banner .scrolling-text {
     display: inline-block;
     padding-left: 100vw;
     animation: scroll-left 20s linear infinite;
+    flex: 1;
+  }
+  #commit-banner.hide {
+    transform: translateY(100%);
+  }
+  #commit-banner-toggle {
+    background: none;
+    border: none;
+    color: #ffe600;
+    font-size: 1.2em;
+    cursor: pointer;
+    outline: none;
+    padding: 0 10px 0 0;
+    user-select: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
   }
   @keyframes scroll-left {
     0% { transform: translateX(0); }
@@ -52,7 +75,7 @@
   }
 </style>
 <script>
-  // Replace these with your GitHub username and repo name
+  // GitHub org/repo info
   const user = "Starry-Systems";
   const repo = "space-cat-games";
   fetch(`https://api.github.com/repos/${user}/${repo}/commits?per_page=1`)
@@ -65,16 +88,25 @@
       const committer = commit.commit.committer.name;
       const date = new Date(commit.commit.committer.date).toLocaleString();
       const text = `Last Commit: ${hash} — "${title}" by ${committer} at ${date}`;
-      document.getElementById("commit-banner").innerHTML =
-        `<span class="scrolling-text">${text}</span>`;
+      document.querySelector("#commit-banner .scrolling-text").textContent = text;
     })
     .catch(() => {
-      document.getElementById("commit-banner").innerHTML =
-        `<span class="scrolling-text">Could not load commit info.</span>`;
+      document.querySelector("#commit-banner .scrolling-text").textContent =
+        "Could not load commit info. Is GitHub API blocked?";
     });
+
+  // Toggle show/hide
+  document.addEventListener("DOMContentLoaded", function () {
+    const banner = document.getElementById("commit-banner");
+    const toggle = document.getElementById("commit-banner-toggle");
+    let hidden = false;
+    toggle.addEventListener("click", function () {
+      hidden = !hidden;
+      banner.classList.toggle("hide", hidden);
+      toggle.textContent = hidden ? "▲" : "▼";
+    });
+  });
 </script>
-  <body class="dark-theme">
-    <noscript>
       <h1>Hey there!</h1>
       <h2>You need Javascript enabled to view this site!</h2>
       <p>Error Code = 0x00004</p>
