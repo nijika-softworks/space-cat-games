@@ -31,6 +31,8 @@
 </div>
 <style>
   #commit-banner {
+    display: flex;
+    align-items: center;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -52,13 +54,13 @@
  #commit-banner .scrolling-text {
   display: inline-block;
   padding-left: 100vw;
-  animation: scroll-left 20s linear infinite;
   min-width: 0;
   max-width: 100vw;
   overflow: hidden;
   white-space: nowrap;
 }
 #commit-banner-toggle {
+  flex: none;
   z-index: 1;
   position: relative;
 }
@@ -101,7 +103,7 @@
     })
     .catch(() => {
       document.querySelector("#commit-banner .scrolling-text").textContent =
-        "Could not load commit info.";
+        "Could not load commit info. Is GitHub API Blocked?";
     });
 
   // Toggle show/hide
