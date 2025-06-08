@@ -20,7 +20,59 @@
     <meta property="og:url" content="https://spacecatgames.netlify.app" />
     <meta property="og:type" content="website" /> 
   </head>
-
+  <!-- Add this just before </body> -->
+<div id="commit-banner"></div>
+<style>
+  #commit-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    background: #222;
+    color: #ffe600;
+    font-family: 'Arial Black', Arial, sans-serif;
+    font-size: 0.95em;
+    z-index: 99999;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    border-top: 2px solid #b59f00;
+    pointer-events: none;
+  }
+  #commit-banner .scrolling-text {
+    display: inline-block;
+    padding-left: 100vw;
+    animation: scroll-left 20s linear infinite;
+  }
+  @keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+</style>
+<script>
+  // Replace these with your GitHub username and repo name
+  const user = "Starry-Systems";
+  const repo = "space-cat-games";
+  fetch(`https://api.github.com/repos/${user}/${repo}/commits?per_page=1`)
+    .then(r => r.json())
+    .then(data => {
+      if (!data[0]) return;
+      const commit = data[0];
+      const hash = commit.sha.substring(0, 7);
+      const title = commit.commit.message.split('\n')[0];
+      const committer = commit.commit.committer.name;
+      const date = new Date(commit.commit.committer.date).toLocaleString();
+      const text = `Last Commit: ${hash} — "${title}" by ${committer} at ${date}`;
+      document.getElementById("commit-banner").innerHTML =
+        `<span class="scrolling-text">${text}</span>`;
+    })
+    .catch(() => {
+      document.getElementById("commit-banner").innerHTML =
+        `<span class="scrolling-text">Could not load commit info.</span>`;
+    });
+</script>
   <body class="dark-theme">
     <noscript>
       <h1>Hey there!</h1>
