@@ -326,5 +326,68 @@
       })();
     </script>
     <script src="js/themeswitcher.js"></script>
+    <!-- ...existing code... -->
+
+<!-- Flag Counter Drawer -->
+<div id="flag-drawer">
+  <div id="flag-drawer-tab">🌐</div>
+  <div id="flag-drawer-content">
+    <a href="https://info.flagcounter.com/1FR6"
+      ><img
+        src="https://s05.flagcounter.com/count2/1FR6/bg_FFFFFF/txt_000000/border_CCCCCC/columns_3/maxflags_20/viewers_0/labels_0/pageviews_0/flags_0/percent_0/"
+        alt="Flag Counter"
+        border="0"
+    /></a>
+  </div>
+</div>
+
+<style>
+  #flag-drawer {
+    position: fixed;
+    top: 120px;
+    right: -180px;
+    width: 200px;
+    transition: right 0.3s;
+    z-index: 10000;
+  }
+  #flag-drawer.open {
+    right: 0;
+  }
+  #flag-drawer-tab {
+    position: absolute;
+    left: -36px;
+    top: 30px;
+    width: 36px;
+    height: 60px;
+    background: #222;
+    color: #fff;
+    border-radius: 8px 0 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    user-select: none;
+  }
+  #flag-drawer-content {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px 0 0 8px;
+    padding: 10px 5px 10px 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+</style>
+<script>
+  // Flag Drawer Toggle
+  document.addEventListener("DOMContentLoaded", function () {
+    const drawer = document.getElementById("flag-drawer");
+    const tab = document.getElementById("flag-drawer-tab");
+    tab.addEventListener("click", function () {
+      drawer.classList.toggle("open");
+    });
+  });
+</script>
+<!-- ...existing code... -->
   </body>
 </html>
