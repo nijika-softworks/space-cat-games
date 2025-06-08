@@ -19,69 +19,8 @@
     <meta property="og:description" content="The worlds best free and open source games website!" />
     <meta property="og:url" content="https://spacecatgames.netlify.app" />
     <meta property="og:type" content="website" /> 
-    <style>
-      .random-tip {
-    display: inline-block;
-    margin-left: 14px;
-    color: #ffe600;
-    font-style: italic;
-    font-size: 1em; /* smaller */
-    transform: rotate(-12deg) scale(1.1);
-    text-shadow: 2px 2px 0 #b59f00, 0 0 8px #fff700;
-    vertical-align: middle;
-    background: none;
-    border: none;
-    padding: 0 4px;
-    font-family: 'Arial Black', 'Arial', sans-serif; /* more blocky, less comic */
-    letter-spacing: 0.5px;
-    line-height: 1;
-    transition: opacity 0.3s;
-}
-      }
-      #flag-drawer {
-        position: fixed;
-        top: 120px;
-        right: -184px;
-        width: 220px;
-        transition: right 0.3s;
-        z-index: 10000;
-      }
-      #flag-drawer.open {
-        right: 0;
-      }
-      #flag-drawer-tab {
-        position: absolute;
-        left: -36px;
-        top: 30px;
-        width: 36px;
-        height: 60px;
-        background: #222;
-        color: #fff;
-        border-radius: 8px 0 0 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        font-size: 24px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-        user-select: none;
-      }
-      #flag-drawer-content {
-        background: #fff;
-        border: 1px solid #ccc;
-        border-radius: 8px 0 0 8px;
-        padding: 10px 5px 10px 10px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-        min-width: 180px;
-        min-height: 70px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        overflow-x: auto;
-      }
-    </style>
   </head>
+
   <body class="dark-theme">
     <noscript>
       <h1>Hey there!</h1>
@@ -97,6 +36,7 @@
       <a href="credits.html">Credits</a>
       <a href="changelog.html">Changelog</a>
       <a href="https://starry-sys.betteruptime.com/">Status</a>
+      <!-- DO NOT CHANGE THIS. CHANGING THIS WILL RESULT IN TERMINATED EDIT PERMISSIONS!-->
       <a
         href="https://docs.google.com/document/d/e/2PACX-1vT-28hqhqnzJb3ABu47A7wYL6ei8MIE7DD7yGq1VrR6D7HSfrHjZlGfsneivTIdLFp16dcWPDhZhjx7/pub"
         >Documentation</a
@@ -107,10 +47,7 @@
 
     <div class="hero">
       <div class="container">
-        <h1 id="main-header">
-          <span id="header-text">Welcome to Space Cat Games 14</span>
-          <span id="random-tip" class="random-tip"></span>
-        </h1>
+       
         <script>
           // Random tips array
           const tips = [
@@ -119,7 +56,7 @@
             "Today I will too roll again!",
             "Hey William, can you hear us?",
             "Shut up with your complains!",
-            "Hey, Kenji, can you see us?",
+            "	Hey, Kenji, can you see us?",
             "It’s painful, it hurts. Break, break this binding spell, okay?",
             "Who am I supposed to show my real self to?",
             "That band's song, is a crutch to someone!",
@@ -170,12 +107,12 @@
 
           // Header randomization: 1 in 10 chance for Japanese Header
           function randomizeHeader() {
-            const headerText = document.getElementById("header-text");
+            const header = document.getElementById("main-header");
             if (Math.random() < 0.1) {
-              headerText.textContent = "スペースキャットゲーム バージョン14";
+              header.textContent = "スペースキャットゲーム バージョン14";
               console.log("Japanese header loaded.");
             } else {
-              headerText.textContent = "Welcome to Space Cat Games 14";
+              header.textContent = "Welcome to Space Cat Games 14";
               console.log("Standard header loaded.");
             }
           }
@@ -396,26 +333,72 @@
       })();
     </script>
     <script src="js/themeswitcher.js"></script>
+    <!-- ...existing code... -->
 
-    <!-- Flag Counter Drawer -->
-    <div id="flag-drawer">
-      <div id="flag-drawer-tab">🏳️</div>
-      <div id="flag-drawer-content">
-        <a target="_blank" href="https://24counter.com/conline/1749394234/">
-          <img alt="Website Audience by Country" border="0" src="https://24counter.com/online/fcc.php?id=1749394234" style="max-width: 100%; display: block;" />
-        </a>
-        <br>
-      </div>
-    </div>
-    <script>
-      // Flag Drawer Toggle
-      document.addEventListener("DOMContentLoaded", function () {
-        const drawer = document.getElementById("flag-drawer");
-        const tab = document.getElementById("flag-drawer-tab");
-        tab.addEventListener("click", function () {
-          drawer.classList.toggle("open");
-        });
-      });
-    </script>
+<!-- Flag Counter Drawer -->
+<div id="flag-drawer">
+  <div id="flag-drawer-tab">🏳️</div>
+  <div id="flag-drawer-content">
+    <a target="_blank" href="https://24counter.com/conline/1749394234/">
+      <img alt="Website Audience by Country" border="0" src="https://24counter.com/online/fcc.php?id=1749394234" style="max-width: 100%; display: block;" />
+    </a>
+    <br>
+  </div>
+</div>
+
+<style>
+  #flag-drawer {
+    position: fixed;
+    top: 120px;
+    right: -184px; /* 220px (drawer width) - 36px (tab width) */
+    width: 220px;
+    transition: right 0.3s;
+    z-index: 10000;
+  }
+  #flag-drawer.open {
+    right: 0;
+  }
+  #flag-drawer-tab {
+    position: absolute;
+    left: -36px;
+    top: 30px;
+    width: 36px;
+    height: 60px;
+    background: #222;
+    color: #fff;
+    border-radius: 8px 0 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    user-select: none;
+  }
+  #flag-drawer-content {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px 0 0 8px;
+    padding: 10px 5px 10px 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    min-width: 180px;
+    min-height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: auto;
+  }
+</style>
+<script>
+  // Flag Drawer Toggle
+  document.addEventListener("DOMContentLoaded", function () {
+    const drawer = document.getElementById("flag-drawer");
+    const tab = document.getElementById("flag-drawer-tab");
+    tab.addEventListener("click", function () {
+      drawer.classList.toggle("open");
+    });
+  });
+</script>
   </body>
 </html>
