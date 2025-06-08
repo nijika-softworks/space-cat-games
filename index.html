@@ -85,6 +85,61 @@
     100% { transform: translateX(-100%); }
   }
 </style>
+<div id="commit-banner">
+  <button id="commit-banner-toggle" aria-label="Toggle commit banner">▼</button>
+  <span class="scrolling-text"></span>
+</div>
+<button id="commit-banner-float-toggle" aria-label="Show commit banner" style="display:none;position:fixed;right:24px;bottom:0;z-index:100001;background:#222;border:2px solid #b59f00;border-bottom:none;border-radius:8px 8px 0 0;color:#ffe600;font-size:1.2em;cursor:pointer;outline:none;padding:0 10px;user-select:none;height:28px;align-items:center;box-shadow:0 -2px 8px rgba(0,0,0,0.2);">▲</button>
+<style>
+  #commit-banner {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    background: #222;
+    color: #ffe600;
+    font-family: 'Arial Black', Arial, sans-serif;
+    font-size: 0.95em;
+    z-index: 99999;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 32px;
+    border-top: 2px solid #b59f00;
+    transition: transform 0.3s;
+    pointer-events: auto;
+  }
+  #commit-banner .scrolling-text {
+    display: inline-block;
+    padding-left: 100vw;
+    animation: scroll-left 20s linear infinite;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  #commit-banner.hide {
+    transform: translateY(100%);
+  }
+  #commit-banner-toggle {
+    background: none;
+    border: none;
+    color: #ffe600;
+    font-size: 1.2em;
+    cursor: pointer;
+    outline: none;
+    padding: 0 10px 0 0;
+    user-select: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 100000;
+    position: relative;
+  }
+  @keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+</style>
 <script>
   // GitHub org/repo info
   const user = "Starry-Systems";
@@ -106,41 +161,24 @@
         "Could not load commit info. Is GitHub API Blocked?";
     });
 
-  // Toggle show/hide with sticky toggle button
+  // Toggle show/hide with floating button
   document.addEventListener("DOMContentLoaded", function () {
     const banner = document.getElementById("commit-banner");
     const toggle = document.getElementById("commit-banner-toggle");
-    let hidden = false;
-    // Make the toggle button stick out when hidden
-    function updateTogglePosition() {
-      if (hidden) {
-        toggle.style.position = "fixed";
-        toggle.style.bottom = "0";
-        toggle.style.right = "24px";
-        toggle.style.borderRadius = "8px 8px 0 0";
-        toggle.style.borderBottom = "none";
-        toggle.style.zIndex = "100001";
-      } else {
-        toggle.style.position = "";
-        toggle.style.bottom = "";
-        toggle.style.right = "";
-        toggle.style.borderRadius = "";
-        toggle.style.borderBottom = "";
-        toggle.style.zIndex = "";
-      }
-    }
+    const floatToggle = document.getElementById("commit-banner-float-toggle");
     toggle.addEventListener("click", function (e) {
-      hidden = !hidden;
-      banner.classList.toggle("hide", hidden);
-      toggle.textContent = hidden ? "▲" : "▼";
-      updateTogglePosition();
-      // Prevent click from bubbling if fixed
+      banner.classList.add("hide");
+      toggle.style.display = "none";
+      floatToggle.style.display = "flex";
       e.stopPropagation();
     });
-    // Ensure toggle is visible on load
-    updateTogglePosition();
+    floatToggle.addEventListener("click", function (e) {
+      banner.classList.remove("hide");
+      toggle.style.display = "flex";
+      floatToggle.style.display = "none";
+      e.stopPropagation();
+    });
   });
-</script>
 </script>
     <noscript>
       <h1>Hey there!</h1>
