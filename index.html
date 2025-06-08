@@ -328,7 +328,6 @@
     <script src="js/themeswitcher.js"></script>
     <!-- ...existing code... -->
 
-<!-- Flag Counter Drawer -->
 <div id="flag-drawer">
   <div id="flag-drawer-tab">🌐</div>
   <div id="flag-drawer-content">
@@ -337,6 +336,7 @@
         src="https://s05.flagcounter.com/count2/1FR6/bg_FFFFFF/txt_000000/border_CCCCCC/columns_3/maxflags_20/viewers_0/labels_0/pageviews_0/flags_0/percent_0/"
         alt="Flag Counter"
         border="0"
+        style="max-width: 190px; display: block;"
     /></a>
   </div>
 </div>
@@ -345,8 +345,8 @@
   #flag-drawer {
     position: fixed;
     top: 120px;
-    right: -180px;
-    width: 200px;
+    right: -200px; /* Hide completely */
+    width: 220px;  /* Enough for content + tab */
     transition: right 0.3s;
     z-index: 10000;
   }
@@ -376,6 +376,11 @@
     border-radius: 8px 0 0 8px;
     padding: 10px 5px 10px 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    min-width: 180px;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 </style>
 <script>
