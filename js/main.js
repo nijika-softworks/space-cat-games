@@ -1,4 +1,5 @@
 const owo = require("@zuzak/owo");
+console.log("Loaded Packages from Yarn!")
 console.log(
   "Space Cat Games (C) Starry Systems. Origially created by Team Astrocat."
 );
