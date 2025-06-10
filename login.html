@@ -1,187 +1,205 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Space Cat Games - Log In/Register</title>
-<script
-  type="text/javascript"
-  src="https://www.bugherd.com/sidebarv2.js?apikey=dirlwq03grzkjludqxjtvg"
-  async="true"
-></script>
-<link href="css/style.css" rel="stylesheet" type="text/css" />
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-<link rel="icon" href="favicon.ico" type="image/x-icon" />
-</head>
-<div class="topnav">
-<a href="index.html">Home</a>
-<a href="games.html">Games</a>
-<a href="news.html">News</a>
-<a href="opensource.html">Source Code</a>
-<a href="credits.html">Credits</a>
-<a href="changelog.html">Changelog</a>
-<a href="archive.html">Archive</a>
-<a href="submitad.html">Submit Ad!</a>
-<a
-  href="https://docs.google.com/document/d/e/2PACX-1vT-28hqhqnzJb3ABu47A7wYL6ei8MIE7DD7yGq1VrR6D7HSfrHjZlGfsneivTIdLFp16dcWPDhZhjx7/pub"
-  >Documentation</a
->
-</div>
-<body class="dark-theme">
-<div
-  id="login-container"
-  style="max-width: 400px; margin: auto; padding: 20px;"
->
-  <h1>Login</h1>
-  <div id="error-message" style="color: red;"></div>
-  <form id="login-form">
-    <div>
-      <label for="email">Email:</label>
-      <input type="email" id="email" required />
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Space Cat Games - Log In/Register</title>
+    <script
+      type="text/javascript"
+      src="https://www.bugherd.com/sidebarv2.js?apikey=dirlwq03grzkjludqxjtvg"
+      async="true"
+    ></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body class="dark-theme">
+    <div class="topnav">
+      <a href="index.html">Home</a>
+      <a href="games.html">Games</a>
+      <a href="news.html">News</a>
+      <a href="opensource.html">Source Code</a>
+      <a href="credits.html">Credits</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="archive.html">Archive</a>
+      <a href="submitad.html">Submit Ad!</a>
+      <a
+        href="https://docs.google.com/document/d/e/2PACX-1vT-28hqhqnzJb3ABu47A7wYL6ei8MIE7DD7yGq1VrR6D7HSfrHjZlGfsneivTIdLFp16dcWPDhZhjx7/pub"
+        >Documentation</a
+      >
     </div>
-    <div>
-      <label for="password">Password:</label>
-      <input type="password" id="password" required />
+    <div
+      id="login-container"
+      style="max-width: 400px; margin: auto; padding: 20px;"
+    >
+      <h1>Login</h1>
+      <div id="error-message" style="color: red;"></div>
+      <form id="login-form">
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" required />
+        </div>
+        <div>
+          <label for="password">Password:</label>
+          <input type="password" id="password" required />
+        </div>
+        <button type="submit" id="login-button">Login</button>
+      </form>
+      <h2>Or, if you don't have an account:</h2>
+      <div
+        id="signup-container"
+        style="max-width: 400px; margin: auto; padding: 20px;"
+      >
+        <h2>Register</h2>
+        <div id="signup-error-message" style="color: red;"></div>
+        <form id="signup-form">
+          <div>
+            <label for="signup-email">Email:</label>
+            <input type="email" id="signup-email" required />
+          </div>
+          <div>
+            <label for="signup-password">Password:</label>
+            <input type="password" id="signup-password" required />
+          </div>
+          <button type="submit" id="signup-button">Register</button>
+        </form>
+      </div>
     </div>
-    <button type="submit" id="login-button">Login</button>
-  </form>
-  <h2>Or, if you don't have an account:</h2>
-  <div id="signup-container" style="max-width: 400px; margin: auto; padding: 20px;">
-    <h2>Register</h2>
-    <div id="signup-error-message" style="color: red;"></div>
-    <form id="signup-form">
-      <div>
-        <label for="signup-email">Email:</label>
-        <input type="email" id="signup-email" required>
+
+    <!-- Load Supabase client library -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <!-- Custom authentication script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        // Supabase client setup
+        const supabaseUrl = "https://fufgjoqrwgpkngjyhqtj.supabase.co";
+        const supabaseAnonKey =
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ1Zmdqb3Fyd2dwa25nanlocXRqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk1NTA1NjcsImV4cCI6MjA2NTEyNjU2N30.aoWqg7XGHMroDREprGn85RDww0DmPg9XQ5nDMYSUA9Q";
+        const supabase = window.supabase.createClient(
+          supabaseUrl,
+          supabaseAnonKey
+        );
+
+        // Login logic
+        const loginForm = document.getElementById("login-form");
+        const emailInput = document.getElementById("email");
+        const passwordInput = document.getElementById("password");
+        const loginButton = document.getElementById("login-button");
+        const errorMessage = document.getElementById("error-message");
+
+        if (loginForm) {
+          loginForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            loginButton.disabled = true;
+            errorMessage.textContent = "";
+
+            try {
+              const { error } = await supabase.auth.signInWithPassword({
+                email: emailInput.value,
+                password: passwordInput.value,
+              });
+              if (error) throw error;
+              window.location.href = "dashboard.html";
+            } catch (err) {
+              errorMessage.textContent = err.message;
+            } finally {
+              loginButton.disabled = false;
+            }
+          });
+        }
+
+        // Signup logic
+        const signupForm = document.getElementById("signup-form");
+        const signupEmailInput = document.getElementById("signup-email");
+        const signupPasswordInput = document.getElementById("signup-password");
+        const signupButton = document.getElementById("signup-button");
+        const signupErrorMessage = document.getElementById(
+          "signup-error-message"
+        );
+
+        if (signupForm) {
+          signupForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            signupButton.disabled = true;
+            signupErrorMessage.textContent = "";
+
+            try {
+              const { error } = await supabase.auth.signUp({
+                email: signupEmailInput.value,
+                password: signupPasswordInput.value,
+              });
+              if (error) throw error;
+              alert(
+                "Registration successful! Please check your email to confirm your account."
+              );
+              signupForm.reset();
+              setTimeout(() => {
+                window.location.href = "dashboard.html";
+              }, 1500);
+            } catch (err) {
+              signupErrorMessage.textContent = err.message;
+            } finally {
+              signupButton.disabled = false;
+            }
+          });
+        }
+      });
+    </script>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="games.html">Games</a>
+            <a href="credits.html">Credits</a>
+            <a href="opensource.html">Open Source</a>
+            <a href="changelog.html">Changelog</a>
+            <a href="archive.html">Archive</a>
+          </div>
+          <p class="copyright">© 2025 Starry Systems. All rights reserved.</p>
+        </div>
       </div>
-      <div>
-        <label for="signup-password">Password:</label>
-        <input type="password" id="signup-password" required>
-      </div>
-      <button type="submit" id="signup-button">Register</button>
-    </form>
-  </div>
-</div>
+    </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
-
-<script>
-    // Supabase client setup
-const supabaseUrl = "https://fufgjoqrwgpkngjyhqtj.supabase.co";
-const supabaseAnonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ1Zmdqb3Fyd2dwa25nanlocXRqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk1NTA1NjcsImV4cCI6MjA2NTEyNjU2N30.aoWqg7XGHMroDREprGn85RDww0DmPg9XQ5nDMYSUA9Q";
-const supabase = supabase.createClient(supabaseUrl, supabaseAnonKey);
-
-// Login logic
-const loginForm = document.getElementById("login-form");
-const emailInput = document.getElementById("email");
-const passwordInput = document.getElementById("password");
-const loginButton = document.getElementById("login-button");
-const errorMessage = document.getElementById("error-message");
-
-loginForm.addEventListener("submit", async (e) => {
-  e.preventDefault();
-  loginButton.disabled = true;
-  errorMessage.textContent = "";
-
-  try {
-    const { error } = await supabase.auth.signInWithPassword({
-      email: emailInput.value,
-      password: passwordInput.value,
-    });
-    if (error) throw error;
-    window.location.href = "dashboard.html"; // Redirect after login
-  } catch (err) {
-    errorMessage.textContent = err.message;
-  } finally {
-    loginButton.disabled = false;
-  }
-});
-
-// Signup logic
-const signupForm = document.getElementById("signup-form");
-const signupEmailInput = document.getElementById("signup-email");
-const signupPasswordInput = document.getElementById("signup-password");
-const signupButton = document.getElementById("signup-button");
-const signupErrorMessage = document.getElementById("signup-error-message");
-
-signupForm.addEventListener("submit", async (e) => {
-  e.preventDefault();
-  signupButton.disabled = true;
-  signupErrorMessage.textContent = "";
-
-  try {
-    const { error } = await supabase.auth.signUp({
-      email: signupEmailInput.value,
-      password: signupPasswordInput.value,
-    });
-    if (error) throw error;
-    alert("Registration successful! Please check your email to confirm your account.");
-    signupForm.reset();
-    setTimeout(() => {
-      window.location.href = "dashboard.html";
-    }, 1500);
-  } catch (err) {
-    signupErrorMessage.textContent = err.message;
-  } finally {
-    signupButton.disabled = false;
-  }
-});
-
-  </script>
-  <footer>
-  <div class="container">
-    <div class="footer-content">
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="games.html">Games</a>
-        <a href="credits.html">Credits</a>
-        <a href="opensource.html">Open Source</a>
-        <a href="changelog.html">Changelog</a>
-        <a href="archive.html">Archive</a>
-      </div>
-      <p class="copyright">© 2025 Starry Systems. All rights reserved.</p>
+    <script src="js/main.js"></script>
+    <!-- FPS Counter -->
+    <div
+      id="fps-counter"
+      style="
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background: rgba(20, 20, 20, 0.8);
+      color: #0f0;
+      font-family: monospace;
+      font-size: 16px;
+      padding: 6px 12px;
+      border-radius: 6px;
+      z-index: 9999;
+      pointer-events: none;
+    "
+    >
+      FPS: --
     </div>
-  </div>
-</footer>
-
-<script src="js/main.js"></script>
-<!-- FPS Counter -->
-<div
-  id="fps-counter"
-  style="
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    background: rgba(20, 20, 20, 0.8);
-    color: #0f0;
-    font-family: monospace;
-    font-size: 16px;
-    padding: 6px 12px;
-    border-radius: 6px;
-    z-index: 9999;
-    pointer-events: none;
-  "
->
-  FPS: --
-</div>
-<script>
-  (function () {
-    let lastFrame = performance.now();
-    let frames = 0;
-    let fps = 0;
-    function loop(now) {
-      frames++;
-      if (now - lastFrame >= 1000) {
-        fps = frames;
-        frames = 0;
-        lastFrame = now;
-        document.getElementById("fps-counter").textContent = "FPS: " + fps;
-      }
-      requestAnimationFrame(loop);
-    }
-    requestAnimationFrame(loop);
-  })();
-</script>
-<script src="js/themeswitcher.js"></script>
-  
-</body>
+    <script>
+      (function() {
+        let lastFrame = performance.now();
+        let frames = 0;
+        let fps = 0;
+        function loop(now) {
+          frames++;
+          if (now - lastFrame >= 1000) {
+            fps = frames;
+            frames = 0;
+            lastFrame = now;
+            document.getElementById("fps-counter").textContent = "FPS: " + fps;
+          }
+          requestAnimationFrame(loop);
+        }
+        requestAnimationFrame(loop);
+      })();
+    </script>
+    <script src="js/themeswitcher.js"></script>
+  </body>
 </html>
