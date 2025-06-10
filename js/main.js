@@ -1,6 +1,6 @@
 const owo = require("@zuzak/owo");
 console.log(
-  owo("Space Cat Games (C) Starry Systems. Origially created by Team Astrocat.")
+  "Space Cat Games (C) Starry Systems. Origially created by Team Astrocat."
 );
 console.log("Loaded js/main.js");
 // Wait for the DOM to be fully loaded
