@@ -64,64 +64,66 @@
 
 <script>
     const supabaseUrl = "https://fufgjoqrwgpkngjyhqtj.supabase.co";
-    const supabaseAnonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ1Zmdqb3Fyd2dwa25nanlocXRqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk1NTA1NjcsImV4cCI6MjA2NTEyNjU2N30.aoWqg7XGHMroDREprGn85RDww0DmPg9XQ5nDMYSUA9Q";
-    const supabase = supabase.createClient(supabaseUrl, supabaseAnonKey);
-  
-    // Login logic
-    const loginForm = document.getElementById("login-form");
-    const emailInput = document.getElementById("email");
-    const passwordInput = document.getElementById("password");
-    const loginButton = document.getElementById("login-button");
-    const errorMessage = document.getElementById("error-message");
-  
-    loginForm.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      loginButton.disabled = true;
-      errorMessage.textContent = "";
-  
-      try {
-        const { error } = await supabase.auth.signInWithPassword({
-          email: emailInput.value,
-          password: passwordInput.value,
-        });
-        if (error) throw error;
-        alert("Logged in successfully!");
-        // window.location.href = '/dashboard.html';
-      } catch (err) {
-        errorMessage.textContent = err.message;
-      } finally {
-        loginButton.disabled = false;
-      }
+const supabaseAnonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ1Zmdqb3Fyd2dwa25nanlocXRqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk1NTA1NjcsImV4cCI6MjA2NTEyNjU2N30.aoWqg7XGHMroDREprGn85RDww0DmPg9XQ5nDMYSUA9Q";
+const supabase = supabase.createClient(supabaseUrl, supabaseAnonKey);
+
+// Login logic
+const loginForm = document.getElementById("login-form");
+const emailInput = document.getElementById("email");
+const passwordInput = document.getElementById("password");
+const loginButton = document.getElementById("login-button");
+const errorMessage = document.getElementById("error-message");
+
+loginForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  loginButton.disabled = true;
+  errorMessage.textContent = "";
+  try {
+    const { error } = await supabase.auth.signInWithPassword({
+      email: emailInput.value,
+      password: passwordInput.value,
     });
-  
-    // Registration logic
-    const signupForm = document.getElementById("signup-form");
-    const signupEmailInput = document.getElementById("signup-email");
-    const signupPasswordInput = document.getElementById("signup-password");
-    const signupButton = document.getElementById("signup-button");
-    const signupErrorMessage = document.getElementById("signup-error-message");
-  
-    signupForm.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      signupButton.disabled = true;
-      signupErrorMessage.textContent = "";
-  
-      try {
-        const { error } = await supabase.auth.signUp({
-          email: signupEmailInput.value,
-          password: signupPasswordInput.value,
-        });
-        if (error) throw error;
-        alert(
-          "Registration successful! Please check your email to confirm your account."
-        );
-        signupForm.reset();
-      } catch (err) {
-        signupErrorMessage.textContent = err.message;
-      } finally {
-        signupButton.disabled = false;
-      }
+    if (error) throw error;
+    window.location.href = "dashboard.html"; // Redirect after login
+  } catch (err) {
+    errorMessage.textContent = err.message;
+  } finally {
+    loginButton.disabled = false;
+  }
+});
+
+// Signup logic
+const signupForm = document.getElementById("signup-form");
+const signupEmailInput = document.getElementById("signup-email");
+const signupPasswordInput = document.getElementById("signup-password");
+const signupButton = document.getElementById("signup-button");
+const signupErrorMessage = document.getElementById("signup-error-message");
+
+signupForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  signupButton.disabled = true;
+  signupErrorMessage.textContent = "";
+  try {
+    const { error } = await supabase.auth.signUp({
+      email: signupEmailInput.value,
+      password: signupPasswordInput.value,
     });
+    if (error) throw error;
+    alert(
+      "Registration successful! Please check your email to confirm your account."
+    );
+    signupForm.reset();
+    // Redirect after a short delay (optional)
+    setTimeout(() => {
+      window.location.href = "dashboard.html";
+    }, 1500);
+  } catch (err) {
+    signupErrorMessage.textContent = err.message;
+  } finally {
+    signupButton.disabled = false;
+  }
+});
+
   </script>
   <footer>
   <div class="container">
