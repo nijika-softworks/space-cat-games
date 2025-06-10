@@ -1,10 +1,10 @@
-const owo = require('@zuzak/owo')
-console.log(owo(
-  "Space Cat Games (C) Starry Systems. Origially created by Team Astrocat.")
+const owo = require("@zuzak/owo");
+console.log(
+  owo("Space Cat Games (C) Starry Systems. Origially created by Team Astrocat.")
 );
 console.log("Loaded js/main.js");
 // Wait for the DOM to be fully loaded
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
   // Add active class to current navigation item
   const currentPage = window.location.pathname.split("/").pop();
   const navLinks = document.querySelectorAll(".topnav a");
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
+    anchor.addEventListener("click", function(e) {
       e.preventDefault();
       const targetId = this.getAttribute("href");
       if (targetId === "#") return;
