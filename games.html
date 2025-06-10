@@ -684,6 +684,70 @@ setInterval(showRandomAd, 10000);
   })();
 </script>
   <script src="js/themeswitcher.js"></script>
+  <div id="flag-drawer">
+    <div id="flag-drawer-tab">🏳️</div>
+    <div id="flag-drawer-content">
+      <a href='http://www.freevisitorcounters.com'>Free Counter</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=3564e82342fa5bd105f6272a43a3eedb3ceb69b1'></script>
+<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1350183/t/0"></script>
+      </a>
+      <br/>
+    </div>
+  </div>
+
+  <style>
+    #flag-drawer {
+      position: fixed;
+      top: 120px;
+      right: -184px; /* 220px (drawer width) - 36px (tab width) */
+      width: 220px;
+      transition: right 0.3s;
+      z-index: 10000;
+    }
+    #flag-drawer.open {
+      right: 0;
+    }
+    #flag-drawer-tab {
+      position: absolute;
+      left: -36px;
+      top: 30px;
+      width: 36px;
+      height: 60px;
+      background: #222;
+      color: #fff;
+      border-radius: 8px 0 0 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 24px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      user-select: none;
+    }
+    #flag-drawer-content {
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 8px 0 0 8px;
+      padding: 10px 5px 10px 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      min-width: 180px;
+      min-height: 70px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow-x: auto;
+    }
+  </style>
+  <script>
+    // Flag Drawer Toggle
+    document.addEventListener("DOMContentLoaded", function () {
+      const drawer = document.getElementById("flag-drawer");
+      const tab = document.getElementById("flag-drawer-tab");
+      tab.addEventListener("click", function () {
+        drawer.classList.toggle("open");
+      });
+    });
+  </script>
 </body>
 
 </html>
