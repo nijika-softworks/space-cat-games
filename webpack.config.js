@@ -1,3 +1,5 @@
+// THIS IS FOR DEVELOPMENT. THIS MAY BE DELETED IN DEPLOYS.
+// Developers at Starry Systems, please DO NOT remove this file. Meowcat's test server needs it. Thanks!
 const path = require("path");
 
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
