@@ -63,7 +63,8 @@
 
 
 <script>
-    const supabaseUrl = "https://fufgjoqrwgpkngjyhqtj.supabase.co";
+    // Supabase client setup
+const supabaseUrl = "https://fufgjoqrwgpkngjyhqtj.supabase.co";
 const supabaseAnonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ1Zmdqb3Fyd2dwa25nanlocXRqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk1NTA1NjcsImV4cCI6MjA2NTEyNjU2N30.aoWqg7XGHMroDREprGn85RDww0DmPg9XQ5nDMYSUA9Q";
 const supabase = supabase.createClient(supabaseUrl, supabaseAnonKey);
 
@@ -78,6 +79,7 @@ loginForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   loginButton.disabled = true;
   errorMessage.textContent = "";
+
   try {
     const { error } = await supabase.auth.signInWithPassword({
       email: emailInput.value,
@@ -103,17 +105,15 @@ signupForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   signupButton.disabled = true;
   signupErrorMessage.textContent = "";
+
   try {
     const { error } = await supabase.auth.signUp({
       email: signupEmailInput.value,
       password: signupPasswordInput.value,
     });
     if (error) throw error;
-    alert(
-      "Registration successful! Please check your email to confirm your account."
-    );
+    alert("Registration successful! Please check your email to confirm your account.");
     signupForm.reset();
-    // Redirect after a short delay (optional)
     setTimeout(() => {
       window.location.href = "dashboard.html";
     }, 1500);
