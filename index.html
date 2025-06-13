@@ -102,31 +102,30 @@
           transform: translateX(-100%);
         }
       }
-    </style>
+
 <script>
   // GitHub org/repo info
   const user = "Starry-Systems";
   const repo = "space-cat-games";
 
-  // Fetch latest commit and version from GitHub
   Promise.all([
     fetch(`https://api.github.com/repos/${user}/${repo}/commits?per_page=1`).then(r => r.json()),
-    fetch(`https://raw.githubusercontent.com/${user}/${repo}/main/package.json`).then(r => r.json())
+    fetch(`https://api.github.com/repos/${user}/${repo}/releases/latest`).then(r => r.json())
   ])
-    .then(([commitData, packageData]) => {
-      let version = packageData.version ? packageData.version : "unknown";
+    .then(([commitData, releaseData]) => {
+      let version = releaseData.tag_name ? releaseData.tag_name : "unknown";
       if (!commitData[0]) return;
       const commit = commitData[0];
       const hash = commit.sha.substring(0, 7);
       const title = commit.commit.message.split("\n")[0];
       const committer = commit.commit.committer.name;
       const date = new Date(commit.commit.committer.date).toLocaleString();
-      const text = `Last Commit: ${hash} — "${title}" by ${committer} at ${date} | Latest Version: v${version}`;
+      const text = `Last Commit: ${hash} — "${title}" by ${committer} at ${date} | Latest Release: ${version}`;
       document.querySelector("#commit-banner .scrolling-text").textContent = text;
     })
     .catch(() => {
       document.querySelector("#commit-banner .scrolling-text").textContent =
-        "Could not load commit info or version. Is GitHub API Blocked?";
+        "Could not load commit info or release. Is GitHub API Blocked?";
     });
 
   // Toggle show/hide with floating button
@@ -150,7 +149,8 @@
     });
   });
 </script>
-// ...existing code...
+
+
 
     <noscript>
       <h1>Hey there!</h1>
