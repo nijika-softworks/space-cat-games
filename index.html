@@ -107,6 +107,8 @@
       // GitHub org/repo info
       const user = "Starry-Systems";
       const repo = "space-cat-games";
+      const latestVersion = "1.4.0"; // <-- Set your latest version here
+
       fetch(`https://api.github.com/repos/${user}/${repo}/commits?per_page=1`)
         .then((r) => r.json())
         .then((data) => {
@@ -116,9 +118,9 @@
           const title = commit.commit.message.split("\n")[0];
           const committer = commit.commit.committer.name;
           const date = new Date(commit.commit.committer.date).toLocaleString();
-          const text = `Last Commit: ${hash} — "${title}" by ${committer} at ${date}`;
-          document.querySelector("#commit-banner .scrolling-text").textContent =
-            text;
+          // Add latest version after commit info
+          const text = `Last Commit: ${hash} — "${title}" by ${committer} at ${date} | Latest Version: v${latestVersion}`;
+          document.querySelector("#commit-banner .scrolling-text").textContent = text;
         })
         .catch(() => {
           document.querySelector("#commit-banner .scrolling-text").textContent =
