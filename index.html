@@ -119,7 +119,7 @@
           const committer = commit.commit.committer.name;
           const date = new Date(commit.commit.committer.date).toLocaleString();
           // Add latest version after commit info
-          const text = `Last Commit: ${hash} — "${title}" by ${committer} at ${date} | Latest Version: v${latestVersion}`;
+          const text = `Last Commit: ${hash} — "${title}" by ${committer} at ${date} | Latest Reported Version: v${latestVersion}`;
           document.querySelector("#commit-banner .scrolling-text").textContent = text;
         })
         .catch(() => {
