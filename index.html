@@ -104,7 +104,9 @@
       }
 </style>
 <script>
-  // GitHub org/repo info
+  // Set your server's current version here
+  const serverVersion = "14.1"; // <-- update as needed
+
   const user = "Starry-Systems";
   const repo = "space-cat-games";
 
@@ -113,14 +115,14 @@
     fetch(`https://api.github.com/repos/${user}/${repo}/releases/latest`).then(r => r.json())
   ])
     .then(([commitData, releaseData]) => {
-      let version = releaseData.tag_name ? releaseData.tag_name : "unknown";
+      let githubVersion = releaseData.tag_name ? releaseData.tag_name : "unknown";
       if (!commitData[0]) return;
       const commit = commitData[0];
       const hash = commit.sha.substring(0, 7);
       const title = commit.commit.message.split("\n")[0];
       const committer = commit.commit.committer.name;
       const date = new Date(commit.commit.committer.date).toLocaleString();
-      const text = `Last Commit: ${hash} — "${title}" by ${committer} at ${date} | Latest Release: ${version}`;
+      const text = `Last Commit: ${hash} — "${title}" by ${committer} at ${date} | Reported Server Version: v${serverVersion} | Latest Reported GitHub Release: ${githubVersion}`;
       document.querySelector("#commit-banner .scrolling-text").textContent = text;
     })
     .catch(() => {
@@ -128,26 +130,6 @@
         "Could not load commit info or release. Is GitHub API Blocked?";
     });
 
-  // Toggle show/hide with floating button
-  document.addEventListener("DOMContentLoaded", function () {
-    const banner = document.getElementById("commit-banner");
-    const toggle = document.getElementById("commit-banner-toggle");
-    const floatToggle = document.getElementById(
-      "commit-banner-float-toggle"
-    );
-    toggle.addEventListener("click", function (e) {
-      banner.classList.add("hide");
-      toggle.style.display = "none";
-      floatToggle.style.display = "flex";
-      e.stopPropagation();
-    });
-    floatToggle.addEventListener("click", function (e) {
-      banner.classList.remove("hide");
-      toggle.style.display = "flex";
-      floatToggle.style.display = "none";
-      e.stopPropagation();
-    });
-  });
 </script>
 
 
