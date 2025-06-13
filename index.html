@@ -103,51 +103,54 @@
         }
       }
     </style>
-    <script>
-      // GitHub org/repo info
-      const user = "Starry-Systems";
-      const repo = "space-cat-games";
-      const latestVersion = "1.4.0"; // <-- Set your latest version here
+<script>
+  // GitHub org/repo info
+  const user = "Starry-Systems";
+  const repo = "space-cat-games";
 
-      fetch(`https://api.github.com/repos/${user}/${repo}/commits?per_page=1`)
-        .then((r) => r.json())
-        .then((data) => {
-          if (!data[0]) return;
-          const commit = data[0];
-          const hash = commit.sha.substring(0, 7);
-          const title = commit.commit.message.split("\n")[0];
-          const committer = commit.commit.committer.name;
-          const date = new Date(commit.commit.committer.date).toLocaleString();
-          // Add latest version after commit info
-          const text = `Last Commit: ${hash} — "${title}" by ${committer} at ${date} | Latest Reported Version: v${latestVersion}`;
-          document.querySelector("#commit-banner .scrolling-text").textContent = text;
-        })
-        .catch(() => {
-          document.querySelector("#commit-banner .scrolling-text").textContent =
-            "Could not load commit info. Is GitHub API Blocked?";
-        });
+  // Fetch latest commit and version from GitHub
+  Promise.all([
+    fetch(`https://api.github.com/repos/${user}/${repo}/commits?per_page=1`).then(r => r.json()),
+    fetch(`https://raw.githubusercontent.com/${user}/${repo}/main/package.json`).then(r => r.json())
+  ])
+    .then(([commitData, packageData]) => {
+      let version = packageData.version ? packageData.version : "unknown";
+      if (!commitData[0]) return;
+      const commit = commitData[0];
+      const hash = commit.sha.substring(0, 7);
+      const title = commit.commit.message.split("\n")[0];
+      const committer = commit.commit.committer.name;
+      const date = new Date(commit.commit.committer.date).toLocaleString();
+      const text = `Last Commit: ${hash} — "${title}" by ${committer} at ${date} | Latest Version: v${version}`;
+      document.querySelector("#commit-banner .scrolling-text").textContent = text;
+    })
+    .catch(() => {
+      document.querySelector("#commit-banner .scrolling-text").textContent =
+        "Could not load commit info or version. Is GitHub API Blocked?";
+    });
 
-      // Toggle show/hide with floating button
-      document.addEventListener("DOMContentLoaded", function () {
-        const banner = document.getElementById("commit-banner");
-        const toggle = document.getElementById("commit-banner-toggle");
-        const floatToggle = document.getElementById(
-          "commit-banner-float-toggle"
-        );
-        toggle.addEventListener("click", function (e) {
-          banner.classList.add("hide");
-          toggle.style.display = "none";
-          floatToggle.style.display = "flex";
-          e.stopPropagation();
-        });
-        floatToggle.addEventListener("click", function (e) {
-          banner.classList.remove("hide");
-          toggle.style.display = "flex";
-          floatToggle.style.display = "none";
-          e.stopPropagation();
-        });
-      });
-    </script>
+  // Toggle show/hide with floating button
+  document.addEventListener("DOMContentLoaded", function () {
+    const banner = document.getElementById("commit-banner");
+    const toggle = document.getElementById("commit-banner-toggle");
+    const floatToggle = document.getElementById(
+      "commit-banner-float-toggle"
+    );
+    toggle.addEventListener("click", function (e) {
+      banner.classList.add("hide");
+      toggle.style.display = "none";
+      floatToggle.style.display = "flex";
+      e.stopPropagation();
+    });
+    floatToggle.addEventListener("click", function (e) {
+      banner.classList.remove("hide");
+      toggle.style.display = "flex";
+      floatToggle.style.display = "none";
+      e.stopPropagation();
+    });
+  });
+</script>
+// ...existing code...
 
     <noscript>
       <h1>Hey there!</h1>
