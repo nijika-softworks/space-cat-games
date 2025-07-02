@@ -108,9 +108,9 @@
 </style>
 <script>
   // Set your server's current version here
-  const serverVersion = "14.1"; // <-- update as needed
+  const serverVersion = "15"; // <-- update as needed
 
-  const user = "Starry-Systems";
+  const user = "Ijichi-Systems";
   const repo = "space-cat-games";
 
   Promise.all([
@@ -162,7 +162,7 @@
 
     <div class="hero">
       <div class="container">
-        <h1 id="main-header">Welcome to Space Cat Games 14</h1>
+        <h1 id="main-header">Welcome to Space Cat Games 15</h1>
         <div id="random-tip" class="random-tip"></div>
         <script>
           // Random tips array
@@ -215,6 +215,9 @@
             "Down for 5 days and running!",
             "あああああああ!",
             "Super Powerful Miku-chan!",
+            "Running for 400 days!",
+            "7 is the second number!",
+            "Gamer-1_5 was here."
           ];
 
           function showRandomTip() {
@@ -227,10 +230,10 @@
           function randomizeHeader() {
             const header = document.getElementById("main-header");
             if (Math.random() < 0.1) {
-              header.textContent = "スペースキャットゲーム バージョン14";
+              header.textContent = "スペースキャットゲーム バージョン15";
               console.log("Japanese header loaded.");
             } else {
-              header.textContent = "Welcome to Space Cat Games 14";
+              header.textContent = "Welcome to Space Cat Games 15";
               console.log("Standard header loaded.");
             }
           }

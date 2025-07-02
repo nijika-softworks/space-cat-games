@@ -132,7 +132,7 @@ h6 {
 
 /* Hero section */
 .hero {
-  background: linear-gradient(to right, #b51313, #2c3e50);
+  background: linear-gradient(to right, #b10ced, #ed530c);
   color: white;
   padding: 60px 20px;
   text-align: center;
@@ -503,9 +503,7 @@ body.dark-theme .archive-item {
   color: #fff !important;
 }
 
-
 body.dark-theme .hero {
   background: linear-gradient(to right, #b51313, #2c3e50) !important;
   color: #fff !important;
 }
-
