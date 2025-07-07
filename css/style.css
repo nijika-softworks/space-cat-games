@@ -507,3 +507,23 @@ body.dark-theme .hero {
   background: linear-gradient(to right, #b51313, #2c3e50) !important;
   color: #fff !important;
 }
+
+#anime-mode-toggle {
+  position: relative;
+  margin-top: auto;
+  padding: 10px 20px;
+  background-color: #ff4081;
+  color: white;
+  align-self: ;
+  margin-right: auto;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+#anime-mode-toggle:hover {
+  background-color: #ff74a3;
+}
