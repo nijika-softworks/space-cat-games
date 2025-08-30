@@ -527,3 +527,8 @@ body.dark-theme .hero {
 #anime-mode-toggle:hover {
   background-color: #ff74a3;
 }
+
+.black-bg {
+  background-color: black;
+  color: white;
+}
